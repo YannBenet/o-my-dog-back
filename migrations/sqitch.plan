@@ -1,0 +1,4 @@
+%syntax-version=1.0.0
+%project=oMyDog
+
+init-migration 2024-06-28T12:07:02Z Jérémy <jérémy@tralala.io> # Create tables for mvp version
