@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import userController from '../controllers/user.controller.js';
+import validationMiddleware from '../libraries/middlewares/validation.middleware.js';
+import userPostSchema from '../schemas/user.post.schema.js';
 
-const router = Router();
+export const router = Router();
 
-router.route('/highlight').get(userController.getHighlight);
-
-
-export default router;
+router.route('/users')
+  .post(validationMiddleware(userPostSchema, 'body'),
+  userController.store);
