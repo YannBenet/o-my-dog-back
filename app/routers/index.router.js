@@ -2,9 +2,9 @@ import { Router } from "express";
 import announcementRouter from "./announcement.router.js";
 import userRouter from "./user.router.js";
 
-const mainRouter = Router();
+const router = Router();
 
-mainRouter.use('/announcements', announcementRouter);
-mainRouter.use('/users', userRouter);
+router.use('/api/announcements', announcementRouter);
+router.use('/api/users', userRouter);
 
-export default mainRouter;
+export default router;

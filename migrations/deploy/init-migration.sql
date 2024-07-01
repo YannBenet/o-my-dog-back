@@ -12,6 +12,7 @@ CREATE TABLE "user" (
     "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "firstname" text NOT NULL,
     "lastname" text NOT NULL,
+    "password" text NOT NULL,
     "email" email NOT NULL UNIQUE,
     "city" text NOT NULL,
     "phone_number" phone_number UNIQUE,
@@ -21,8 +22,8 @@ CREATE TABLE "user" (
 
 CREATE TABLE "announcement" (
     "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    "date_start" timestamptz NOT NULL,
-    "date_end" timestamptz NOT NULL,
+    "date_start" date NOT NULL,
+    "date_end" date NOT NULL,
     "mobility" boolean NOT NULL,
     "home" boolean NOT NULL,
     "description" text,
