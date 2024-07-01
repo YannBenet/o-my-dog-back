@@ -7,7 +7,7 @@
 @home=home=false
 
 
-GET {{endpoint}}/announcements/highlight
+GET {{endpoint}}/api/announcements/highlight
 
 ###
-GET {{endpoint}}/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
+GET {{endpoint}}/api/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
