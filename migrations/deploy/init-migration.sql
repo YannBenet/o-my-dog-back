@@ -21,8 +21,8 @@ CREATE TABLE "user" (
 
 CREATE TABLE "announcement" (
     "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    "date_start" timestamptz NOT NULL,
-    "date_end" timestamptz NOT NULL,
+    "date_start" DATE NOT NULL,
+    "date_end" DATE NOT NULL,
     "mobility" boolean NOT NULL,
     "home" boolean NOT NULL,
     "description" text,
