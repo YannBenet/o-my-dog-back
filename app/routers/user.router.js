@@ -8,3 +8,7 @@ export const router = Router();
 router.route('/')
   .post(validationMiddleware(userPostSchema, 'body'),
   userController.store);
+
+router.route('/login')
+  .post(validationMiddleware(loginPostSchema, 'body'),
+  userController.login);
