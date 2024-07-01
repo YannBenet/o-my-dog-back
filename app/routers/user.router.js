@@ -1,4 +1,5 @@
 import { Router } from 'express';
+
 import userController from '../controllers/user.controller.js';
 import validationMiddleware from '../libraries/middlewares/validation.middleware.js';
 import userPostSchema from '../schemas/user.post.schema.js';

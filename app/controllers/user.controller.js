@@ -18,4 +18,4 @@ export default {
     res.status(201).json({message : 'User created successfully'});
   }
 
-}
+};

@@ -1,9 +1,10 @@
-// import { Router } from 'expess';
+import { Router } from "express";
+import announcementRouter from "./announcement.router.js";
+import userRouter from "./user.router.js";
 
-// import { router as userRouter } from './user.router.js';
-// import { router as announcementsRouter } from './annoucement.router.js';
+const router = Router();
 
-// export const router = Router();
+router.use('/api/announcements', announcementRouter);
+router.use('/api/users', userRouter);
 
-// router.use(userRouter);
-// router.use(announcementsRouter);
+export default router;
