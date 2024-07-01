@@ -3,7 +3,7 @@ import UserDatamapper from "../datamappers/user.datamapper.js";
 
 export default {
   async store(req, res){
-    const { firstname, lastname, email, password, city, phoneNumber } = req.body;
+    const { firstname, lastname, email, password, city, phoneNumber, repeatPassword } = req.body;
 
     const emailAlreadyExists = await UserDatamapper.findByEmail(email);
 
@@ -13,7 +13,7 @@ export default {
 
     const hashPassword = await bcrypt.hash(password, 10)
 
-    await UserDatamapper.create(firstname, lastname, email, hashPassword, city, phoneNumber);
+    await UserDatamapper.create(firstname, lastname, email, hashPassword, city, phoneNumber, repeatPassword);
 
     res.status(201).json({message : 'User created successfully'});
   }
