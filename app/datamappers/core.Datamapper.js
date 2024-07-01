@@ -7,16 +7,17 @@ export default class CoreDatamapper {
         this.client = config.client; 
     }
 
-    static async findAll() {
-        try {
-            const result  = await this.client.query(`SELECT * FROM "${this.tableName}";`)
-            const { rows } = result; 
-            return rows
-        } catch (error) {
-            console.error(`Erreur lors de la récupération de toutes les données dans la table ${this.tableName}`);
-            throw error;
-        }
-    }
+    // ! Possiblement inutile voir s'il faut supprimer
+    // static async findAll() {
+    //     try {
+    //         const result  = await this.client.query(`SELECT * FROM "${this.tableName}";`)
+    //         const { rows } = result; 
+    //         return rows
+    //     } catch (error) {
+    //         console.error(`Erreur lors de la récupération de toutes les données dans la table ${this.tableName}`);
+    //         throw error;
+    //     }
+    // }
 
     static async findByPk(id) {
         try {
@@ -27,6 +28,5 @@ export default class CoreDatamapper {
             console.error(`Erreur lors de la récupération de toutes la donnée avec l'id : ${id} dans la table ${this.tableName}`);
             throw error;
         }
-
     }
 }

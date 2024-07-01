@@ -1,9 +1,7 @@
 import { Router } from 'express';
-import userController from '../controllers/user.controller.js';
 
-const router = Router();
-
-router.route('/highlight').get(userController.getHighlight);
+const userRouter = Router();
 
 
-export default router;
+
+export default userRouter;
