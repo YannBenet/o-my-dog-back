@@ -1,9 +1,9 @@
-import { Router } from 'express';
+import { Router } from "express";
 
-import { router as userRouter } from './user.router.js';
-// import { router as announcementsRouter } from './annoucement.router.js';
+import { router as announcementRouter } from "./announcement.router.js";
+import { router as userRouter } from "./user.router.js";
 
 export const router = Router();
 
+router.use('/api/announcements', announcementRouter);
 router.use('/api/users', userRouter);
-// router.use(announcementsRouter);
