@@ -54,7 +54,7 @@ export default {
             console.log('Erreur dans le controller announcement / deleteAnnouncement')
             console.error(error)
         }
-    }
+    },
 
     async store(req, res){
         // TODO vérification des tokens ou de la session pour vérifier qu'un utilisateur est bien connecté avant de poster une annonce
