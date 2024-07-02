@@ -23,11 +23,7 @@ export default {
   async login(req, res){
     const { email, password } = req.body;
 
-    console.log(email,password);
-
     const user = await UserDatamapper.findByEmail(email);
-
-    console.log(`user.req: ${JSON.stringify(user)}`);
 
     if(!user.length){
       return res.status(401).json({ error: 'Incorrect email or password'});
@@ -47,16 +43,30 @@ export default {
       userAgent: req.headers['user-agent']
     }
 
-    console.log(`fingerprint: ${fingerprint}`);
-
     const token = await jwtService.createToken({
       id: user[0].id,
       firstname: user[0].firstname,
       lastname: user[0].lastname,
       fingerprint
     });
-    console.log(`token: ${token}`);
 
     res.status(200).json({ token });
+  },
+
+  async show(req, res) {
+    const { id } = req.params;
+    console.log(req.token);
+
+    if(parseInt(id) !== req.token){
+      return res.status(403).json({ error: 'Acces forbidden' })
+    }
+
+    const user = await UserDatamapper.findByPk(id);
+
+    if(!user){
+      return res.status(404).json({ error: 'User not found' })
+    }
+
+    res.status(200).json(user)
   }
 };

@@ -28,4 +28,16 @@ export default class UserDatamapper extends CoreDatamapper {
         ]
     );
   }
+
+  static async findByPk(id) {
+
+    const result = await this.client.query(`
+      SELECT firstname, lastname, email, city, phone_number
+      FROM "user" 
+      WHERE id = $1;`,
+      [id]
+    );
+        
+    return result.rows[0]; 
+  }
 };

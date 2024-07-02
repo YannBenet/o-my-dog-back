@@ -19,14 +19,14 @@ export default class CoreDatamapper {
     //     }
     // }
 
-    static async findByPk(id) {
-        try {
-            const result = await this.client.query(`SELECT * FROM "${this.tableName}" WHERE id = $1;`, [id]);
-            const { rows } = result; 
-            return rows[0]; 
-        } catch (error) {
-            console.error(`Erreur lors de la récupération de toutes la donnée avec l'id : ${id} dans la table ${this.tableName}`);
-            throw error;
-        }
-    }
+    // static async findByPk(id) {
+    //     try {
+    //         const result = await this.client.query(`SELECT * FROM "${this.tableName}" WHERE id = $1;`, [id]);
+    //         const { rows } = result; 
+    //         return rows[0]; 
+    //     } catch (error) {
+    //         console.error(`Erreur lors de la récupération de toutes la donnée avec l'id : ${id} dans la table ${this.tableName}`);
+    //         throw error;
+    //     }
+    // }
 }
