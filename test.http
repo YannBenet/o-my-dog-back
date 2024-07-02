@@ -7,11 +7,13 @@
 @home=home=false
 
 
-GET {{endpoint}}/announcements/highlight
+GET {{endpoint}}/api/announcements/highlight
 
 ###
 
-GET {{endpoint}}/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
+GET {{endpoint}}/api/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
+
+
 ###
 
 POST {{endpoint}}/api/users/
@@ -27,6 +29,7 @@ Content-Type: application/json
   "repeatPassword": "2Aa!4Zo!"
 }
 ###
+
 
 POST {{endpoint}}/api/users/
 Content-Type: application/json
@@ -53,3 +56,38 @@ Content-Type: application/json
 
 GET {{endpoint}}/api/users/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2ODUsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzM2MjR9.2jh-Qfn7grDh5F0fG0G3uAhaVOYqggIr9m3IwIoo4SI
+###
+
+
+GET {{endpoint}}/api/announcements/3
+
+###
+
+PATCH {{endpoint}}/api/announcements/3
+Content-Type: application/json
+
+{
+  "date_start": "2024-11-11",
+  "date_end": "2024-11-29",
+  "description": "J'adore m'occuper des gros reptiles",
+  "home" : true,
+  "mobility" : true
+}
+
+###
+
+DELETE {{endpoint}}/api/announcements/2
+
+###
+
+POST {{endpoint}}/api/announcements/
+Content-Type: application/json
+
+{
+    "date_start": "2024-07-20",
+    "date_end": "2024-07-30",
+    "mobility": true,
+    "home": false,
+    "description": "PetSitting",
+    "animal": ["Chien", "Chat"]
+}
