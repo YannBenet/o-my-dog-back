@@ -27,4 +27,13 @@ Content-Type: application/json
   "repeatPassword": "2Aa!4Zo!"
 }
 
+POST {{endpoint}}/api/announcement/:id
+Content-Type: application/json
 
+{
+  "date_debut": "2024-11-11",
+  "date_fin": "2024-11-29",
+  "description": "J'adore m'occuper des gros reptiles",
+  "accueil" : true,
+  "mobile" : true
+}
