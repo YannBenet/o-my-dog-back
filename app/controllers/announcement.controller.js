@@ -21,6 +21,17 @@ export default {
             console.log('Erreur dans le controller announcement / getAll')
             console.error(error) 
         }
+    },
+
+    async getOneAnnouncement(req, res){
+        try {
+            const { id } = req.params;
+            const announcement = await AnnouncementDatamapper.getOneAnnouncement(id);
+            res.status(200).json({announcement})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / getOneAnnouncement')
+            console.error(error)
+        }
     }
 
 }

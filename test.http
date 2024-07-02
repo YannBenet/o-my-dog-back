@@ -26,17 +26,22 @@ Content-Type: application/json
   "phoneNumber": "0610256389",
   "repeatPassword": "2Aa!4Zo!"
 }
- ###
 
+###
 
-GET {{endpoint}}/api/announcement/2
-Content-Type: application/json
+GET {{endpoint}}/api/announcements/2
+
+###
+
+PATCH {{endpoint}}/api/announcements/2
 
 {
   "date_start": "2024-11-11",
   "date_end": "2024-11-29",
-  "description": "J'adore m'occuper des gros reptiles",
+  "description": "J'adore m'occuper des gros chiens",
   "home" : true,
   "mobility" : true
 }
-###
+
+ ###
+
