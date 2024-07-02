@@ -6,8 +6,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "node --watch index.js",
-		"createdb":"psql -U omydog -d omydog -f ./migrations/deploy/init-migration.sql",
-		"seeding": "psql -U omydog -d omydog -f ./data/seeding.sql",
+		"createdb":"psql -U <dbusername> -d <dbname> -f ./migrations/deploy/init-migration.sql",
+		"seeding": "psql -U <dbusername> -d <dbname> -f ./data/seeding.sql",
 		"createdb:seeding" :"npm run createdb && npm run seeding"
 
 	},
