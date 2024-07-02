@@ -7,11 +7,13 @@
 @home=home=false
 
 
-GET {{endpoint}}/announcements/highlight
+GET {{endpoint}}/api/announcements/highlight
 
 ###
 
-GET {{endpoint}}/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
+GET {{endpoint}}/api/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
+
+
 ###
 
 POST {{endpoint}}/api/users/
@@ -36,3 +38,17 @@ Content-Type: application/json
   "email": "jhon.doe@fake.net",
   "password": "2Aa!4Zz!"
 }
+###
+
+POST {{endpoint}}/api/announcements/
+Content-Type: application/json
+
+{
+    "date_start": "2024-07-20",
+    "date_end": "2024-07-30",
+    "mobility": true,
+    "home": false,
+    "description": "PetSitting",
+    "animal": ["Chien", "Chat"]
+}
+

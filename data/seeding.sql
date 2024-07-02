@@ -1,33 +1,34 @@
 BEGIN;
 
 INSERT INTO
-  "user" ("firstname", "lastname", "email", "city", "phone_number")
+  "user" ("firstname", "lastname", "email", "city", "phone_number", "password")
 VALUES
-    ('Jean', 'Dupont', 'jean.dupont@example.com', 'Paris', '0612345678'),
-    ('Marie', 'Durand', 'marie.durand@example.com', 'Lyon', '0623456789'),
-    ('Étienne', 'Martin', 'etienne.martin@example.com', 'Marseille', '0634567890'),
-    ('Sophie', 'Bernard', 'sophie.bernard@example.com', 'Toulouse', '0645678901'),
-    ('Lucas', 'Thomas', 'lucas.thomas@example.com', 'Nice', '0656789012'),
-    ('Camille', 'Petit', 'camille.petit@example.com', 'Nantes', '0667890123'),
-    ('Maxime', 'Robert', 'maxime.robert@example.com', 'Strasbourg', '0678901234'),
-    ('Chloé', 'Richard', 'chloe.richard@example.com', 'Montpellier', '0689012345'),
-    ('Alexandre', 'Dubois', 'alexandre.dubois@example.com', 'Bordeaux', '0690123456'),
-    ('Julie', 'Moreau', 'julie.moreau@example.com', 'Lille', '0601234567'),
-    ('Nicolas', 'Laurent', 'nicolas.laurent@example.com', 'Rennes', '0612345679'),
-    ('Émilie', 'Simon', 'emilie.simon@example.com', 'Reims', '0623456790'),
-    ('Vincent', 'Michel', 'vincent.michel@example.com', 'Saint-Étienne', '0634567891'),
-    ('Aurélie', 'Lefebvre', 'aurelie.lefebvre@example.com', 'Toulon', '0645678902'),
-    ('Pierre', 'Leroy', 'pierre.leroy@example.com', 'Le Havre', '0656789013'),
-    ('Charlotte', 'Roux', 'charlotte.roux@example.com', 'Grenoble', '0667890124'),
-    ('Antoine', 'David', 'antoine.david@example.com', 'Dijon', '0678901235'),
-    ('Laura', 'Bertrand', 'laura.bertrand@example.com', 'Angers', '0689012346'),
-    ('Julien', 'Morel', 'julien.morel@example.com', 'Nîmes', '0690123457'),
-    ('Louise', 'Fournier', 'louise.fournier@example.com', 'Villeurbanne', '0602345678'),
-    ('Sébastien', 'Girard', 'sebastien.girard@example.com', 'Clermont-Ferrand', '0612345689'),
-    ('Alice', 'Bonnet', 'alice.bonnet@example.com', 'La Rochelle', '0623456780'),
-    ('Gabriel', 'Dupuis', 'gabriel.dupuis@example.com', 'Cannes', '0634567892'),
-    ('Manon', 'Lambert', 'manon.lambert@example.com', 'Versailles', '0645678903'),
-    ('Théo', 'Fontaine', 'theo.fontaine@example.com', 'Rouen', '0656789014');
+  ('Jean', 'Dupont', 'jean.dupont@example.com', 'Paris', '0612345678', 'password1'),
+  ('Marie', 'Durand', 'marie.durand@example.com', 'Lyon', '0623456789', 'password2'),
+  ('Étienne', 'Martin', 'etienne.martin@example.com', 'Marseille', '0634567890', 'password3'),
+  ('Sophie', 'Bernard', 'sophie.bernard@example.com', 'Toulouse', '0645678901', 'password4'),
+  ('Lucas', 'Thomas', 'lucas.thomas@example.com', 'Nice', '0656789012', 'password5'),
+  ('Camille', 'Petit', 'camille.petit@example.com', 'Nantes', '0667890123', 'password6'),
+  ('Maxime', 'Robert', 'maxime.robert@example.com', 'Strasbourg', '0678901234', 'password7'),
+  ('Chloé', 'Richard', 'chloe.richard@example.com', 'Montpellier', '0689012345', 'password8'),
+  ('Alexandre', 'Dubois', 'alexandre.dubois@example.com', 'Bordeaux', '0690123456', 'password9'),
+  ('Julie', 'Moreau', 'julie.moreau@example.com', 'Lille', '0601234567', 'password10'),
+  ('Nicolas', 'Laurent', 'nicolas.laurent@example.com', 'Rennes', '0612345679', 'password11'),
+  ('Émilie', 'Simon', 'emilie.simon@example.com', 'Reims', '0623456790', 'password12'),
+  ('Vincent', 'Michel', 'vincent.michel@example.com', 'Saint-Étienne', '0634567891', 'password13'),
+  ('Aurélie', 'Lefebvre', 'aurelie.lefebvre@example.com', 'Toulon', '0645678902', 'password14'),
+  ('Pierre', 'Leroy', 'pierre.leroy@example.com', 'Le Havre', '0656789013', 'password15'),
+  ('Charlotte', 'Roux', 'charlotte.roux@example.com', 'Grenoble', '0667890124', 'password16'),
+  ('Antoine', 'David', 'antoine.david@example.com', 'Dijon', '0678901235', 'password17'),
+  ('Laura', 'Bertrand', 'laura.bertrand@example.com', 'Angers', '0689012346', 'password18'),
+  ('Julien', 'Morel', 'julien.morel@example.com', 'Nîmes', '0690123457', 'password19'),
+  ('Louise', 'Fournier', 'louise.fournier@example.com', 'Villeurbanne', '0602345678', 'password20'),
+  ('Sébastien', 'Girard', 'sebastien.girard@example.com', 'Clermont-Ferrand', '0612345689', 'password21'),
+  ('Alice', 'Bonnet', 'alice.bonnet@example.com', 'La Rochelle', '0623456780', 'password22'),
+  ('Gabriel', 'Dupuis', 'gabriel.dupuis@example.com', 'Cannes', '0634567892', 'password23'),
+  ('Manon', 'Lambert', 'manon.lambert@example.com', 'Versailles', '0645678903', 'password24'),
+  ('Théo', 'Fontaine', 'theo.fontaine@example.com', 'Rouen', '0656789014', 'password25');
+
 
 INSERT INTO
   "announcement" ("date_start", "date_end", "mobility", "home", "description", "user_id")
