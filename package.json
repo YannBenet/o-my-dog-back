@@ -6,10 +6,9 @@
 	"type": "module",
 	"scripts": {
 		"dev": "node --watch index.js",
-		"createdb":"psql -U <dbuser> -d <dbname> -f ./migrations/deploy/init-migration.sql",
+		"createdb": "psql -U <dbuser> -d <dbname> -f ./migrations/deploy/init-migration.sql",
 		"seeding": "psql -U <dbuser> -d <dbname> -f ./data/seeding.sql",
-		"createdb:seeding" :"npm run createdb && npm run seeding"
-
+		"createdb:seeding": "npm run createdb && npm run seeding"
 	},
 	"repository": {
 		"type": "git",
