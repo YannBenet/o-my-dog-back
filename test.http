@@ -29,11 +29,11 @@ Content-Type: application/json
 
 ###
 
-GET {{endpoint}}/api/announcements/2
+GET {{endpoint}}/api/announcements/3
 
 ###
 
-PATCH {{endpoint}}/api/announcements/2
+PATCH {{endpoint}}/api/announcements/3
 Content-Type: application/json
 
 {

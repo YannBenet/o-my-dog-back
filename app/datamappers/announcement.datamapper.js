@@ -79,7 +79,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
     static async getOneAnnouncement(id) {
         try {
             const result = await this.client.query(
-                `SELECT 
+                `SELECT
                     "announcement"."id",
                     "announcement"."date_start",
                     "announcement"."date_end",
@@ -90,13 +90,19 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                     "user"."lastname",
                     "user"."city",
                     "user"."phone_number",
-                    "user"."email"
-                FROM 
+                    "user"."email",
+                    "animal_type"."label"
+                FROM
                     "announcement"
-                JOIN 
+                JOIN
                     "user" ON "announcement"."user_id" = "user"."id"
-                WHERE 
-                    "announcement"."id" = $1;`,
+                JOIN
+                    "announcement_animal_type" ON "announcement"."id" = "announcement_animal_type"."announcement_id"
+                JOIN
+                    "animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
+                WHERE
+                    "announcement"."id" = $1;
+                    `,
                 [id]
             );
             
