@@ -103,7 +103,28 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
             const { rows } = result;
             return rows[0];
         } catch (error) {
-            console.error(`Erreur lors de la récupération de toutes les données dans la table`);
+            console.error(`Erreur lors de la récupération de toutes les données`);
+            throw error;
+        }
+    }
+
+    static async updateAnnouncement(id, date_start, date_end, mobility, home, description) {
+        try {
+            await this.client.query(
+                `UPDATE 
+                    "announcement"
+                SET 
+                    "date_start" = $1,
+                    "date_end" = $2,
+                    "mobility" = $3,
+                    "home" = $4,
+                    "description" = $5
+                WHERE 
+                    "id" = $6;`,
+                [date_start, date_end, mobility, home, description, id]
+            );
+        } catch (error) {
+            console.error(`Erreur lors de la récupération de toutes les données`);
             throw error;
         }
     }

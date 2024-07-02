@@ -32,6 +32,18 @@ export default {
             console.log('Erreur dans le controller announcement / getOneAnnouncement')
             console.error(error)
         }
+    },
+
+    async updateAnnouncement(req, res){
+        try {
+            const { id } = req.params;
+            const { date_start, date_end, mobility, home, description } = req.body;
+            await AnnouncementDatamapper.updateAnnouncement(id, date_start, date_end, mobility, home, description);
+            res.status(200).json({message: 'Annonce modifiée'})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / updateAnnouncement')
+            console.error(error)
+        }
     }
 
 }
