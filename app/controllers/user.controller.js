@@ -15,7 +15,16 @@ export default {
     console.log(password);
     const hashPassword = await bcrypt.hash(password, 10);
 
-    await UserDatamapper.create(firstname, lastname, email, hashPassword, city, phoneNumber);
+  const user = {
+    firstname,
+    lastname,
+    email,
+    hashPassword,
+    city,
+    phoneNumber
+  };
+
+    await UserDatamapper.create(user);
 
     res.status(201).json({message : 'User created successfully'});
   },
