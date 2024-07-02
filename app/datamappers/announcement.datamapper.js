@@ -135,6 +135,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         }
     }
     
+
     static async deleteAnnouncementAndRelatedTypes(id) {
         await this.client.query('BEGIN');
         try {
@@ -157,4 +158,64 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         }
       }
 
+    static async create(b, id){
+        const result = await this.client.query(
+            `INSERT INTO "${this.tableName}" (date_start, date_end, mobility, home, description, user_id)
+            VALUES ($1, $2, $3, $4, $5, $6)
+            RETURNING *`
+            , [
+                b.date_start,
+                b.date_end, 
+                b.mobility,
+                b.home,
+                b.description,
+                id
+            ] 
+        )
+        return result.rows[0]
+    }
+
+    static async addAuthorizedAnimals(id, animalLabel){
+        await this.client.query(
+            `INSERT INTO "announcement_animal_type" (announcement_id, animal_type_id)
+            VALUES ($1, (
+                SELECT "animal_type"."id" 
+                FROM "animal_type" 
+                WHERE "animal_type"."label" = $2
+            ))`
+            , [
+                id,
+                animalLabel
+            ]
+        )
+    }
+
+
+
+    static async findByAuthor(authorId) {
+        try {
+            const result = await this.client.query(
+                `SELECT 
+                    "announcement"."id",
+                    "announcement"."date_start",
+                    "announcement"."date_end",
+                    "announcement"."mobility",
+                    "announcement"."home",
+                    "announcement"."description",
+                    ARRAY_AGG("animal_type"."label") AS animals
+                FROM 
+                    "${this.tableName}" 
+                JOIN 
+                    "announcement_animal_type" ON "announcement"."id" = "announcement_animal_type"."announcement_id"
+                JOIN 
+                    "animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
+                WHERE "announcement"."user_id" = $1
+                GROUP BY 
+                    "announcement"."id";`, [authorId]);
+            return result.rows[0]
+        } catch (error) {
+            console.error(`Erreur lors de la récupération de toutes les entrées du user avec l'id: ${authorId} dans la table ${this.tableName}`);
+            throw error;
+        }
+    }
 }

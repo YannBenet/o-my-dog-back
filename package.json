@@ -6,9 +6,10 @@
 	"type": "module",
 	"scripts": {
 		"dev": "node --watch index.js",
-		"createdb":"psql -U <dbusername> -d <dbname> -f ./migrations/deploy/init-migration.sql",
-		"seeding": "psql -U <dbusername> -d <dbname> -f ./data/seeding.sql",
-		"createdb:seeding" :"npm run createdb && npm run seeding"
+
+		"createdb": "psql -U <dbuser> -d <dbname> -f ./migrations/deploy/init-migration.sql",
+		"seeding": "psql -U <dbuser> -d <dbname> -f ./data/seeding.sql",
+		"createdb:seeding": "npm run createdb && npm run seeding"
 
 	},
 	"repository": {
@@ -26,6 +27,7 @@
 		"dotenv": "^16.4.5",
 		"express": "^4.19.2",
 		"joi": "^17.13.3",
+		"jsonwebtoken": "^9.0.2",
 		"pg": "^8.12.0"
 	},
 	"devDependencies": {
