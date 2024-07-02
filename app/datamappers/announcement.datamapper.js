@@ -75,6 +75,38 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
             throw error;
         }
     }
+
+    static async getOneAnnouncement(id) {
+        try {
+            const result = await this.client.query(
+                `SELECT 
+                    "announcement"."id",
+                    "announcement"."date_start",
+                    "announcement"."date_end",
+                    "announcement"."mobility",
+                    "announcement"."home",
+                    "announcement"."description",
+                    "user"."firstname",
+                    "user"."lastname",
+                    "user"."city",
+                    "user"."phone_number",
+                    "user"."email"
+                FROM 
+                    "announcement"
+                JOIN 
+                    "user" ON "announcement"."user_id" = "user"."id"
+                WHERE 
+                    "announcement"."id" = $1;`,
+                [id]
+            );
+            
+            const { rows } = result;
+            return rows[0];
+        } catch (error) {
+            console.error(`Erreur lors de la récupération de toutes les données dans la table`);
+            throw error;
+        }
+    }
     
 
 }
