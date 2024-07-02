@@ -11,7 +11,7 @@ export default class UserDatamapper extends CoreDatamapper {
       [email]
     );
 
-    return result.rows.length;
+    return result.rows;
   }
 
   static async create(firstname, lastname, email, hashPassword, city, phoneNumber){

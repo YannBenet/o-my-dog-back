@@ -31,6 +31,15 @@ Content-Type: application/json
 
 ###
 
+POST {{endpoint}}/api/users/login
+Content-Type: application/json
+
+{
+  "email": "jhon.doe@fake.net",
+  "password": "2Aa!4Zz!"
+}
+###
+
 POST {{endpoint}}/api/announcements/
 Content-Type: application/json
 
@@ -42,3 +51,4 @@ Content-Type: application/json
     "description": "PetSitting",
     "animal": ["Chien", "Chat"]
 }
+
