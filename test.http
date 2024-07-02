@@ -28,17 +28,34 @@ Content-Type: application/json
   "phoneNumber": "0610256389",
   "repeatPassword": "2Aa!4Zo!"
 }
+###
 
- ###
+
+POST {{endpoint}}/api/users/
+Content-Type: application/json
+
+{
+  "firstname": "jhin",
+  "lastname": "dou",
+  "email": "jhin.dou@fake.net",
+  "password": "2Aa!4Xx!",
+  "city": "quelquepart",
+  "phoneNumber": "0610256390",
+  "repeatPassword": "2Aa!4Xx!"
+}
+###
 
 POST {{endpoint}}/api/users/login
 Content-Type: application/json
 
 {
-  "email": "jhon.doe@fake.net",
-  "password": "2Aa!4Zz!"
+  "email": "jhin.dou@fake.net",
+  "password": "2Aa!4Xx!"
 }
+###
 
+GET {{endpoint}}/api/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2ODUsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzM2MjR9.2jh-Qfn7grDh5F0fG0G3uAhaVOYqggIr9m3IwIoo4SI
 ###
 
 
