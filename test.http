@@ -44,5 +44,9 @@ Content-Type: application/json
   "mobility" : true
 }
 
+###
+
+DELETE {{endpoint}}/api/announcements/2
+
  ###
 

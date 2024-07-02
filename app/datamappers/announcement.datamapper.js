@@ -129,5 +129,26 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         }
     }
     
+    static async deleteAnnouncementAndRelatedTypes(id) {
+        await this.client.query('BEGIN');
+        try {
+          // Delete from announcement_animal_type
+          await this.client.query(`
+            DELETE FROM "announcement_animal_type"
+            WHERE "announcement_id" = $1;
+          `, [id]);
+      
+          // Delete from announcement
+          await this.client.query(`
+            DELETE FROM "announcement"
+            WHERE "id" = $1;
+          `, [id]);
+      
+          await this.client.query('COMMIT');
+        } catch (error) {
+          await this.client.query('ROLLBACK');
+          throw error;
+        }
+      }
 
 }
