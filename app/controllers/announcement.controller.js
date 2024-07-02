@@ -22,6 +22,40 @@ export default {
         }
     },
 
+
+    async getOneAnnouncement(req, res){
+        try {
+            const { id } = req.params;
+            const announcement = await AnnouncementDatamapper.getOneAnnouncement(id);
+            res.status(200).json({announcement})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / getOneAnnouncement')
+            console.error(error)
+        }
+    },
+
+    async updateAnnouncement(req, res){
+        try {
+            const { id } = req.params;
+            const { date_start, date_end, mobility, home, description } = req.body;
+            await AnnouncementDatamapper.updateAnnouncement(id, date_start, date_end, mobility, home, description);
+            res.status(200).json({message: 'Annonce modifiée'})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / updateAnnouncement')
+            console.error(error)
+        }
+    },
+    async deleteAnnouncementAndRelatedTypes(req, res){
+        try {
+            const { id } = req.params;
+            await AnnouncementDatamapper.deleteAnnouncementAndRelatedTypes(id);
+            res.status(200).json({message: 'Annonce supprimée'})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / deleteAnnouncement')
+            console.error(error)
+        }
+    }
+
     async store(req, res){
         // TODO vérification des tokens ou de la session pour vérifier qu'un utilisateur est bien connecté avant de poster une annonce
 
