@@ -53,12 +53,11 @@ export default {
     res.status(200).json({ token });
   },
 
-  async show(req, res) {
+  async show(req, res){
     const { id } = req.params;
-    console.log(req.token);
 
     if(parseInt(id) !== req.token){
-      return res.status(403).json({ error: 'Acces forbidden' })
+      return res.status(403).json({ error: 'Access forbidden' })
     }
 
     const user = await UserDatamapper.findByPk(id);
@@ -68,5 +67,16 @@ export default {
     }
 
     res.status(200).json(user)
+  },
+
+  async destroy(req, res){
+    const { id } = req.params;
+
+    if(parseInt(id) !== req.token){
+      return res.status(403).json({ error: 'Access forbidden' })
+    }
+
+    await UserDatamapper.delete(id);
+    res.status(200).json({ message: 'User profile removed successfully' })
   }
 };

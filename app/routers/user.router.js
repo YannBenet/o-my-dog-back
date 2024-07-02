@@ -8,13 +8,24 @@ import auth from '../libraries/middlewares/auth.middleware.js';
 export const router = Router();
 
 router.route('/')
-  .post(validationMiddleware(userPostSchema, 'body'),
-  userController.store);
+  .post(
+    validationMiddleware(userPostSchema, 'body'),
+    userController.store
+  );
 
 router.route('/login')
-  .post(validationMiddleware(loginPostSchema, 'body'),
-  userController.login);
+  .post(
+    validationMiddleware(loginPostSchema, 'body'),
+    userController.login
+  );
 
 router.route('/:id(\\d+)')
-  .get(auth(), 
-  userController.show);
+  .get(
+    auth(), 
+    userController.show
+  )
+  .delete(
+    auth(),
+    userController.destroy
+  )
+
