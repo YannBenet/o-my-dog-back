@@ -8,7 +8,7 @@ export const router = Router();
 router.route('/')
     .get(announcementController.searchAnnouncement)
     .post(validationMiddleware(announcementPostSchema, 'body'),
-        announcementController.store)
+        announcementController.store);
 router.route('/highlight').get(announcementController.getHighlight);
 router.route('/:id').get(announcementController.getOneAnnouncement)
     .delete(announcementController.deleteAnnouncementAndRelatedTypes)
