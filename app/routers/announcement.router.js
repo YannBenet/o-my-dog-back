@@ -9,4 +9,5 @@ router.route('/')
     .get(announcementController.searchAnnouncement)
     .post(validationMiddleware(announcementPostSchema, 'body'),
         announcementController.store)
+
 router.route('/highlight').get(announcementController.getHighlight);

@@ -12,8 +12,7 @@ export default Joi.object({
   email: Joi.string()
     .email({ minDomainSegments: 2, tlds: { allow: false } }),
   password: Joi.string().min(8).max(64)
-    .pattern(new RegExp('^(?=.*[a-z].*[a-z])(?=.*[A-Z].*[A-Z])(?=.*\\d.*\\d)(?=.*[@$!%*?&].*[@$!%*?&])[\\w@$!%*?&]$')
-    )
+    .pattern(new RegExp('^(?=.*[a-z].*[a-z])(?=.*[A-Z].*[A-Z])(?=.*\\d.*\\d)(?=.*[@$!%*?&].*[@$!%*?&]).{8,}$'))
     .message('Password must contain at least two lowercase letters, two uppercase letters, two numbers and two special characters'),
   repeatPassword: Joi.string()
     .valid(Joi.ref('password'))

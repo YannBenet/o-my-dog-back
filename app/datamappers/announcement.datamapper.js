@@ -1,4 +1,4 @@
-import CoreDatamapper from "./core.Datamapper.js";
+import CoreDatamapper from "./core.datamapper.js";
 
 export default class AnnouncementDatamapper extends CoreDatamapper {
     static tableName = 'announcement'

@@ -10,7 +10,9 @@
 GET {{endpoint}}/api/announcements/highlight
 
 ###
+
 GET {{endpoint}}/api/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
+
 
 ###
 

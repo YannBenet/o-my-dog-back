@@ -1,9 +1,9 @@
 import bcrypt from 'bcrypt';
-import UserDatamapper from "../datamappers/user.datamapper.js";
+import { UserDatamapper } from "../datamappers/index.datamapper.js";
 
 export default {
   async store(req, res){
-    const { firstname, lastname, email, password, city, phoneNumber, repeatPassword } = req.body;
+    const { firstname, lastname, email, password, city, phoneNumber } = req.body;
 
     const emailAlreadyExists = await UserDatamapper.findByEmail(email);
 
@@ -11,9 +11,10 @@ export default {
       return res.status(409).json({ error: 'Email already exists' })
     };
 
-    const hashPassword = await bcrypt.hash(password, 10)
+    console.log(password);
+    const hashPassword = await bcrypt.hash(password, 10);
 
-    await UserDatamapper.create(firstname, lastname, email, hashPassword, city, phoneNumber, repeatPassword);
+    await UserDatamapper.create(firstname, lastname, email, hashPassword, city, phoneNumber);
 
     res.status(201).json({message : 'User created successfully'});
   }

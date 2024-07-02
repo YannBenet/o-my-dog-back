@@ -1,7 +1,4 @@
-import client from "../config/pg.client.js";
-import AnnouncementDatamapper from "../datamappers/announcement.datamapper.js";
-
-AnnouncementDatamapper.init({client})
+import { AnnouncementDatamapper } from "../datamappers/index.datamapper.js";
 
 export default {
     async getHighlight(_, res) {
