@@ -91,3 +91,7 @@ Content-Type: application/json
     "description": "PetSitting",
     "animal": ["Chien", "Chat"]
 }
+###
+
+DELETE {{endpoint}}/api/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzY1MjYsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzY0NjZ9.0ZsDWMsLk4tQ7a9zDOst-bOS3fgD6VHEIGipT1ATevQ
