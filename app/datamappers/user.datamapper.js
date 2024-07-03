@@ -29,23 +29,4 @@ export default class UserDatamapper extends CoreDatamapper {
     );
   }
 
-  static async update(id, input) {
-    const fieldPlaceholders = Object.keys(input).map((column, index) => `"${column}" = $${index + 1}`);
-    /*
-    fieldPlaceholders ==> ['"label" = $1', '"route" = $2']
-    values ==> ['Angular','/angular']
-    */
-    const values = Object.values(input);
-    const result = await this.client.query(`
-      UPDATE "${this.tableName}" SET
-        ${fieldPlaceholders},
-        updated_at = now()
-      WHERE id = $${fieldPlaceholders.length + 1}
-      RETURNING *
-    `, [
-      ...values,
-      id,
-    ]);
-    return result.rows[0];
-  }
 };

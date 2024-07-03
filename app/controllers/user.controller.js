@@ -29,7 +29,7 @@ export default {
     if (input.email) {
       const emailAlreadyExists = await UserDatamapper.findByEmail(input.email);
       if (emailAlreadyExists.length){
-        if(id !== emailAlreadyExists[0].id){
+        if(parseInt(id) !== emailAlreadyExists[0].id){
           return res.status(409).json({ error: 'Email already exists' })
         };
       }
