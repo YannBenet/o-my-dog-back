@@ -45,11 +45,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2O
 ###
 
 
-GET {{endpoint}}/api/announcements/6
+GET {{endpoint}}/api/announcements/20
 
 ###
 
-PATCH {{endpoint}}/api/announcements/6
+PATCH {{endpoint}}/api/announcements/20
 Content-Type: application/json
 
 {
@@ -62,7 +62,7 @@ Content-Type: application/json
 
 ###
 
-DELETE {{endpoint}}/api/announcements/6
+DELETE {{endpoint}}/api/announcements/20
 
 ###
 
