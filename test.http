@@ -28,6 +28,41 @@ Content-Type: application/json
   "phone_number": "0610256389",
   "repeatPassword": "2Aa!4Zo!"
 }
+###
+
+
+POST {{endpoint}}/api/users/login
+Content-Type: application/json
+
+{
+  "email": "jhin.dou@fake.net",
+  "password": "2Aa!4Xx!"
+}
+###
+
+GET {{endpoint}}/api/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2ODUsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzM2MjR9.2jh-Qfn7grDh5F0fG0G3uAhaVOYqggIr9m3IwIoo4SI
+###
+
+
+GET {{endpoint}}/api/announcements/3
+
+###
+
+PATCH {{endpoint}}/api/announcements/3
+Content-Type: application/json
+
+{
+  "date_start": "2024-11-11",
+  "date_end": "2024-11-29",
+  "description": "J'adore m'occuper des gros reptiles",
+  "home" : true,
+  "mobility" : true
+}
+
+###
+
+DELETE {{endpoint}}/api/announcements/2
 
 ###
 
@@ -56,3 +91,7 @@ Content-Type: application/json
     "description": "PetSitting",
     "animal": ["Chien", "Chat"]
 }
+###
+
+DELETE {{endpoint}}/api/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzY1MjYsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzY0NjZ9.0ZsDWMsLk4tQ7a9zDOst-bOS3fgD6VHEIGipT1ATevQ
