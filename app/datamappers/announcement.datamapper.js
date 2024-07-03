@@ -114,7 +114,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         }
     }
 
-    static async updateAnnouncement(id, date_start, date_end, mobility, home, description) {
+    static async update(id, date_start, date_end, mobility, home, description) {
         try {
             await this.client.query(
                 `UPDATE 

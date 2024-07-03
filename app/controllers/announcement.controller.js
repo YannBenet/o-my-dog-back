@@ -34,11 +34,11 @@ export default {
         }
     },
 
-    async updateAnnouncement(req, res){
+    async update(req, res){
         try {
             const { id } = req.params;
             const { date_start, date_end, mobility, home, description } = req.body;
-            await AnnouncementDatamapper.updateAnnouncement(id, date_start, date_end, mobility, home, description);
+            await AnnouncementDatamapper.update(id, date_start, date_end, mobility, home, description);
             res.status(200).json({message: 'Annonce modifiée'})
         } catch (error) {
             console.log('Erreur dans le controller announcement / updateAnnouncement')
