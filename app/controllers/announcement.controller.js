@@ -1,6 +1,43 @@
 import { AnnouncementDatamapper } from "../datamappers/index.datamapper.js";
+//! TODO remove try / catch, add next argument to method, import ApiError class and replace error message by new instance of ApiError
 
 export default {
+    
+    async findOne(req, res){
+        try {
+            const { id } = req.params;
+            const announcement = await AnnouncementDatamapper.findOne(id);
+            res.status(200).json({announcement})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / getOneAnnouncement')
+            console.error(error)
+        }
+    },
+
+    async update(req, res){
+        try {
+            const { id } = req.params;
+            const { date_start, date_end, mobility, home, description } = req.body;
+            await AnnouncementDatamapper.update(id, date_start, date_end, mobility, home, description);
+            res.status(200).json({message: 'Annonce modifiée'})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / updateAnnouncement')
+            console.error(error)
+        }
+    },
+
+    //! TODO Check if announcement exist before try to remove it
+    async delete(req, res){
+        try {
+            const { id } = req.params;
+            await AnnouncementDatamapper.delete(id);
+            res.status(200).json({message: 'Annonce supprimée'})
+        } catch (error) {
+            console.log('Erreur dans le controller announcement / deleteAnnouncement')
+            console.error(error)
+        }
+    },
+
     async getHighlight(_, res) {
         try {
             const randomAnnouncements = await AnnouncementDatamapper.highlight();
@@ -19,42 +56,6 @@ export default {
         } catch (error) {
             console.log('Erreur dans le controller announcement / getAll')
             console.error(error) 
-        }
-    },
-
-
-    async getOneAnnouncement(req, res){
-        try {
-            const { id } = req.params;
-            const announcement = await AnnouncementDatamapper.getOneAnnouncement(id);
-            res.status(200).json({announcement})
-        } catch (error) {
-            console.log('Erreur dans le controller announcement / getOneAnnouncement')
-            console.error(error)
-        }
-    },
-
-    async updateAnnouncement(req, res){
-        try {
-            const { id } = req.params;
-            const { date_start, date_end, mobility, home, description } = req.body;
-            await AnnouncementDatamapper.updateAnnouncement(id, date_start, date_end, mobility, home, description);
-            res.status(200).json({message: 'Annonce modifiée'})
-        } catch (error) {
-            console.log('Erreur dans le controller announcement / updateAnnouncement')
-            console.error(error)
-        }
-    },
-
-    //! TODO Check if announcement exist before try to remove it
-    async deleteAnnouncementAndRelatedTypes(req, res){
-        try {
-            const { id } = req.params;
-            await AnnouncementDatamapper.deleteAnnouncementAndRelatedTypes(id);
-            res.status(200).json({message: 'Annonce supprimée'})
-        } catch (error) {
-            console.log('Erreur dans le controller announcement / deleteAnnouncement')
-            console.error(error)
         }
     },
 

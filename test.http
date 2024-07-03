@@ -20,13 +20,13 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-  "firstname": "jhon",
-  "lastname": "doe",
-  "email": "jhon.doe@fake.net",
+  "firstname": "test",
+  "lastname": "test",
+  "email": "jhon.doe2@fake.net",
   "password": "2Aa!4Zz!",
   "city": "quelquepart",
-  "phoneNumber": "0610256389",
-  "repeatPassword": "2Aa!4Zo!"
+  "phone_number": "0610256380",
+  "repeatPassword": "2Aa!4Zz!"
 }
 ###
 
@@ -51,35 +51,53 @@ Content-Type: application/json
 {
   "email": "jhon.dou@fake.net",
   "password": "2Aa!4Zz!"
+  "email": "jhon.doe2@fake.net",
+  "password": "2Aa!4Zz!"
 }
 ###
 
 GET {{endpoint}}/api/users/tralala
+GET {{endpoint}}/api/users/26
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2ODUsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzM2MjR9.2jh-Qfn7grDh5F0fG0G3uAhaVOYqggIr9m3IwIoo4SI
 ###
 
 
-GET {{endpoint}}/api/announcements/3
+GET {{endpoint}}/api/announcements/20
 
 ###
 
-PATCH {{endpoint}}/api/announcements/3
+PATCH {{endpoint}}/api/announcements/20
 Content-Type: application/json
 
 {
   "date_start": "2024-11-11",
   "date_end": "2024-11-29",
-  "description": "J'adore m'occuper des gros reptiles",
+  "description": "J'adore m'occuper des gros lezards",
   "home" : true,
   "mobility" : true
 }
 
 ###
 
-DELETE {{endpoint}}/api/announcements/84
+DELETE {{endpoint}}/api/announcements/840
 
 ###
 
+PATCH {{endpoint}}/api/users/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwMDMxMDYsImRhdGEiOnsiaWQiOjI2LCJmaXJzdG5hbWUiOiJ0ZXN0IiwibGFzdG5hbWUiOiJ0ZXN0IiwiZmluZ2VycHJpbnQiOnsiaXAiOiI6OmZmZmY6MTI3LjAuMC4xIiwidXNlckFnZW50IjoidnNjb2RlLXJlc3RjbGllbnQifX0sImlhdCI6MTcyMDAwMzA0Nn0.9mEsHOPLuZkXONcTUiHM3T5AENVV-yVvD5pdrtRjytM
+
+{
+  "firstname": "PrénomTest",
+  "lastname": "NomTest",
+  "email": "test.test4@example.com",
+  "password": "2Aa!4Zz!1",
+  "city": "quelquepart",
+  "phone_number": "0610254389",
+  "repeatPassword": "2Aa!4Zz!1"
+}
+
+###
 POST {{endpoint}}/api/announcements/
 Content-Type: application/json
 

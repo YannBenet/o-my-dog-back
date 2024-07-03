@@ -17,7 +17,16 @@ export default {
 
     const hashPassword = await bcrypt.hash(password, 10);
 
-    await UserDatamapper.create(firstname, lastname, email, hashPassword, city, phoneNumber);
+  const user = {
+    firstname,
+    lastname,
+    email,
+    hashPassword,
+    city,
+    phoneNumber
+  };
+
+    await UserDatamapper.create(user);
 
     // Response
     res.status(201).json({message : 'User created successfully'});
@@ -78,8 +87,35 @@ export default {
     // Response
     res.status(200).json(user);
   },
+ 
+  async update(req, res) {
+    const { id } = req.params;
+    const input = req.body;
 
-  async destroy(req, res){
+    if(parseInt(id) !== req.token){
+      return res.status(403).json({ error: 'Access forbidden' })
+    }
+
+    if (input.email) {
+      const emailAlreadyExists = await UserDatamapper.findByEmail(input.email);
+      if (emailAlreadyExists.length){
+        if(parseInt(id) !== emailAlreadyExists[0].id){
+          return res.status(409).json({ error: 'Email already exists' })
+        };
+      }
+    }
+
+    if (input.password){
+      const hashPassword = await bcrypt.hash(input.password, 10);
+      input.password = hashPassword
+    }
+
+    delete req.body.repeatPassword;
+    const row = await UserDatamapper.update(id, input);
+    return res.json({ data: row });
+  },
+
+  async delete(req, res){
     // Check that requested informations are this user's informations
     const { id } = req.params;
 
