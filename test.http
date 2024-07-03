@@ -31,20 +31,6 @@ Content-Type: application/json
 ###
 
 
-POST {{endpoint}}/api/users/
-Content-Type: application/json
-
-{
-  "firstname": "jhin",
-  "lastname": "dou",
-  "email": "jhin.dou@fake.net",
-  "password": "2Aa!4Xx!",
-  "city": "quelquepart",
-  "phoneNumber": "0610256390",
-  "repeatPassword": "2Aa!4Xx!"
-}
-###
-
 POST {{endpoint}}/api/users/login
 Content-Type: application/json
 

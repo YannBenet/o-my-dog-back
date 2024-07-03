@@ -14,10 +14,12 @@ export default class UserDatamapper extends CoreDatamapper {
     return result.rows;
   }
 
-  static async create(firstname, lastname, email, hashPassword, city, phoneNumber){
-    await this.client.query(`
-      INSERT INTO "user" (firstname, lastname, password, email, city, phone_number)
-      VALUES ($1, $2, $3, $4, $5, $6);`
+  static async create(user){
+    const { firstname, lastname, email, hashPassword, city, phoneNumber } = user;
+    await this.client.query(
+      `INSERT INTO "user" (firstname, lastname, password, email, city, phone_number)
+      VALUES ($1, $2, $3, $4, $5, $6)`
+
       , [
         firstname,
         lastname,
