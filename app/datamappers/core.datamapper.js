@@ -7,7 +7,7 @@ export default class CoreDatamapper {
         this.client = config.client; 
     }
 
-    // ! Possiblement inutile voir s'il faut supprimer
+    // ! Possiblement inutile voir s'il faut supprimer (à aucun moment on a besoin de tout trouver) 
     // static async findAll() {
     //     try {
     //         const result  = await this.client.query(`SELECT * FROM "${this.tableName}";`)

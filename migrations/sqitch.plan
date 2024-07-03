@@ -2,3 +2,4 @@
 %project=oMyDog
 
 init-migration 2024-06-28T12:07:02Z Jérémy <jérémy@tralala.io> # Create tables for mvp version
+01-userUrlImg 2024-07-02T14:07:03Z PierreGuillard <pguillard95@gmail.com> # ajout d'une colonne url_img dans la table user
