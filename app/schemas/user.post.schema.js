@@ -2,11 +2,9 @@ import Joi from 'joi';
 
 export default Joi.object({
   firstname: Joi.string()
-    .alphanum()
     .min(3)
     .max(30),
   lastname: Joi.string()
-    .alphanum()
     .min(3)
     .max(30),
   email: Joi.string()
@@ -18,7 +16,7 @@ export default Joi.object({
     .valid(Joi.ref('password'))
     .messages({ 'any.only': 'Passwords must be the same' }),
   city: Joi.string().min(2),
-  phoneNumber: Joi.string().max(13)
+  phone_number: Joi.string().max(13)
     .pattern(new RegExp('^[0-9+]+$'))
     .message('Incorrect phone number'),
 });

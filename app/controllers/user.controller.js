@@ -102,6 +102,7 @@ export default {
     delete req.body.repeatPassword;
     const row = await UserDatamapper.update(id, input);
     return res.json({ data: row });
+  },
 
   async destroy(req, res){
     const { id } = req.params;
