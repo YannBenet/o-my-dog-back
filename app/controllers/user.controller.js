@@ -12,7 +12,6 @@ export default {
       return res.status(409).json({ error: 'Email already exists' })
     };
 
-    console.log(password);
     const hashPassword = await bcrypt.hash(password, 10);
 
   const user = {
@@ -77,6 +76,32 @@ export default {
 
     res.status(200).json(user)
   },
+ 
+  async update(req, res) {
+    const { id } = req.params;
+    const input = req.body;
+
+    if(parseInt(id) !== req.token){
+      return res.status(403).json({ error: 'Access forbidden' })
+    }
+
+    if (input.email) {
+      const emailAlreadyExists = await UserDatamapper.findByEmail(input.email);
+      if (emailAlreadyExists.length){
+        if(parseInt(id) !== emailAlreadyExists[0].id){
+          return res.status(409).json({ error: 'Email already exists' })
+        };
+      }
+    }
+
+    if (input.password){
+      const hashPassword = await bcrypt.hash(input.password, 10);
+      input.password = hashPassword
+    }
+
+    delete req.body.repeatPassword;
+    const row = await UserDatamapper.update(id, input);
+    return res.json({ data: row });
 
   async destroy(req, res){
     const { id } = req.params;

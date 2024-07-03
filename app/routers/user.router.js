@@ -2,8 +2,11 @@ import { Router } from 'express';
 import userController from '../controllers/user.controller.js';
 import validationMiddleware from '../libraries/middlewares/validation.middleware.js';
 import userPostSchema from '../schemas/user.post.schema.js';
+
+import userUpdateSchema from '../schemas/user.update.schema.js';
 import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
+
 
 export const router = Router();
 
@@ -28,4 +31,7 @@ router.route('/:id(\\d+)')
     auth(),
     userController.destroy
   )
-
+  .patch(
+    auth(),
+    validationMiddleware(userUpdateSchema, 'body'),
+    userController.update)

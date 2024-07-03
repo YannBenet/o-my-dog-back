@@ -25,7 +25,7 @@ Content-Type: application/json
   "email": "jhon.doe@fake.net",
   "password": "2Aa!4Zz!",
   "city": "quelquepart",
-  "phoneNumber": "0610256389",
+  "phone_number": "0610256389",
   "repeatPassword": "2Aa!4Zo!"
 }
 ###
@@ -66,6 +66,20 @@ DELETE {{endpoint}}/api/announcements/2
 
 ###
 
+PATCH {{endpoint}}/api/users/1
+Content-Type: application/json
+
+{
+  "firstname": "PrénomTest",
+  "lastname": "NomTest",
+  "email": "test.test@example.com",
+  "password": "2Aa!4Zz!1",
+  "city": "quelquepart",
+  "phone_number": "0610256389",
+  "repeatPassword": "2Aa!4Zz!1"
+}
+
+###
 POST {{endpoint}}/api/announcements/
 Content-Type: application/json
 
