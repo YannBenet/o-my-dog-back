@@ -76,7 +76,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         }
     }
 
-    static async getOneAnnouncement(id) {
+    static async findOne(id) {
         try {
             const result = await this.client.query(
                 `SELECT
@@ -114,7 +114,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         }
     }
 
-    static async updateAnnouncement(id, date_start, date_end, mobility, home, description) {
+    static async update(id, date_start, date_end, mobility, home, description) {
         try {
             await this.client.query(
                 `UPDATE 
@@ -136,7 +136,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
     }
     
 
-    static async deleteAnnouncementAndRelatedTypes(id) {
+    static async delete(id) {
         await this.client.query('BEGIN');
         try {
           // Delete from announcement_animal_type
