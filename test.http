@@ -45,11 +45,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2O
 ###
 
 
-GET {{endpoint}}/api/announcements/3
+GET {{endpoint}}/api/announcements/6
 
 ###
 
-PATCH {{endpoint}}/api/announcements/3
+PATCH {{endpoint}}/api/announcements/6
 Content-Type: application/json
 
 {

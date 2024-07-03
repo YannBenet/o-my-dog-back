@@ -76,7 +76,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         }
     }
 
-    static async getOneAnnouncement(id) {
+    static async findByPk(id) {
         try {
             const result = await this.client.query(
                 `SELECT

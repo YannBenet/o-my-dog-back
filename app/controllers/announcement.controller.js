@@ -23,10 +23,10 @@ export default {
     },
 
 
-    async getOneAnnouncement(req, res){
+    async show(req, res){
         try {
             const { id } = req.params;
-            const announcement = await AnnouncementDatamapper.getOneAnnouncement(id);
+            const announcement = await AnnouncementDatamapper.findByPk(id);
             res.status(200).json({announcement})
         } catch (error) {
             console.log('Erreur dans le controller announcement / getOneAnnouncement')
