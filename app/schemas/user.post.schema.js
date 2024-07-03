@@ -2,11 +2,9 @@ import Joi from 'joi';
 
 export default Joi.object({
   firstname: Joi.string()
-    .alphanum()
     .min(3)
     .max(30),
   lastname: Joi.string()
-    .alphanum()
     .min(3)
     .max(30),
   email: Joi.string()

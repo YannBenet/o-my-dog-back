@@ -4,28 +4,29 @@ import validationMiddleware from '../libraries/middlewares/validation.middleware
 import userPostSchema from '../schemas/user.post.schema.js';
 import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
+import cw from '../libraries/middlewares/controllerWrapper.middleware.js'
 
 export const router = Router();
 
-router.route('/')
+router.route('/signin')
   .post(
     validationMiddleware(userPostSchema, 'body'),
-    userController.store
+    cw(userController.store)
   );
 
 router.route('/login')
   .post(
     validationMiddleware(loginPostSchema, 'body'),
-    userController.login
+    cw(userController.login)
   );
 
 router.route('/:id(\\d+)')
   .get(
     auth(), 
-    userController.show
+    cw(userController.show)
   )
   .delete(
     auth(),
-    userController.destroy
-  )
+    cw(userController.destroy)
+  );
 

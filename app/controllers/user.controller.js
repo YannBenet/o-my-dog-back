@@ -1,32 +1,37 @@
 import bcrypt from 'bcrypt';
 import jwtService from '../libraries/helpers/jwt.services.js';
 import { UserDatamapper } from "../datamappers/index.datamapper.js";
+import ApiError from '../libraries/errors/api.error.js';
 
 export default {
-  async store(req, res){
+  async store(req, res, next){
+    // Get user's informations from request
     const { firstname, lastname, email, password, city, phoneNumber } = req.body;
 
+    // Check informations and add user in database
     const emailAlreadyExists = await UserDatamapper.findByEmail(email);
 
     if(emailAlreadyExists.length){
-      return res.status(409).json({ error: 'Email already exists' })
+      return next(new ApiError('Email already exists', { status: 409 }))
     };
 
-    console.log(password);
     const hashPassword = await bcrypt.hash(password, 10);
 
     await UserDatamapper.create(firstname, lastname, email, hashPassword, city, phoneNumber);
 
+    // Response
     res.status(201).json({message : 'User created successfully'});
   },
 
-  async login(req, res){
+  async login(req, res, next){
+    // Get login informations from request
     const { email, password } = req.body;
 
+    // Check login informations
     const user = await UserDatamapper.findByEmail(email);
 
     if(!user.length){
-      return res.status(401).json({ error: 'Incorrect email or password'});
+      return next(new ApiError('Incorrect email or password', { status: 401 }))
     }
 
     const passwordValidation = await bcrypt.compare(
@@ -35,13 +40,14 @@ export default {
     );
 
     if(!passwordValidation){
-      return res.status(401).json({ error: 'Incorrect email or password'});
+      return next(new ApiError('Incorrect email or password', { status: 401 }))
     }
 
+    // Create JWT and load it with user's informations
     const fingerprint = {
       ip: req.ip,
       userAgent: req.headers['user-agent']
-    }
+    };
 
     const token = await jwtService.createToken({
       id: user[0].id,
@@ -50,33 +56,41 @@ export default {
       fingerprint
     });
 
+    // Response
     res.status(200).json({ token });
   },
 
   async show(req, res){
+    // Check that requested informations are this user's informations
     const { id } = req.params;
 
     if(parseInt(id) !== req.token){
-      return res.status(403).json({ error: 'Access forbidden' })
+      return next(new ApiError('Access forbidden', { status: 403 }))
     }
 
+    // Get user's informations from database
     const user = await UserDatamapper.findByPk(id);
 
     if(!user){
-      return res.status(404).json({ error: 'User not found' })
+      return next(new ApiError('User not found', { status: 404 }))
     }
 
-    res.status(200).json(user)
+    // Response
+    res.status(200).json(user);
   },
 
   async destroy(req, res){
+    // Check that requested informations are this user's informations
     const { id } = req.params;
 
     if(parseInt(id) !== req.token){
-      return res.status(403).json({ error: 'Access forbidden' })
+      return next(new ApiError('Access forbidden', { status: 403 }))
     }
 
+    // Delete user in database
     await UserDatamapper.delete(id);
-    res.status(200).json({ message: 'User profile removed successfully' })
+
+    // Response
+    res.status(200).json({ message: 'User profile removed successfully' });
   }
 };

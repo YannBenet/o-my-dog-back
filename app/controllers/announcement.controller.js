@@ -45,6 +45,8 @@ export default {
             console.error(error)
         }
     },
+
+    //! TODO Check if announcement exist before try to remove it
     async deleteAnnouncementAndRelatedTypes(req, res){
         try {
             const { id } = req.params;
