@@ -45,10 +45,10 @@ export default {
             console.error(error)
         }
     },
-    async deleteAnnouncementAndRelatedTypes(req, res){
+    async delete(req, res){
         try {
             const { id } = req.params;
-            await AnnouncementDatamapper.deleteAnnouncementAndRelatedTypes(id);
+            await AnnouncementDatamapper.delete(id);
             res.status(200).json({message: 'Annonce supprimée'})
         } catch (error) {
             console.log('Erreur dans le controller announcement / deleteAnnouncement')

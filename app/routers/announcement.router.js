@@ -12,5 +12,5 @@ router.route('/highlight')
     .get(announcementController.getHighlight);
 router.route('/:id')
     .get(announcementController.show)
-    .delete(announcementController.deleteAnnouncementAndRelatedTypes)
+    .delete(announcementController.delete)
     .patch(announcementController.update);

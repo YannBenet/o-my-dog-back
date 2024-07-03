@@ -62,7 +62,7 @@ Content-Type: application/json
 
 ###
 
-DELETE {{endpoint}}/api/announcements/2
+DELETE {{endpoint}}/api/announcements/6
 
 ###
 

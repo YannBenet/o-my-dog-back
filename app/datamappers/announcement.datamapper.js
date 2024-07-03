@@ -136,7 +136,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
     }
     
 
-    static async deleteAnnouncementAndRelatedTypes(id) {
+    static async delete(id) {
         await this.client.query('BEGIN');
         try {
           // Delete from announcement_animal_type
