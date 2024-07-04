@@ -3,7 +3,4 @@ node_modules
 sqitch.conf
 logfile
 test.http
-docker-compose.yml
-Dockerfile
 .dockerignore
-/testDocker
