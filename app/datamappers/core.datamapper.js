@@ -1,11 +1,11 @@
 export default class CoreDatamapper {
-    // TODO => Supprimer les tryCatch pour remplacer par un mw de gestion d'erreur (à implémenter dans le routeur)
+  // TODO => Supprimer les tryCatch pour remplacer par un mw de gestion d'erreur (à implémenter dans le routeur)
 
-    static tableName = null;
+  static tableName = null;
 
-    static init(config) {
-        this.client = config.client; 
-    }
+  static init(config) {
+    this.client = config.client; 
+  }
 
     // ! Possiblement inutile voir s'il faut supprimer (à aucun moment on a besoin de tout trouver) 
     // static async findAll() {
@@ -31,22 +31,37 @@ export default class CoreDatamapper {
     //         }
     //     }
 
-    static async update(id, input) {
-        const fieldPlaceholders = Object.keys(input).map((column, index) => `"${column}" = $${index + 1}`);
+  static async update(id, input) {
+    const fieldPlaceholders = Object.keys(input).map((column, index) => `"${column}" = $${index + 1}`);
         /*
         fieldPlaceholders ==> ['"label" = $1', '"route" = $2']
         */
-        const values = Object.values(input);
-        const result = await this.client.query(`
-          UPDATE "${this.tableName}" SET
-            ${fieldPlaceholders},
-            updated_at = now()
-          WHERE id = $${fieldPlaceholders.length + 1}
-          RETURNING *
-        `, [
-          ...values,
-          id,
-        ]);
-        return result.rows[0];
-      }
+    const values = Object.values(input);
+    const result = await this.client.query(`
+      UPDATE "${this.tableName}" 
+      SET ${fieldPlaceholders}, updated_at = now()
+      WHERE id = $${fieldPlaceholders.length + 1}
+      RETURNING *
+      `, [
+        ...values,
+        id,
+      ]);
+      return result.rows[0];
+    }
+  
+  static async findOne(column, data){
+    console.log("entré dans le datamapper");
+    const result = await this.client.query(`
+      SELECT *
+      FROM "${this.tableName}"
+      WHERE ${column} = $1
+      `, [
+        data
+      ]);
+      console.log("datamapper check");
+      return result.rows;
+  }
+
+  
+
 }

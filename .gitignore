@@ -6,3 +6,4 @@ test.http
 docker-compose.yml
 Dockerfile
 .dockerignore
+/testDocker
