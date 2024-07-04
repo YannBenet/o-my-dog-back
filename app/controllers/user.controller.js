@@ -116,7 +116,7 @@ export default {
     await UserDatamapper.update(id, input);
     
     // Response
-    return res.status(200).json({ message: 'User\'s data updated' });
+    return res.status(200).json({ message: 'User\'s data updated successfully' });
   },
 
   
