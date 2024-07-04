@@ -69,7 +69,7 @@ export default {
     res.status(200).json({ token });
   },
 
-  async show(req, res){
+  async show(req, res, next){
     // Check that requested informations are this user's informations
     const { id } = req.params;
 
@@ -115,7 +115,7 @@ export default {
     return res.json({ data: row });
   },
 
-  async delete(req, res){
+  async delete(req, res, next){
     // Check that requested informations are this user's informations
     const { id } = req.params;
 
