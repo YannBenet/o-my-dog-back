@@ -20,13 +20,13 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-  "firstname": "test",
-  "lastname": "test",
-  "email": "jhon.doe3@fake.net",
-  "password": "2Aa!4Zz!",
-  "city": "quelquepart",
-  "phone_number": "0612256380",
-  "repeatPassword": "2Aa!4Zz!"
+  "firstname": "Joker",
+  "lastname": "Joker",
+  "email": "Joker4@anonyme.bat",
+  "password": "uuUU**00",
+  "city": "Gotham City",
+  "phone_number": "0612256383",
+  "repeatPassword": "uuUU**00"
 }
 ###
 

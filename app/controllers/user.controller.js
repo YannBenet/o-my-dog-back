@@ -6,25 +6,31 @@ import ApiError from '../libraries/errors/api.error.js';
 export default {
   async store(req, res, next){
     // Get user's informations from request
-    const { firstname, lastname, email, password, city, phoneNumber } = req.body;
+    const { firstname, lastname, email, password, city, phone_number } = req.body;
 
     // Check data and add user in database
-    const emailAlreadyExists = await UserDatamapper.findByEmail(email);
-
+    const emailAlreadyExists = await UserDatamapper.findOne("email", email);
     if(emailAlreadyExists.length){
-      return next(new ApiError('Email already exists', { status: 409 }))
-    };
+      return next(new ApiError('Email already exists', { status: 409 }));
+    }
+
+    if(phone_number){
+      const phoneAlreadyExists = await UserDatamapper.findOne("phone_number", phone_number)
+      if(phoneAlreadyExists.length){
+        return next(new ApiError('Phone number already exists', { status: 409 }));
+      }
+    }
 
     const hashPassword = await bcrypt.hash(password, 10);
 
-  const user = {
-    firstname,
-    lastname,
-    email,
-    hashPassword,
-    city,
-    phoneNumber
-  };
+    const user = {
+      firstname,
+      lastname,
+      email,
+      hashPassword,
+      city,
+      phone_number
+    };
 
     await UserDatamapper.create(user);
 

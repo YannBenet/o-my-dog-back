@@ -14,7 +14,8 @@ export default Joi.object({
     .message('Password must contain at least two lowercase letters, two uppercase letters, two numbers and two special characters'),
   repeatPassword: Joi.string()
     .valid(Joi.ref('password'))
-    .messages({ 'any.only': 'Passwords must be the same' }),
+    .messages({ 'any.only': 'Passwords must be the same' })
+    .required(),
   city: Joi.string().min(2),
   phone_number: Joi.string().max(13)
     .pattern(new RegExp('^[0-9+]+$'))
