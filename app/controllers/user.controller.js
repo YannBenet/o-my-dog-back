@@ -119,6 +119,7 @@ export default {
     return res.status(200).json({ message: 'User\'s data updated' });
   },
 
+  
   async delete(req, res, next){
     // Check that requested informations are this user's informations
     const { id } = req.params;

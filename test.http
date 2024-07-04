@@ -22,26 +22,11 @@ Content-Type: application/json
 {
   "firstname": "test",
   "lastname": "test",
-  "email": "jhon.doe2@fake.net",
+  "email": "jhon.doe3@fake.net",
   "password": "2Aa!4Zz!",
   "city": "quelquepart",
-  "phone_number": "0610256380",
+  "phone_number": "0612256380",
   "repeatPassword": "2Aa!4Zz!"
-}
-###
-
-
-POST {{endpoint}}/api/users/signin
-Content-Type: application/json
-
-{
-  "firstname": "jhin",
-  "lastname": "dou",
-  "email": "jh0n.doe@fake.net",
-  "password": "2Aa!4Xx!",
-  "city": "quelquepart",
-  "phoneNumber": "0610256390",
-  "repeatPassword": "2Aa!4Xx!"
 }
 ###
 
@@ -49,9 +34,7 @@ POST {{endpoint}}/api/users/login
 Content-Type: application/json
 
 {
-  "email": "jhon.dou@fake.net",
-  "password": "2Aa!4Zz!"
-  "email": "jhon.doe2@fake.net",
+  "email": "jhon.doe3@fake.net",
   "password": "2Aa!4Zz!"
 }
 ###
@@ -85,7 +68,7 @@ DELETE {{endpoint}}/api/announcements/840
 
 PATCH {{endpoint}}/api/users/2
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwMDMxMDYsImRhdGEiOnsiaWQiOjI2LCJmaXJzdG5hbWUiOiJ0ZXN0IiwibGFzdG5hbWUiOiJ0ZXN0IiwiZmluZ2VycHJpbnQiOnsiaXAiOiI6OmZmZmY6MTI3LjAuMC4xIiwidXNlckFnZW50IjoidnNjb2RlLXJlc3RjbGllbnQifX0sImlhdCI6MTcyMDAwMzA0Nn0.9mEsHOPLuZkXONcTUiHM3T5AENVV-yVvD5pdrtRjytM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwNzkwNDQsImRhdGEiOnsiaWQiOjI3LCJmaXJzdG5hbWUiOiJ0ZXN0IiwibGFzdG5hbWUiOiJ0ZXN0IiwiZmluZ2VycHJpbnQiOnsiaXAiOiI6OmZmZmY6MTI3LjAuMC4xIiwidXNlckFnZW50IjoidnNjb2RlLXJlc3RjbGllbnQifX0sImlhdCI6MTcyMDA3ODk4M30.h3qZzpNzSyH6IBlh5MsIw5DBt4EbCGFDCO60ZEGWbe8
 
 {
   "firstname": "PrénomTest",
