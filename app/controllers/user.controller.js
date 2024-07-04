@@ -8,7 +8,7 @@ export default {
     // Get user's informations from request
     const { firstname, lastname, email, password, city, phoneNumber } = req.body;
 
-    // Check informations and add user in database
+    // Check data and add user in database
     const emailAlreadyExists = await UserDatamapper.findByEmail(email);
 
     if(emailAlreadyExists.length){
@@ -52,7 +52,7 @@ export default {
       return next(new ApiError('Incorrect email or password', { status: 401 }))
     }
 
-    // Create JWT and load it with user's informations
+    // Create JWT and load it with user's data
     const fingerprint = {
       ip: req.ip,
       userAgent: req.headers['user-agent']
@@ -69,8 +69,8 @@ export default {
     res.status(200).json({ token });
   },
 
-  async show(req, res){
-    // Check that requested informations are this user's informations
+  async show(req, res, next){
+    // Check that requested data are this user's data
     const { id } = req.params;
 
     if(parseInt(id) !== req.token){
@@ -88,19 +88,21 @@ export default {
     res.status(200).json(user);
   },
  
-  async update(req, res) {
+  async update(req, res, next) {
+    // Check that requested data are this user's data
     const { id } = req.params;
     const input = req.body;
 
     if(parseInt(id) !== req.token){
-      return res.status(403).json({ error: 'Access forbidden' })
+      return next(new ApiError('Access forbidden', { status: 403 }))
     }
 
+    // Check if data and update it in database
     if (input.email) {
       const emailAlreadyExists = await UserDatamapper.findByEmail(input.email);
       if (emailAlreadyExists.length){
         if(parseInt(id) !== emailAlreadyExists[0].id){
-          return res.status(409).json({ error: 'Email already exists' })
+          return next(new ApiError('Email already exists', { status: 409 }))
         };
       }
     }
@@ -111,11 +113,13 @@ export default {
     }
 
     delete req.body.repeatPassword;
-    const row = await UserDatamapper.update(id, input);
-    return res.json({ data: row });
+    await UserDatamapper.update(id, input);
+    
+    // Response
+    return res.status(200).json({ message: 'User\'s data updated' });
   },
 
-  async delete(req, res){
+  async delete(req, res, next){
     // Check that requested informations are this user's informations
     const { id } = req.params;
 
