@@ -1,3 +1,5 @@
+import logger from '../helpers/logger.services.js';
+
 export default  (err, req, res, next) => {
 
   if(err.name === 'ValidationError'){
@@ -10,6 +12,7 @@ export default  (err, req, res, next) => {
   }
 
   if(err.status === 500){
+    logger.error(err);
     err.message = 'Internal server error';
   }
 

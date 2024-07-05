@@ -9,13 +9,13 @@ export default {
     const { firstname, lastname, email, password, city, phone_number } = req.body;
 
     // Check data and add user in database
-    const emailAlreadyExists = await UserDatamapper.findOne("email", email);
+    const emailAlreadyExists = await UserDatamapper.findOne('email', email);
     if(emailAlreadyExists.length){
       return next(new ApiError('Email already exists', { status: 409 }));
     }
 
     if(phone_number){
-      const phoneAlreadyExists = await UserDatamapper.findOne("phone_number", phone_number)
+      const phoneAlreadyExists = await UserDatamapper.findOne('phone_number', phone_number)
       if(phoneAlreadyExists.length){
         return next(new ApiError('Phone number already exists', { status: 409 }));
       }
@@ -43,7 +43,7 @@ export default {
     const { email, password } = req.body;
 
     // Check login informations
-    const user = await UserDatamapper.findByEmail(email);
+    const user = await UserDatamapper.findOne('email', email);
 
     if(!user.length){
       return next(new ApiError('Incorrect email or password', { status: 401 }))
