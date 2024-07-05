@@ -108,14 +108,14 @@ export default {
       const emailAlreadyExists = await UserDatamapper.findByEmail(input.email);
       if (emailAlreadyExists.length){
         if(parseInt(id) !== emailAlreadyExists[0].id){
-          return next(new ApiError('Email already exists', { status: 409 }))
-        };
+          return next(new ApiError('Email already exists', { status: 409 }));
+        }
       }
     }
 
     if (input.password){
       const hashPassword = await bcrypt.hash(input.password, 10);
-      input.password = hashPassword
+      input.password = hashPassword;
     }
 
     delete req.body.repeatPassword;

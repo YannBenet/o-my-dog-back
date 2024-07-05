@@ -20,12 +20,12 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-  "firstname": "Joker",
-  "lastname": "Joker",
-  "email": "Joker4@anonyme.bat",
-  "password": "uuUU**00",
+  "firstname": "Han",
+  "lastname": "Quinn",
+  "email": "batou@anonyme.bat",
+  # "password": "uuUU**00",
   "city": "Gotham City",
-  "phone_number": "0612256383",
+  "phone_number": "0612256378",
   "repeatPassword": "uuUU**00"
 }
 ###
@@ -39,7 +39,6 @@ Content-Type: application/json
 }
 ###
 
-GET {{endpoint}}/api/users/tralala
 GET {{endpoint}}/api/users/26
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2ODUsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzM2MjR9.2jh-Qfn7grDh5F0fG0G3uAhaVOYqggIr9m3IwIoo4SI
 ###
