@@ -125,7 +125,7 @@ export default {
     return res.status(200).json({ message: 'User\'s data updated successfully' });
   },
 
-  
+    //? TODO Necessité de vérifier si l'utilisateur existe avant de la supprimer au cas où l'id transmis par le front serait faux ?
   async delete(req, res, next){
     // Check that requested informations are this user's informations
     const { id } = req.params;

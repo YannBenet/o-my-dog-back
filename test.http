@@ -34,8 +34,8 @@ POST {{endpoint}}/api/users/login
 Content-Type: application/json
 
 {
-  "email": "jhon.doe3@fake.net",
-  "password": "2Aa!4Zz!"
+  "email": "batou@anonyme.bat",
+  "password": "uuUU**00"
 }
 ###
 
@@ -44,7 +44,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2O
 ###
 
 
-GET {{endpoint}}/api/announcements/20
+GET {{endpoint}}/api/announcements/4
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAyMDM4NjMsImRhdGEiOnsiaWQiOjExLCJmaXJzdG5hbWUiOiJIYXJsZXkiLCJsYXN0bmFtZSI6IlF1aW5uIiwiZmluZ2VycHJpbnQiOnsiaXAiOiI6OmZmZmY6MTI3LjAuMC4xIiwidXNlckFnZW50IjoidnNjb2RlLXJlc3RjbGllbnQifX0sImlhdCI6MTcyMDIwMDI2Mn0.wkeCQHKEpdjZhP8Nh_SadnS0O0KRF1puCofwDQZNwKU
 
 ###
 
@@ -80,7 +82,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwNzkwN
 }
 
 ###
-POST {{endpoint}}/api/announcements/
+POST {{endpoint}}/api/announcements/users/11
 Content-Type: application/json
 
 {
