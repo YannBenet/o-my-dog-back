@@ -20,10 +20,10 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-  "firstname": "Han",
+  "firstname": "Harley",
   "lastname": "Quinn",
   "email": "batou@anonyme.bat",
-  # "password": "uuUU**00",
+  "password": "uuUU**00",
   "city": "Gotham City",
   "phone_number": "0612256378",
   "repeatPassword": "uuUU**00"
