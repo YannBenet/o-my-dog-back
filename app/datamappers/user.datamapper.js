@@ -31,6 +31,17 @@ export default class UserDatamapper extends CoreDatamapper {
     return result.rows[0]; 
   }
 
+  static async findOne(column, data){
+    const result = await this.client.query(`
+      SELECT *
+      FROM "user"
+      WHERE ${column} = $1
+      `, [
+        data
+      ]);
+      return result.rows;
+  }
+
   static async delete(id){
     await this.client.query(`
       DELETE

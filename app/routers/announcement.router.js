@@ -37,7 +37,7 @@ router.route('/')
     cw(announcementController.searchAnnouncement)
   );
 
-router.route('/announcement/users:id(\\d+)')
+router.route('/users/:id(\\d+)')
   /**
    * POST /api/announcements/users/id
    * @summary Post an announcement (need to be connected)
