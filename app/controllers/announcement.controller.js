@@ -36,7 +36,7 @@ export default {
     await AnnouncementDatamapper.update(id, date_start, date_end, mobility, home, description);
 
     // Response
-    res.status(200).json({message: 'Annonce modifiée'});
+    res.status(200).json({message: 'Announcement updated successfully'});
   },
 
   //? TODO Necessité de vérifier si l'annonce existe avant de la supprimer au cas où l'id transmis par le front serait faux ?
