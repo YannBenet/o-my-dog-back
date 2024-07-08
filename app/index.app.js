@@ -2,6 +2,7 @@ import express from 'express';
 import cors from "cors";
 
 import { router } from './routers/index.router.js';
+import docMiddleware from './libraries/middlewares/doc.middleware.js';
 
 const corsOptions = {
     origin: process.env.FRONT_URL,
@@ -13,6 +14,8 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+docMiddleware(app)
 
 app.use(cors(corsOptions));
 app.use(router);

@@ -6,24 +6,30 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
     static async highlight() {
         const result  = await this.client.query(
             `SELECT 
-                "user"."id", 
-                "user"."firstname", 
-                "user"."lastname", 
-                "user"."email", 
-                "user"."city", 
-                "user"."phone_number",
                 "announcement"."id" AS "announcement_id", 
                 "announcement"."date_start", 
                 "announcement"."date_end", 
                 "announcement"."mobility", 
                 "announcement"."home", 
-                "announcement"."description"
+                "announcement"."description",
+                "user"."id" as "user_id", 
+                "user"."firstname", 
+                "user"."lastname", 
+                "user"."city", 
+                ARRAY_AGG("animal_type"."label") AS animals
             FROM 
                 "announcement"
             JOIN 
                 "user" ON "announcement"."user_id" = "user"."id"
+            JOIN 
+                "announcement_animal_type" ON "announcement"."id" = "announcement_animal_type"."announcement_id"
+            JOIN 
+                "animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
+            GROUP BY 
+                "announcement"."id",
+                "user"."id"
             ORDER BY RANDOM()
-            LIMIT 5;`
+            LIMIT 8;`
         )
         const { rows } = result; 
         return rows
