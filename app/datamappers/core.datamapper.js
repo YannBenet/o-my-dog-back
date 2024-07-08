@@ -48,20 +48,4 @@ export default class CoreDatamapper {
       ]);
       return result.rows[0];
     }
-  
-  static async findOne(column, data){
-    console.log("entré dans le datamapper");
-    const result = await this.client.query(`
-      SELECT *
-      FROM "${this.tableName}"
-      WHERE ${column} = $1
-      `, [
-        data
-      ]);
-      console.log("datamapper check");
-      return result.rows;
-  }
-
-  
-
 }
