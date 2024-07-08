@@ -30,7 +30,8 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                 "user"."id"
             ORDER BY RANDOM()
             LIMIT 8;`
-        )
+        );
+
         const { rows } = result; 
         return rows
     }
@@ -148,7 +149,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
           await this.client.query('ROLLBACK');
           throw error;
         }
-      }
+    }
 
     static async create(data, id){
         const result = await this.client.query(
@@ -163,10 +164,12 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                 data.description,
                 id
             ] 
-        )
+        );
+
         return result.rows[0]
     }
 
+    //? Pas necessaire ?
     static async addAuthorizedAnimals(id, animalLabel){
         await this.client.query(
             `INSERT INTO "announcement_animal_type" (announcement_id, animal_type_id)
@@ -179,7 +182,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                 id,
                 animalLabel
             ]
-        )
+        );
     }
 
     static async findByAuthor(authorId) {
@@ -201,6 +204,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
             WHERE "announcement"."user_id" = $1
             GROUP BY 
                 "announcement"."id";`, [authorId]);
+                
         return result.rows[0]
     }
 }
