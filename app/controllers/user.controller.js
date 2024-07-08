@@ -106,7 +106,7 @@ export default {
     if (input.email) {
       const emailAlreadyExists = await UserDatamapper.findOne("email", input.email);
       if(emailAlreadyExists.length){
-        if (id !== emailAlreadyExists.id) {
+        if (parseInt(id) !== emailAlreadyExists.id) {
           return next(new ApiError('Email already exists', { status: 409 }));
         }
       }
@@ -115,7 +115,7 @@ export default {
     if(input.phone_number){
       const phoneAlreadyExists = await UserDatamapper.findOne("phone_number", input.phone_number)
       if(phoneAlreadyExists.length){
-        if (id !== phoneAlreadyExists.id) {
+        if (parseInt(id) !== phoneAlreadyExists.id) {
           return next(new ApiError('Phone number already exists', { status: 409 }));
         }
       }
