@@ -2,6 +2,7 @@
 
 BEGIN;
 
-ALTER TABLE "user" REMOVE COLUMN department;
+ALTER TABLE "user" 
+DROP COLUMN "department_label";
 
 COMMIT;

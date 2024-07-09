@@ -1,4 +1,4 @@
--- Deploy oMyDog:01-init-migration to pg
+-- Deploy oMyDog:init-migration to pg
 
 BEGIN;
 

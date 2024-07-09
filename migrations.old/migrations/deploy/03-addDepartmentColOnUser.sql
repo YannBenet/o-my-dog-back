@@ -2,6 +2,6 @@
 
 BEGIN;
 
-ALTER TABLE "user" ADD COLUMN "department_label" text;
+ALTER TABLE "user" ADD COLUMN department_label text;
 
 COMMIT;

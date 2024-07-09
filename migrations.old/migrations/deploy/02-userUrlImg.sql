@@ -1,4 +1,4 @@
--- Deploy oMyDog:02-userUrlImg to pg
+-- Deploy oMyDog:01-userUrlImg to pg
 
 BEGIN;
 
