@@ -43,7 +43,6 @@ export default {
     const { email, password } = req.body;
 
     // Check login informations
-
     const user = await UserDatamapper.findOne('email', email);
 
     if(!user.length){
@@ -65,15 +64,21 @@ export default {
       userAgent: req.headers['user-agent']
     };
 
-    const token = await jwtService.createToken({
+    const { accessToken, refreshToken } = await jwtService.createTokens({
       id: user[0].id,
       firstname: user[0].firstname,
-      lastname: user[0].lastname,
       fingerprint
+    });
+    //! TODO modifier secure: false par secure: true quand l'appli sera en https
+    res.cookie('refreshToken', refreshToken, { 
+      httpOnly: true,
+      secure: false,
+      sameSite: 'Strict',
+      maxAge:  7 * 86400000
     });
 
     // Response
-    res.status(200).json({ token });
+    res.status(200).json({ accessToken });
   },
 
   async show(req, res, next){

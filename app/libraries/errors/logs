@@ -1,0 +1,626 @@
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:68:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T12:51:56.370Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:70:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T12:54:22.167Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:72:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T12:57:45.074Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:72:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T12:59:08.363Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:01:25.277Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:02:55.455Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:04:08.262Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:05:32.442Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:06:35.005Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:07:01.796Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:40:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:15:55.946Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:41:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:18:43.002Z'
+}
+{
+  length: 134,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « 0 » de la relation « user » n'existe pas",
+  stack: "error: la colonne « 0 » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:43:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:22:24.588Z'
+}
+{
+  length: 145,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
+  status: 500,
+  level: 'error',
+  message: "la colonne « refreshToken » de la relation « user » n'existe pas",
+  stack: "error: la colonne « refreshToken » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:43:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:19:5)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:37)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-09T13:29:01.966Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:171:19\n' +
+    '    at getSecret (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:97:14)\n' +
+    '    at module.exports [as verify] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:101:10)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:8:28\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)',
+  timestamp: '2024-07-09T13:57:17.835Z'
+}
+{
+  level: 'error',
+  message: "Cannot access 'refreshToken' before initialization",
+  stack: "ReferenceError: Cannot access 'refreshToken' before initialization\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:32:46\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:280:10)',
+  timestamp: '2024-07-09T14:19:27.514Z'
+}
+{
+  level: 'error',
+  message: "Cannot access 'refreshToken' before initialization",
+  stack: "ReferenceError: Cannot access 'refreshToken' before initialization\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:32:46\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:280:10)',
+  timestamp: '2024-07-09T14:21:34.204Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:25:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:65\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-09T14:30:45.971Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:26:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:65\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-09T14:32:16.731Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:26:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:65\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-09T14:33:31.945Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:26:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:65\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-09T14:34:05.226Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:26:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:65\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-09T14:34:49.067Z'
+}
+{
+  level: 'error',
+  message: 'Invalid refresh token',
+  stack: 'Error: Invalid refresh token\n' +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:30:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:47',
+  timestamp: '2024-07-09T14:38:36.768Z'
+}
+{
+  level: 'error',
+  message: 'Invalid refresh token',
+  stack: 'Error: Invalid refresh token\n' +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:31:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:47',
+  timestamp: '2024-07-09T14:40:16.571Z'
+}
+{
+  level: 'error',
+  message: 'Invalid refresh token',
+  stack: 'Error: Invalid refresh token\n' +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:31:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:47',
+  timestamp: '2024-07-09T14:41:53.977Z'
+}
+{
+  level: 'error',
+  message: 'createToken is not defined',
+  stack: 'ReferenceError: createToken is not defined\n' +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:34:20)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:47',
+  timestamp: '2024-07-09T14:44:13.665Z'
+}
+{
+  level: 'error',
+  message: 'createTokens is not defined',
+  stack: 'ReferenceError: createTokens is not defined\n' +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:34:20)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:47',
+  timestamp: '2024-07-09T14:45:43.892Z'
+}
+{
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2024-07-09T14:43:17.000Z,
+  level: 'error',
+  stack: 'TokenExpiredError: jwt expired\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:190:21\n' +
+    '    at getSecret (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:97:14)\n' +
+    '    at module.exports [as verify] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:101:10)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:8:28\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)',
+  timestamp: '2024-07-09T14:46:54.154Z'
+}

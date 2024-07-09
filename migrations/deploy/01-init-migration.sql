@@ -11,11 +11,12 @@ CHECK (value ~ '^(0|\+33|0033)[1-9][0-9]{8}$');
 CREATE TABLE "user" (
     "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "firstname" text NOT NULL,
-    "lastname" text NOT NULL,
+    "lastname" text,
     "password" text NOT NULL,
     "email" email NOT NULL UNIQUE,
     "city" text NOT NULL,
     "phone_number" phone_number UNIQUE,
+    "refresh_token" text,
     "created_at" timestamptz NOT NULL DEFAULT now(), 
     "updated_at" timestamptz
 );

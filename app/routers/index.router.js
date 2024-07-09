@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { router as announcementRouter } from './announcement.router.js';
 import { router as userRouter } from './user.router.js';
-import ApiError from '../libraries/errors/api.error.js'
+import ApiError from '../libraries/errors/api.error.js';
 import errorHandler from '../libraries/middlewares/errorhandler.middleware.js'
 
 export const router = Router();
