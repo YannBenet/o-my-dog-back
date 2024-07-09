@@ -2,6 +2,6 @@
 
 BEGIN;
 
-SELECT "department_label" FROM "USER" WHERE "department_label" IS NULL;
+SELECT "department_label" FROM "user" WHERE "department_label" IS NULL;
 
 ROLLBACK;
