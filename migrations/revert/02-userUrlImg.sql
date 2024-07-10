@@ -1,4 +1,4 @@
--- Revert oMyDog:01-userUrlImg from pg
+-- Revert oMyDog:02-userUrlImg from pg
 
 BEGIN;
 

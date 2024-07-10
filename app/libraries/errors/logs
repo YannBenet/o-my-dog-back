@@ -1,0 +1,30 @@
+{
+  length: 321,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '23502',
+  detail: 'La ligne en échec contient (1, null, 1, 2024-07-10 09:27:50.638484+02, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'announcement_animal_type',
+  column: 'animal_type_id',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '1968',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'une valeur NULL viole la contrainte NOT NULL de la colonne « animal_type_id » dans la relation « announcement_animal_type »',
+  stack: 'error: une valeur NULL viole la contrainte NOT NULL de la colonne « animal_type_id » dans la relation « announcement_animal_type »\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.addAuthorizedAnimals (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:147:5)\n' +
+    '    at async store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:94:7)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T07:27:50.641Z'
+}

@@ -1,7 +1,8 @@
 import CoreDatamapper from "./core.datamapper.js";
 
 export default class AnnouncementDatamapper extends CoreDatamapper {
-    static tableName = 'announcement'
+  static tableName = 'announcement'
+
 
     static async highlight() {
         const result  = await this.client.query(
@@ -32,158 +33,131 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
             LIMIT 8;`
         );
 
-        const { rows } = result; 
-        return rows
+      const { rows } = result; 
+      return rows
     }
 
-    static async searchAnnouncement(filters) {
-        const { city, date_start, date_end, animal_label } = filters;
+  static async searchAnnouncement(filters) {
+    const { city, date_start, date_end, animal_label } = filters;
 
-        const result = await this.client.query(
-            `SELECT 
-                "announcement"."id",
-                "announcement"."date_start",
-                "announcement"."date_end",
-                "announcement"."mobility",
-                "announcement"."home",
-                "announcement"."description",
-                "user"."firstname",
-                "user"."lastname",
-                "user"."city",
-                "animal_type"."label"
-            FROM 
-                "announcement"
-            JOIN 
-                "user" ON "announcement"."user_id" = "user"."id"
-            JOIN 
-                "announcement_animal_type" ON "announcement"."id" = "announcement_animal_type"."announcement_id"
-            JOIN 
-                "animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
-            WHERE 
-                "user"."city" = $1
-                AND "announcement"."date_start" >= $2
-                AND "announcement"."date_end" <= $3
-                AND "animal_type"."label" = $4;`,
-            [city, date_start, date_end, animal_label]
-        );
+    const result = await this.client.query(
+      `SELECT 
+        "announcement"."id",
+        "announcement"."date_start",
+        "announcement"."date_end",
+        "announcement"."mobility",
+        "announcement"."home",
+        "announcement"."description",
+        "user"."firstname",
+        "user"."lastname",
+        "user"."city",
+        "animal_type"."label"
+      FROM 
+        "announcement"
+      JOIN 
+        "user" ON "announcement"."user_id" = "user"."id"
+      JOIN 
+        "announcement_animal_type" ON "announcement"."id" = "announcement_animal_type"."announcement_id"
+      JOIN 
+        "animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
+      WHERE 
+        "user"."city" = $1
+        AND "announcement"."date_start" >= $2
+        AND "announcement"."date_end" <= $3
+        AND "animal_type"."label" = $4;`,
+      [city, date_start, date_end, animal_label]
+    );
         
-        const { rows } = result;
-        return rows;
-    }
+    const { rows } = result;
+    return rows;
+  }
 
-    static async findByPk(id) {
-        const result = await this.client.query(
-            `SELECT
-                "announcement"."id",
-                "announcement"."date_start",
-                "announcement"."date_end",
-                "announcement"."mobility",
-                "announcement"."home",
-                "announcement"."description",
-                "user"."firstname",
-                "user"."lastname",
-                "user"."city",
-                "user"."phone_number",
-                "user"."email",
-                ARRAY_AGG("animal_type"."label") AS animal_label
-            FROM
-                "announcement"
-            JOIN
-                "user" ON "announcement"."user_id" = "user"."id"
-            LEFT JOIN
-                "announcement_animal_type" ON "announcement"."id" = "announcement_animal_type"."announcement_id"
-            LEFT JOIN
-                "animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
-            WHERE
-                "announcement"."id" = $1
-            GROUP BY
-                "announcement"."id",
-                "user"."firstname",
-                "user"."lastname",
-                "user"."city",
-                "user"."phone_number",
-                "user"."email";
-                `,
-            [id]
-        );
+  static async findByPk(id) {
+    const result = await this.client.query(
+      `SELECT
+        "announcement"."id",
+        "announcement"."date_start",
+        "announcement"."date_end",
+        "announcement"."mobility",
+        "announcement"."home",
+        "announcement"."description",
+        "user"."firstname",
+        "user"."lastname",
+        "user"."city",
+        "user"."phone_number",
+        "user"."email",
+        ARRAY_AGG("animal_type"."label") AS animal_label
+      FROM
+        "announcement"
+      JOIN
+        "user" ON "announcement"."user_id" = "user"."id"
+      LEFT JOIN
+        "announcement_animal_type" ON "announcement"."id" = "announcement_animal_type"."announcement_id"
+      LEFT JOIN
+        "animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
+      WHERE
+        "announcement"."id" = $1
+      GROUP BY
+        "announcement"."id",
+        "user"."firstname",
+        "user"."lastname",
+        "user"."city",
+        "user"."phone_number",
+        "user"."email";
+        `,
+      [id]
+    );
         
-        const { rows } = result;
-        return rows[0];
-    }
-
-    //? Utilité de cette fonction compte tenu de celle existant dans le core.datamapper ?
-    static async update(id, date_start, date_end, mobility, home, description) {
-        await this.client.query(
-            `UPDATE 
-                "announcement"
-            SET 
-                "date_start" = $1,
-                "date_end" = $2,
-                "mobility" = $3,
-                "home" = $4,
-                "description" = $5
-            WHERE 
-                "id" = $6;`,
-            [date_start, date_end, mobility, home, description, id]
-        );
-    }
+    const { rows } = result;
+    return rows[0];
+  }
     
-    //? Besoin d'expliquation sur celle ci avant de virer les try/catch
-    static async delete(id) {
-        await this.client.query('BEGIN');
-        try {
-          // Delete from announcement_animal_type
-          await this.client.query(`
-            DELETE FROM "announcement_animal_type"
-            WHERE "announcement_id" = $1;
-          `, [id]);
+  static async delete(id) {
+    // Delete from announcement_animal_type
+    await this.client.query(`
+      DELETE FROM "announcement_animal_type"
+      WHERE "announcement_id" = $1;
+    `, [id]);
       
-          // Delete from announcement
-          await this.client.query(`
-            DELETE FROM "announcement"
-            WHERE "id" = $1;
-          `, [id]);
-      
-          await this.client.query('COMMIT');
-        } catch (error) {
-          await this.client.query('ROLLBACK');
-          throw error;
-        }
-    }
+    // Delete from announcement
+    await this.client.query(`
+      DELETE FROM "announcement"
+      WHERE "id" = $1;
+    `, [id]);
+  }
 
-    static async create(data, id){
-        const result = await this.client.query(
-            `INSERT INTO "${this.tableName}" (date_start, date_end, mobility, home, description, user_id)
-            VALUES ($1, $2, $3, $4, $5, $6)
-            RETURNING *`
-            , [
-                data.date_start,
-                data.date_end, 
-                data.mobility,
-                data.home,
-                data.description,
-                id
-            ] 
-        );
+  static async create(data, id){
+    const result = await this.client.query(
+      `INSERT INTO "${this.tableName}" (date_start, date_end, mobility, home, description, user_id)
+      VALUES ($1, $2, $3, $4, $5, $6)
+      RETURNING *`
+      , [
+        data.date_start,
+        data.date_end, 
+        data.mobility,
+        data.home,
+        data.description,
+        id
+      ] 
+    );
 
-        return result.rows[0]
-    }
+    return result.rows[0]
+  }
 
-    //? Pas necessaire ?
-    static async addAuthorizedAnimals(id, animalLabel){
-        await this.client.query(
-            `INSERT INTO "announcement_animal_type" (announcement_id, animal_type_id)
-            VALUES ($1, (
-                SELECT "animal_type"."id" 
-                FROM "animal_type" 
-                WHERE "animal_type"."label" = $2
-            ))`
-            , [
-                id,
-                animalLabel
-            ]
-        );
-    }
+  static async addAuthorizedAnimals(id, animalLabel){
+    await this.client.query(
+      `INSERT INTO "announcement_animal_type" (announcement_id, animal_type_id)
+      VALUES ($1, (
+        SELECT "animal_type"."id" 
+        FROM "animal_type" 
+        WHERE "animal_type"."label" = $2
+      ))`
+      , [
+        id,
+        animalLabel
+      ]
+    );
+  }
 
     static async findByAuthor(authorId) {
         const result = await this.client.query(

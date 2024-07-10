@@ -1,4 +1,3 @@
-import { log } from "console";
 import { AnnouncementDatamapper } from "../datamappers/index.datamapper.js";
 import ApiError from "../libraries/errors/api.error.js";
 

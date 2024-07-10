@@ -1,4 +1,4 @@
--- Verify oMyDog:init-migration on pg
+-- Verify oMyDog:01-init-migration on pg
 
 BEGIN;
 

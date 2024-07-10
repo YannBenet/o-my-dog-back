@@ -1,4 +1,4 @@
--- Revert oMyDog:init-migration from pg
+-- Revert oMyDog:01-init-migration from pg
 
 BEGIN;
 

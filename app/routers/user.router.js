@@ -5,7 +5,7 @@ import userPostSchema from '../schemas/user.post.schema.js';
 import userUpdateSchema from '../schemas/user.update.schema.js';
 import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
-import cw from '../libraries/middlewares/controllerWrapper.middleware.js'
+import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
 
 
 export const router = Router();

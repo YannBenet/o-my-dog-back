@@ -3,7 +3,7 @@ import announcementController from '../controllers/announcement.controller.js';
 import validationMiddleware from '../libraries/middlewares/validation.middleware.js';
 import announcementPostSchema from '../schemas/announcement.schema.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
-import auth from '../libraries/middlewares/auth.middleware.js'
+import auth from '../libraries/middlewares/auth.middleware.js';
 
 export const router = Router();
 
@@ -37,7 +37,7 @@ router.route('/')
     cw(announcementController.searchAnnouncement)
   );
 
-router.route('/announcement/users:id(\\d+)')
+router.route('/users/:id(\\d+)')
   /**
    * POST /api/announcements/users/id
    * @summary Post an announcement (need to be connected)

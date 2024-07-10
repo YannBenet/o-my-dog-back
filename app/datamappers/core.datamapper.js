@@ -7,17 +7,13 @@ export default class CoreDatamapper {
     this.client = config.client; 
   }
 
-    // ! Possiblement inutile voir s'il faut supprimer (à aucun moment on a besoin de tout trouver) 
-    // static async findAll() {
-    //     try {
-    //         const result  = await this.client.query(`SELECT * FROM "${this.tableName}";`)
-    //         const { rows } = result; 
-    //         return rows
-    //     } catch (error) {
-    //         console.error(`Erreur lors de la récupération de toutes les données dans la table ${this.tableName}`);
-    //         throw error;
-    //     }
-    // }
+  static async findAll() {
+    // Request
+    const result  = await this.client.query(`SELECT * FROM "${this.tableName}";`)
+
+    // Return results
+    return result.rows
+  }
 
 
     //     static async findByPk(id) {
@@ -48,20 +44,4 @@ export default class CoreDatamapper {
       ]);
       return result.rows[0];
     }
-  
-  static async findOne(column, data){
-    console.log("entré dans le datamapper");
-    const result = await this.client.query(`
-      SELECT *
-      FROM "${this.tableName}"
-      WHERE ${column} = $1
-      `, [
-        data
-      ]);
-      console.log("datamapper check");
-      return result.rows;
-  }
-
-  
-
 }
