@@ -89,3 +89,10 @@
  * @property {string[]} animals - authorized animal's label
  */
 
+/**
+ * AnimalTypesResponse object
+ * @typedef {object} AnimalTypesResponse
+ * @property {integer} id - Id of animal types
+ * @property {string} label - Label of animal types
+ */
+
