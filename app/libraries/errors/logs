@@ -28,3 +28,453 @@
     '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
   timestamp: '2024-07-10T07:27:50.641Z'
 }
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.highlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:7:21)\n' +
+    '    at async getHighlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:58:33)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T08:37:36.875Z'
+}
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.highlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:7:21)\n' +
+    '    at async getHighlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:58:33)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T08:37:36.892Z'
+}
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.highlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:7:21)\n' +
+    '    at async getHighlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:58:33)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T08:37:51.480Z'
+}
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.highlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:7:21)\n' +
+    '    at async getHighlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:58:33)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T08:37:51.485Z'
+}
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.highlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:7:21)\n' +
+    '    at async getHighlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:58:33)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:03:20.258Z'
+}
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.highlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:7:21)\n' +
+    '    at async getHighlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:58:33)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:03:35.638Z'
+}
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.searchAnnouncement (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:42:20)\n' +
+    '    at async searchAnnouncement (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:69:30)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:05:34.733Z'
+}
+{
+  length: 100,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table announcement',
+  stack: 'error: permission denied for table announcement\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AnnouncementDatamapper.highlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:7:21)\n' +
+    '    at async getHighlight (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:58:33)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:05:39.048Z'
+}
+{
+  length: 99,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2807',
+  routine: 'aclcheck_error',
+  status: 500,
+  level: 'error',
+  message: 'permission denied for table animal_type',
+  stack: 'error: permission denied for table animal_type\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.findAll (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:12:21)\n' +
+    '    at async index (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/animal.controller.js:5:21)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:05:53.617Z'
+}
+{
+  length: 374,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (26, Harley, Quinn, $2b$10$i2pb2zTVuvggrz/xku074.W07RN6DfbxNKcH8VEUfMutudx8Isdc2, batou@anonyme.bat, Poissy, 0612256378, 2024-07-10 11:40:54.31072+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:40:54.326Z'
+}
+{
+  length: 375,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (27, Harley, Quinn, $2b$10$fLFsLUDUhANxT2arVFh.3uHMWsw.bhSOqoDN3bJheaOiMcVy.9ny2, batou@anonyme.bat, Poissy, 0612256378, 2024-07-10 11:41:09.629589+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:41:09.636Z'
+}
+{
+  length: 375,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (28, Harley, Quinn, $2b$10$xZeXM9waS3g6QZvrprncqucM8t3cEmyNA/6Q1aDptN0QVLmPUNZz2, batou@anonyme.bat, Poissy, 0612256378, 2024-07-10 11:42:22.900219+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:42:22.904Z'
+}
+{
+  length: 374,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (29, Harley, Quinn, $2b$10$3e1DSyD5zFQ6FFAkAmqFY.BqiCPjo7/Ck1DhO.rFvzETDUtFYtRQa, batou@anonyme.bat, Poissy, 0612256378, 2024-07-10 11:43:15.20642+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:43:15.209Z'
+}
+{
+  length: 375,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (30, Harley, Quinn, $2b$10$tv.mdrqTml00drChdP8/euigTXN9F1BHW.tBKhpnstiJ9Y6hlj33W, batou@anonyme.bat, Poissy, 0612256378, 2024-07-10 11:44:22.216626+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T09:44:22.219Z'
+}
+{
+  length: 372,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (32, Harley, Quinn, $2b$10$OJQ5qyF6nJYmwNmz8tcbBOpZaYBSQfL0A8RRPDTheMSy4EuFW7.YC, batou@anonyme.bat, Poi, 0612256378, 2024-07-10 13:21:27.867764+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-10T11:21:27.877Z'
+}

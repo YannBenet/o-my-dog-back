@@ -6,6 +6,7 @@ import userUpdateSchema from '../schemas/user.update.schema.js';
 import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
+import compareCityDepartmentMiddleware from '../libraries/middlewares/compareCityDepartment.middleware.js';
 
 
 export const router = Router();
@@ -40,6 +41,7 @@ router.route('/signin')
  */
   .post(
     validationMiddleware(userPostSchema, 'body'),
+    compareCityDepartmentMiddleware(),
     cw(userController.store)
   );
 

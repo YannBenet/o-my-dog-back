@@ -22,7 +22,7 @@ Content-Type: application/json
   "lastname": "Quinn",
   "email": "batou@anonyme.bat",
   "password": "uuUU**00",
-  "city": "Gotham City",
+  "city": "houlgate",
   "phone_number": "0612256378",
   "repeatPassword": "uuUU**00"
 }
