@@ -1,18 +1,19 @@
 @endpoint=http://localhost:{{$dotenv PORT}}
-@city=city=Lyon
-@date_start=date_start=2023-11-11
-@date_end=date_end=2025-11-29
-@animal_label=animal_label=Poisson rouge
+@department_label=department_label=var
+@date_start=date_start=2024-07-20
+@date_end=date_end=2025-07-29
+@animal_label=animal_label=Chien
 
 
 GET {{endpoint}}/api/announcements/highlight
 
 ###
 
-GET {{endpoint}}/api/announcements?{{city}}&{{date_start}}&{{date_end}}&{{animal_label}}
+GET {{endpoint}}/api/announcements?{{department_label}}&{{date_start}}&{{date_end}}&{{animal_label}}
 
 
 ###
+GET {{endpoint}/api/announcements}
 
 POST {{endpoint}}/api/users/signin
 Content-Type: application/json
@@ -20,11 +21,12 @@ Content-Type: application/json
 {
   "firstname": "Harley",
   "lastname": "Quinn",
-  "email": "batou@anonyme.bat",
+  "email": "harley.quinn@ajokerteam.gc",
   "password": "uuUU**00",
   "city": "Gotham City",
   "phone_number": "0612256378",
-  "repeatPassword": "uuUU**00"
+  "repeatPassword": "uuUU**00",
+  "department_label": "var"
 }
 ###
 
@@ -80,13 +82,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwNzkwN
 }
 
 ###
-POST {{endpoint}}/api/announcements/users/1
+POST {{endpoint}}/api/announcements/users/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA2MDAwMzIsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImxhc3RuYW1lIjoiUXVpbm4iLCJmaW5nZXJwcmludCI6eyJpcCI6Ijo6ZmZmZjoxMjcuMC4wLjEiLCJ1c2VyQWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCJ9fSwiaWF0IjoxNzIwNTk2NDMxfQ.lHLS2GKcc9qQP6OYph4OjxRAWFTQYqB47UWdvG7ygu8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA2NDM0ODksImRhdGEiOnsiaWQiOjMsImZpcnN0bmFtZSI6IkhhcmxleSIsImxhc3RuYW1lIjoiUXVpbm4iLCJmaW5nZXJwcmludCI6eyJpcCI6Ijo6ZmZmZjoxMjcuMC4wLjEiLCJ1c2VyQWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCJ9fSwiaWF0IjoxNzIwNjM5ODg4fQ.-OmXxwbqRoGS6BM8yAYFTgG2_gZycxIO7DA1RVGNaRc
 
 {
     "date_start": "2024-07-20",
-    "date_end": "2024-07-30",
+    "date_end": "2025-07-30",
     "mobility": true,
     "home": false,
     "description": "PetSitting",

@@ -42,7 +42,7 @@ export default Joi.object({
     .message('City must be a string'),
   phone_number: 
     Joi.string().max(13),
-  department_label : 
+  department_label: 
     Joi.string().min(3)
     .required()
     .messages({ 'any.required': 'Department_label is required' }),

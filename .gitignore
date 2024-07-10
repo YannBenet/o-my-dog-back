@@ -5,3 +5,5 @@ logfile
 test.http
 .dockerignore
 TODO.md
+app/static
+app/controllers/main.controller.js

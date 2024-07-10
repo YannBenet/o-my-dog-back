@@ -64,6 +64,7 @@ export default {
   async searchAnnouncement(req, res){
     // Get data from query
     const data = req.query
+    console.log(data);
 
     // Get data from database
     const allAnnouncements = await AnnouncementDatamapper.searchAnnouncement(data);
