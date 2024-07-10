@@ -1,5 +1,5 @@
-// export default {
-//     index(_, res) {
-//         res.send('index.html');
-//     }
-// };
+export default {
+    index(req, res) {
+        res.sendFile('index.html');
+    }
+};
