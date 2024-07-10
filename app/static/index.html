@@ -6,23 +6,48 @@
 </head>
 <body>
   <h1>WebSocket Test</h1>
+  <button id="joinRoomButton">Join Room</button> <!-- Bouton pour rejoindre une salle -->
+  <input id="messageInput" type="text" placeholder="Type a message"> <!-- Champ de texte pour taper un message -->
+  <button id="sendMessageButton">Send Message</button> <!-- Bouton pour envoyer un message -->
+  <div id="chatBox"></div> <!-- Div pour afficher les messages du chat -->
+
   <script src="/socket.io/socket.io.js"></script>
   <script>
+    // Initialise la connexion au serveur WebSocket
     const socket = io('http://localhost:5000');
 
-    // Connect to WebSocket server
+    // Écoute l'événement de connexion
     socket.on('connect', () => {
       console.log('Connected to WebSocket server');
 
-      // Simulate joining a room
-      socket.emit('joinRoom', { userId1: 'userA', userId2: 'userB' });
+      // Ajoute un écouteur d'événement au bouton "Join Room"
+      document.getElementById('joinRoomButton').addEventListener('click', () => {
+        const data = { idA: 1, idB: 2 }; // Simule les données des utilisateurs
+        console.log('Envoi des données:', data);
+        socket.emit('joinRoom', data); // Émet l'événement 'joinRoom' avec les données des utilisateurs
+      });
 
-      // Listen for any messages from the server
+      // Ajoute un écouteur d'événement au bouton "Send Message"
+      document.getElementById('sendMessageButton').addEventListener('click', () => {
+        const message = document.getElementById('messageInput').value; // Récupère le message tapé par l'utilisateur
+        const room = 'useruserA - useruserB'; // Nom de la salle (doit correspondre au format utilisé sur le back-end)
+        socket.emit('sendMessage', { room, message }); // Émet l'événement 'sendMessage' avec le message et le nom de la salle
+      });
+
+      // Écoute l'événement 'receiveMessage' pour recevoir les messages du serveur
+      socket.on('receiveMessage', (data) => {
+        const { message, clientId } = data; // Déstructure les données reçues
+        const chatBox = document.getElementById('chatBox'); // Récupère la div pour afficher les messages
+        // Ajoute le message reçu au chatBox
+        chatBox.innerHTML += `<p><strong>${clientId}:</strong> ${message}</p>`;
+      });
+
+      // Écoute l'événement 'message' (générique) pour afficher les messages du serveur
       socket.on('message', (data) => {
         console.log('Message from server:', data);
       });
 
-      // Handle disconnection
+      // Écoute l'événement de déconnexion
       socket.on('disconnect', () => {
         console.log('Disconnected from WebSocket server');
       });
