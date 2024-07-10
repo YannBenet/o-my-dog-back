@@ -6,7 +6,7 @@ import ApiError from '../libraries/errors/api.error.js';
 export default {
   async store(req, res, next){
     // Get user's informations from request
-    const { firstname, lastname, email, password, city, phone_number } = req.body;
+    const { firstname, lastname, email, password, city, phone_number, department_label } = req.body;
 
     // Check data and add user in database
     const emailAlreadyExists = await UserDatamapper.findOne('email', email);
@@ -29,7 +29,8 @@ export default {
       email,
       hashPassword,
       city,
-      phone_number
+      phone_number,
+      department_label
     };
 
     await UserDatamapper.create(user);
