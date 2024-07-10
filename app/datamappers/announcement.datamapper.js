@@ -179,4 +179,4 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         "announcement"."id";`, [authorId]);
     return result.rows[0]
   }
-}
+};

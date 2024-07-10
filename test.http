@@ -32,7 +32,7 @@ POST {{endpoint}}/api/users/login
 Content-Type: application/json
 
 {
-  "email": "batou@anonyme.bat",
+  "email": "harley.quinn@ajokerteam.gc",
   "password": "uuUU**00"
 }
 ###
@@ -80,8 +80,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwNzkwN
 }
 
 ###
-POST {{endpoint}}/api/announcements/users/11
+POST {{endpoint}}/api/announcements/users/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA2MDAwMzIsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImxhc3RuYW1lIjoiUXVpbm4iLCJmaW5nZXJwcmludCI6eyJpcCI6Ijo6ZmZmZjoxMjcuMC4wLjEiLCJ1c2VyQWdlbnQiOiJ2c2NvZGUtcmVzdGNsaWVudCJ9fSwiaWF0IjoxNzIwNTk2NDMxfQ.lHLS2GKcc9qQP6OYph4OjxRAWFTQYqB47UWdvG7ygu8
 
 {
     "date_start": "2024-07-20",
@@ -95,3 +96,6 @@ Content-Type: application/json
 
 DELETE {{endpoint}}/api/users/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzY1MjYsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzY0NjZ9.0ZsDWMsLk4tQ7a9zDOst-bOS3fgD6VHEIGipT1ATevQ
+###
+
+GET {{endpoint}}/api/animals/
