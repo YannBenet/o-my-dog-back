@@ -16,7 +16,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         "user"."firstname", 
         "user"."lastname", 
         "user"."city", 
-        ARRAY_AGG("animal_type"."label") AS animals
+        ARRAY_AGG("animal_type"."label") AS animal_label
       FROM 
         "announcement"
       JOIN 
@@ -50,7 +50,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         "user"."firstname",
         "user"."lastname",
         "user"."city",
-        "animal_type"."label"
+        ARRAY_AGG("animal_type"."label") AS animal_label
       FROM 
         "announcement"
       JOIN 
@@ -63,7 +63,9 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
         "user"."city" = $1
         AND "announcement"."date_start" >= $2
         AND "announcement"."date_end" <= $3
-        AND "animal_type"."label" = $4;`,
+        AND "animal_type"."label" = $4
+      GROUP BY
+        "announcement"."id";`,
       [city, date_start, date_end, animal_label]
     );
         
