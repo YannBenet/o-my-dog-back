@@ -21,9 +21,7 @@ export default Joi.object({
     Joi.string()
     .email({ minDomainSegments: 2, tlds: { allow: false } })
     .required()
-    .messages({
-      'any.required': 'Email is required',
-    }),
+    .messages({ 'any.required': 'Email is required' }),
   password: 
     Joi.string()
     .min(8)
@@ -43,7 +41,13 @@ export default Joi.object({
     Joi.string().min(2)
     .message('City must be a string'),
   phone_number: 
+    Joi.string().max(13),
+  department_label : 
+    Joi.string().min(3)
+    .required()
+    .messages({ 'any.required': 'Department_label is required' }),
+  phone_number: 
     Joi.string().max(13)
     .pattern(new RegExp('^[0-9+]+$'))
-    .message('Incorrect phone number'),
+    .message('Incorrect phone number')
 });
