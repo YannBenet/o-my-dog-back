@@ -16,7 +16,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                 "user"."firstname", 
                 "user"."lastname", 
                 "user"."city", 
-                ARRAY_AGG("animal_type"."label") AS animals
+                ARRAY_AGG("animal_type"."label") AS animal_label
             FROM 
                 "announcement"
             JOIN 
@@ -194,7 +194,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                 "announcement"."mobility",
                 "announcement"."home",
                 "announcement"."description",
-                ARRAY_AGG("animal_type"."label") AS animals
+                ARRAY_AGG("animal_type"."label") AS animal_label
             FROM 
                 "${this.tableName}" 
             JOIN 

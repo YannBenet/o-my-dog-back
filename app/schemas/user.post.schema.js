@@ -36,6 +36,8 @@ export default Joi.object({
     .messages({ 'any.only': 'Passwords must be the same' }),
   city: Joi.string().min(2)
     .message('City must be a string'),
+  department_label : Joi.string().min(3)
+  .message('Department_label is empty'),
   phone_number: Joi.string().max(13)
     .pattern(new RegExp('^[0-9+]+$'))
     .message('Incorrect phone number'),
