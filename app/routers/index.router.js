@@ -17,7 +17,7 @@ router.use('/api/animals', animalRouter);
 router.use('/api/departments', departmentRouter);
 
 router.use((_, res, next) => {
-  next(new ApiError('Ressource not found', {status: 404}));
+  next(new ApiError('Ressource not found', { status: 404 }));
 });
 
 router.use(errorHandler);

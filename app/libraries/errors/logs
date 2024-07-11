@@ -82,3 +82,193 @@
   constraint: undefined,
 
 }
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:11:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:16:11.472Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:11:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:16:59.255Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'name')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'name')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:11:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:21:03.302Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot access 'data' before initialization",
+  stack: "ReferenceError: Cannot access 'data' before initialization\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:9:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:24:57.348Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:26:36.883Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:29\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:27:56.667Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:37\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:29:38.366Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:37\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:30:16.501Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:32:48.767Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:33:20.078Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:16:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:34:28.178Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:16:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:36:08.790Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:16:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:38:34.801Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:17:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:46:06.930Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:17:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:46:55.033Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: 'Invalid city name or no exact match found.',
+  stack: 'Error: Invalid city name or no exact match found.\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:47:34.562Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: 'Invalid city name or no exact match found.',
+  stack: 'Error: Invalid city name or no exact match found.\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:50:48.039Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: 'Invalid city name or no exact match found.',
+  stack: 'Error: Invalid city name or no exact match found.\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:52:47.454Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: 'Invalid city name or no exact match found.',
+  stack: 'Error: Invalid city name or no exact match found.\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T10:58:55.349Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:33\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T11:04:08.739Z'
+}
+{
+  name: undefined,
+  status: 400,
+  level: 'error',
+  message: 'Invalid city name or no exact match found.',
+  stack: 'Error: Invalid city name or no exact match found.\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:15\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T11:44:26.879Z'
+}
