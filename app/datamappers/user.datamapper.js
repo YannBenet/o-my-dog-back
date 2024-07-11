@@ -23,7 +23,7 @@ export default class UserDatamapper extends CoreDatamapper {
 
   static async findByPk(id){
     const result = await this.client.query(`
-      SELECT firstname, lastname, email, city, phone_number
+      SELECT firstname, lastname, email, city, phone_number, department_label
       FROM "user" 
       WHERE id = $1;`,
       [id]

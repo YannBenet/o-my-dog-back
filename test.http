@@ -19,6 +19,7 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
+
   "firstname": "Harley",
   "lastname": "Quinn",
   "email": "harley.quinn@ajokerteam.gc",
@@ -27,6 +28,7 @@ Content-Type: application/json
   "phone_number": "0612256378",
   "repeatPassword": "uuUU**00",
   "department_label": "var"
+
 }
 ###
 
@@ -67,18 +69,19 @@ DELETE {{endpoint}}/api/announcements/840
 
 ###
 
-PATCH {{endpoint}}/api/users/2
+PATCH {{endpoint}}/api/users/44
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwNzkwNDQsImRhdGEiOnsiaWQiOjI3LCJmaXJzdG5hbWUiOiJ0ZXN0IiwibGFzdG5hbWUiOiJ0ZXN0IiwiZmluZ2VycHJpbnQiOnsiaXAiOiI6OmZmZmY6MTI3LjAuMC4xIiwidXNlckFnZW50IjoidnNjb2RlLXJlc3RjbGllbnQifX0sImlhdCI6MTcyMDA3ODk4M30.h3qZzpNzSyH6IBlh5MsIw5DBt4EbCGFDCO60ZEGWbe8
 
 {
-  "firstname": "PrénomTest",
-  "lastname": "NomTest",
-  "email": "test.test4@example.com",
-  "password": "2Aa!4Zz!1",
-  "city": "quelquepart",
-  "phone_number": "0610254389",
-  "repeatPassword": "2Aa!4Zz!1"
+  "firstname": "Robert",
+  "lastname": "Patulacci",
+  "email": "yannbenet@test.com",
+  "password": "aaAA!!00",
+  "city": "poissy",
+  "phone_number": "0612256344",
+  "repeatPassword": "aaAA!!00",
+  "department_label": "yvelines"
 }
 
 ###

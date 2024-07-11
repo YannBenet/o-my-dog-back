@@ -47,5 +47,6 @@ export default Joi.object({
   phone_number: 
     Joi.string().max(13)
     .pattern(new RegExp('^[0-9+]+$'))
-    .message('Incorrect phone number')
+    .message('Incorrect phone number'),
+
 });
