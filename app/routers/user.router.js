@@ -139,5 +139,6 @@ router.route('/:id(\\d+)')
   .patch(
     auth(),
     validationMiddleware(userUpdateSchema, 'body'),
+    compareCityDepartmentMiddleware(),
     cw(userController.update)
   )

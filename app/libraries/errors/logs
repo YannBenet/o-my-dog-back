@@ -478,3 +478,382 @@
     '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
   timestamp: '2024-07-10T11:21:27.877Z'
 }
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (33, Harley, Quinn, $2b$10$9SoeeaSPY8IDHaf5IRxloezcDImEc1W2DKdHU2NzYDxiiPNoHC8mW, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:14:35.622578+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:14:35.632Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (34, Harley, Quinn, $2b$10$ZU48VYZD3xHiXIP.PII7MuGqC1yjSHuUbO.1EZ7O6qk5zWr9Brg7S, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:16:36.884926+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:16:36.887Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (35, Harley, Quinn, $2b$10$PQkuYaw7f.R1PeZVUDY9UeYecvpjpy.qtcN6yveRzfbfWNkY1l8C., batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:19:13.100053+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:19:13.103Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (36, Harley, Quinn, $2b$10$kH6hejv0vrC81cXcFP5HGewdncg5yOHInQfs3iIkuIYYJQwWg28dm, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:20:38.905099+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:20:38.910Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (37, Harley, Quinn, $2b$10$Gkc5LpGp5jduOCEBYOnQueDehIB87PlkZneYSUNflCkPjVeuTQOyC, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:23:18.795983+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:23:18.801Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (38, Harley, Quinn, $2b$10$R4p/Mhud87SrDHcJbhvWz.9.0Lbx3KP3JVxUbFIXsZ9nIcMdUjQPK, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:23:53.334028+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:23:53.337Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (39, Harley, Quinn, $2b$10$PjS.t3WCuFK8.fQBjwnOMOgo3VM5VQf62Z.tkQViXDC3cMDHRQuky, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:27:30.443763+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:27:30.448Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (40, Harley, Quinn, $2b$10$0KFD1R0eIyhbbqB7CHmufeU0X.jWIRTx/eZDZNL57j0ipc5OgK0my, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:28:36.493363+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:28:36.501Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (41, Harley, Quinn, $2b$10$kKcRrem5jK0TSnqQNGrmyOPdbRXqfmt8UNxJgHmLHGGjq0I5n9.xG, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:29:01.431166+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:29:01.432Z'
+}
+{
+  length: 377,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (42, Harley, Quinn, $2b$10$YxGwSfoYejqSxwSVpmw6du47OaR.1v03CuShETJtCjV7t5o35mZQi, batou@anonyme.bat, Houlgate, 0612256378, 2024-07-11 10:29:06.304211+02, null, null, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_label',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  status: 500,
+  level: 'error',
+  message: 'null value in column "department_label" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_label" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:35:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:29:06.305Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: 'department_label is not defined',
+  stack: 'ReferenceError: department_label is not defined\n' +
+    '    at UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:19:9)\n' +
+    '    at store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:36:26)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:35:52.902Z'
+}
+{
+  length: 137,
+  name: 'error',
+  severity: 'ERROR',
+  code: '08P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postgres.c',
+  line: '1715',
+  routine: 'exec_bind_message',
+  status: 500,
+  level: 'error',
+  message: 'bind message supplies 7 parameters, but prepared statement "" requires 6',
+  stack: 'error: bind message supplies 7 parameters, but prepared statement "" requires 6\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:36:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:36:49.664Z'
+}
+{
+  length: 117,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42601',
+  detail: undefined,
+  hint: undefined,
+  position: '117',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '1026',
+  routine: 'transformInsertRow',
+  status: 500,
+  level: 'error',
+  message: 'INSERT has more expressions than target columns',
+  stack: 'error: INSERT has more expressions than target columns\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:36:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T08:38:40.754Z'
+}
+{
+  status: 500,
+  level: 'error',
+  message: 'Invalid city name or no exact match found.',
+  stack: 'Error: Invalid city name or no exact match found.\n' +
+    '    at file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:44:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T08:56:30.489Z'
+}
