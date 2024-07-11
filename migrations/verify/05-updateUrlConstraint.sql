@@ -1,4 +1,4 @@
--- Verify oMyDog:05-addUrlImg on pg
+-- Verify oMyDog:05-updateUrlConstraint on pg
 
 BEGIN;
 

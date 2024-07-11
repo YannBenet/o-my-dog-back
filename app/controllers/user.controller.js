@@ -132,8 +132,8 @@ export default {
       };
       
       const urlImg = await uploadImage(req.file.path)
-
-      body.urlImg = urlImg
+      console.log(urlImg);
+      body.url_img = urlImg
     }
     // Check if data and update it in database
     if (body.email) {
