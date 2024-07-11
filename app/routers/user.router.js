@@ -8,7 +8,6 @@ import auth from '../libraries/middlewares/auth.middleware.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
 import compareCityDepartmentMiddleware from '../libraries/middlewares/compareCityDepartment.middleware.js';
 
-
 export const router = Router();
 
 router.route('/signin')
