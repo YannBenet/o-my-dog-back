@@ -66,13 +66,13 @@ export default {
       ip: req.ip,
       userAgent: req.headers['user-agent']
     };
-    console.log('before create tokens');
+
     const { accessToken, refreshToken } = await jwtService.createTokens({
       id: user[0].id,
       firstname: user[0].firstname,
       fingerprint
     });
-    console.log(accessToken);
+
     //! TODO modifier secure: false par secure: true quand l'appli sera en https
     res.cookie('refreshToken', refreshToken, { 
       httpOnly: true,

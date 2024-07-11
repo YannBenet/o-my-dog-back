@@ -31,6 +31,7 @@ export default {
     try {
       // Check if refresh token porvided is the same that refresh token stored in database
       const user = await UserDatamapper.findByPk(data.id);
+
       if(!user){
         throw new CustomError('Ressource not found', { status: 404 });
       }
@@ -45,6 +46,7 @@ export default {
       // Return new tokens
       return tokens;
     } catch(err) {
+
       throw err;
     }
   }

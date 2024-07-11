@@ -7,8 +7,7 @@ export default class UserDatamapper extends CoreDatamapper {
     const { firstname, lastname, email, hashPassword, city, phone_number, department_label } = user;
     await this.client.query(
       `INSERT INTO "user" (firstname, lastname, password, email, city, phone_number, department_label)
-      VALUES ($1, $2, $3, $4, $5, $6, $7)`
-
+      VALUES ($1, $2, $3, $4, $5, $6, $7);`
       , [
         firstname,
         lastname,
