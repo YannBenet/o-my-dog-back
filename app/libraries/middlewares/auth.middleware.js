@@ -1,19 +1,20 @@
 import jwt from 'jsonwebtoken';
 import jwtServices from '../helpers/jwt.services.js';
+import CustomError from '../errors/custom.error.js'
 
 export default () => async (req, res, next) => {
   try {
     // Verify access token
-    const token = req.headers.authorization.split(' ')[1];
-    const tokenInfos = jwt.verify(token, process.env.JWT_PRIVATE_KEY);
+    const accessToken = req.headers.authorization.split(' ')[1];
+    const accessTokenInfos = jwt.verify(accessToken, process.env.JWT_PRIVATE_KEY);
     const ip = req.ip;
     const userAgent = req.headers['user-agent'];
     
-    if(ip !== tokenInfos.data.fingerprint.ip || userAgent !== tokenInfos.data.fingerprint.userAgent){
-      throw new Error('Invalid token', { status: 401 });
+    if(ip !== accessTokenInfos.data.fingerprint.ip || userAgent !== accessTokenInfos.data.fingerprint.userAgent){
+      throw new CustomError('Invalid token', { status: 401 });
     }
     // Store user id in request and next
-    req.token = tokenInfos.data.id;
+    req.token = accessTokenInfos.data.id;
 
     next();
 
@@ -23,7 +24,7 @@ export default () => async (req, res, next) => {
       // Get refresh token from cookies
       const token = req.cookies.refreshToken;
       if(!token){
-        return next(new Error('Invalid refresh token', { status: 401 }));
+        throw new CustomError('Invalid token', { status: 401 });
       }
 
       try {
@@ -33,7 +34,7 @@ export default () => async (req, res, next) => {
         const userAgent = req.headers['user-agent'];
 
         if(ip !== refreshTokenInfos.data.fingerprint.ip || userAgent !== refreshTokenInfos.data.fingerprint.userAgent){
-          return next(new Error('Invalid refresh token', { status: 401 }));
+          throw new CustomError('Invalid token', { status: 401 });
         }
         // Generate new tokens
         const { accessToken, refreshToken } = await jwtServices.refreshTokens(token, refreshTokenInfos.data);

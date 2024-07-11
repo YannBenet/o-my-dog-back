@@ -3,7 +3,7 @@ import announcementController from '../controllers/announcement.controller.js';
 import validationMiddleware from '../libraries/middlewares/validation.middleware.js';
 import announcementPostSchema from '../schemas/announcement.schema.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
-import auth from '../libraries/middlewares/auth.middleware.js'
+import auth from '../libraries/middlewares/auth.middleware.js';
 
 export const router = Router();
 

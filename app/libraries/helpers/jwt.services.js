@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { UserDatamapper } from '../../datamappers/index.datamapper.js';
+import CustomError from '../errors/custom.error.js'
 
 export default {
   // Create access and refresh tokens
@@ -22,7 +23,7 @@ export default {
       return { accessToken, refreshToken };
     } catch(err) {
 
-      return err;
+      throw err;
     }
   },
 
@@ -30,18 +31,23 @@ export default {
     try {
       // Check if refresh token porvided is the same that refresh token stored in database
       const user = await UserDatamapper.findByPk(data.id);
+
+      if(!user){
+        throw new CustomError('Ressource not found', { status: 404 });
+      }
   
       if(user.refresh_token !== refreshToken){
         // If refresh tokens don't match, remove it from database to prevent unauthorized user to use it
         await UserDatamapper.update(data.id, { refresh_token: null });
-        throw new Error('Invalid refresh token', { status: 401 });
+        throw new CustomError('Invalid token', { status: 401 });
       }
   
       const tokens = await this.createTokens(data);
       // Return new tokens
       return tokens;
     } catch(err) {
-      return err;
+
+      throw err;
     }
   }
 };
