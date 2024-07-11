@@ -8,8 +8,8 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"dev": "node --watch index.js",
-		"start": "node index.js",
+		"dev": "NODE_ENV=development node --watch index.js",
+		"start": "NODE_ENV=production node index.js",
 		"createdb": "psql -U <dbuser> -d <dbname> -f ./migrations/deploy/init-migration.sql",
 		"seeding": "psql -U <dbuser> -d <dbname> -f ./data/seeding.sql",
 		"createdb:seeding": "npm run createdb && npm run seeding"
