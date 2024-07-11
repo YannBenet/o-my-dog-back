@@ -1,4 +1,4 @@
-import ApiError from '../errors/custom.error.js'; 
+import ApiError from '../errors/api.error.js'; 
 
 export default () => async (req, res, next) => {
   const cityReq = req.body.city;
