@@ -15,19 +15,20 @@ GET {{endpoint}}/api/announcements?{{department_label}}&{{date_start}}&{{date_en
 ###
 GET {{endpoint}/api/announcements}
 
+###
 POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
 
-  "firstname": "Harley",
-  "lastname": "Quinn",
-  "email": "harley.quinn@ajokerteam.gc",
+  "firstname": "Sow",
+  "lastname": "Kaneda",
+  "email": "sow.kaned@ajokerteam.gc",
   "password": "uuUU**00",
-  "city": "Gotham City",
-  "phone_number": "0612256378",
+  "city": "gotham",
+  "phone_number": "0612256389",
   "repeatPassword": "uuUU**00",
-  "department_label": "var"
+  "department_label": "Bouche"
 
 }
 ###
