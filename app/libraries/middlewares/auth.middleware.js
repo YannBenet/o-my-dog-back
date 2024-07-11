@@ -18,7 +18,6 @@ export default () => async (req, res, next) => {
     next();
 
   } catch(err) {
-    console.log(`Entrée dans l\'erreur de la vérification access token: ${err}`);
     // If access token is expired try to generate new one
     if(err.name === 'TokenExpiredError' || err.message === 'jwt must be provided'){
       // Get refresh token from cookies
