@@ -1,4 +1,7 @@
 {
+	"engines": {
+		"node": "20.x"
+	},
 	"name": "backomydog",
 	"version": "1.0.0",
 	"description": "backend du projet o'mydog",
@@ -6,6 +9,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "node --watch index.js",
+		"start": "node index.js",
 		"createdb": "psql -U <dbuser> -d <dbname> -f ./migrations/deploy/init-migration.sql",
 		"seeding": "psql -U <dbuser> -d <dbname> -f ./data/seeding.sql",
 		"createdb:seeding": "npm run createdb && npm run seeding"
@@ -39,5 +43,8 @@
 		"@eslint/js": "^9.5.0",
 		"eslint": "^9.5.0",
 		"globals": "^15.6.0"
-	}
+	},
+	"keywords": [
+		"OmYDog"
+	]
 }
