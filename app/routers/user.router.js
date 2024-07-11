@@ -7,7 +7,6 @@ import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
 
-
 export const router = Router();
 
 router.route('/signin')

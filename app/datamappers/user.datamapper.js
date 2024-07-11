@@ -51,4 +51,12 @@ export default class UserDatamapper extends CoreDatamapper {
       [id]
     );
   }
+
+  static async findAllDepartments(){
+    const result = await this.client.query(`
+      SELECT DISTINCT "department_label"
+      FROM "user";
+    `);
+    return result.rows;
+  }
 };
