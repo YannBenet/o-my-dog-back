@@ -40,8 +40,6 @@ export default Joi.object({
   city: 
     Joi.string().min(2)
     .message('City must be a string'),
-  phone_number: 
-    Joi.string().max(13),
   department_label: 
     Joi.string().min(3)
     .required()
