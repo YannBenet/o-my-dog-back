@@ -1,7 +1,6 @@
 import logger from '../helpers/logger.services.js';
 
 export default  (err, req, res, next) => {
-  console.log('Entrée dans le errorhandler');
   logger.error(err);
 
   if(err.name === 'ValidationError'){

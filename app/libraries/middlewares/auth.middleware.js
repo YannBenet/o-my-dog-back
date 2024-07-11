@@ -19,16 +19,16 @@ export default () => async (req, res, next) => {
 
   } catch(err) {
     console.log(`Entrée dans l\'erreur de la vérification access token: ${err}`);
-    // If access token is expired verify refresh token and generate new ones
-    if(err.name === 'TokenExpiredError'){
+    // If access token is expired try to generate new one
+    if(err.name === 'TokenExpiredError' || err.message === 'jwt must be provided'){
+      // Get refresh token from cookies
       const token = req.cookies.refreshToken;
-      console.log(`RefreshToken: ${token}`);
       if(!token){
         return next(new Error('Invalid refresh token', { status: 401 }));
       }
 
       try {
-        console.log('Verification du refresh token');
+        // Verify refresh token
         const refreshTokenInfos = jwt.verify(token, process.env.JWT_PRIVATE_KEY);
         const ip = req.ip;
         const userAgent = req.headers['user-agent'];
@@ -36,7 +36,7 @@ export default () => async (req, res, next) => {
         if(ip !== refreshTokenInfos.data.fingerprint.ip || userAgent !== refreshTokenInfos.data.fingerprint.userAgent){
           return next(new Error('Invalid refresh token', { status: 401 }));
         }
-        console.log(`Refresh token validé: ${JSON.stringify(refreshTokenInfos.data)}`);
+        // Generate new tokens
         const { accessToken, refreshToken } = await jwtServices.refreshTokens(token, refreshTokenInfos.data);
         
         // Store new tokens in response and next
@@ -48,12 +48,11 @@ export default () => async (req, res, next) => {
           maxAge:  7 * 86400000
         });
         res.setHeader('Authorization', `Bearer ${accessToken}`);
-        console.log(`Nouveau refresh token: ${refreshToken}`);
+
         req.token = refreshTokenInfos.data.id;
 
         return next();
       } catch(err) {
-        console.log(`Entrée dans l'erreur du ${err}`);
 
         return next(err);
       }

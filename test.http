@@ -37,8 +37,8 @@ Content-Type: application/json
 }
 ###
 
-GET {{endpoint}}/api/users/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA1MzYxOTcsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjA1MzYxNjd9.I-grdc2RkPx-fXLyPAmyOEUl2gEQz1KlDzsWDJ8VeEA
+GET {{endpoint}}/api/users/3
+Authorization: Bearer
 Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExNDEyMTQsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjA1MzY0MTR9.4k5bYsrt732ppL3Mp1dJjjVoX1uCyK8CuCjUnf7hqd0
 ###
 
@@ -94,5 +94,5 @@ Content-Type: application/json
 }
 ###
 
-DELETE {{endpoint}}/api/users/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzY1MjYsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzY0NjZ9.0ZsDWMsLk4tQ7a9zDOst-bOS3fgD6VHEIGipT1ATevQ
+DELETE {{endpoint}}/api/users/1
+

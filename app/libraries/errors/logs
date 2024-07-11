@@ -624,3 +624,131 @@
     '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)',
   timestamp: '2024-07-09T14:46:54.154Z'
 }
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:7:45\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:280:10)',
+  timestamp: '2024-07-11T09:26:10.533Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:60:17)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:8:28\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-11T09:28:32.462Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'jwt malformed',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt malformed\n' +
+    '    at module.exports [as verify] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:70:17)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:8:28\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-11T09:30:31.230Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:89:19)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:18:5\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15',
+  timestamp: '2024-07-11T09:30:59.934Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/jsonwebtoken/verify.js:60:17)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:8:28\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)',
+  timestamp: '2024-07-11T09:32:34.892Z'
+}
+{
+  length: 120,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '63',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '3656',
+  routine: 'errorMissingColumn',
+  level: 'error',
+  message: "la colonne « refresh_token » n'existe pas",
+  stack: "error: la colonne « refresh_token » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.findByPk (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:24:20)\n' +
+    '    at async Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:26:18)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:40:47',
+  timestamp: '2024-07-11T09:33:45.740Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:89:19)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:54:16\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T09:41:04.794Z'
+}
