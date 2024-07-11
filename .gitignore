@@ -4,6 +4,6 @@ sqitch.conf
 logfile
 test.http
 .dockerignore
+uploads
 TODO.md
 app/static
-app/controllers/main.controller.js

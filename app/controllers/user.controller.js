@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt';
 import jwtService from '../libraries/helpers/jwt.services.js';
 import { UserDatamapper } from "../datamappers/index.datamapper.js";
 import ApiError from '../libraries/errors/api.error.js';
+import { v2 as cloudinary } from 'cloudinary';
 
 export default {
   async store(req, res, next){
@@ -97,17 +98,46 @@ export default {
   },
  
   async update(req, res, next) {
-    // Check that requested data are this user's data
     const { id } = req.params;
     const input = req.body;
+    const body = Object.assign({}, req.body);
 
     if(parseInt(id) !== req.token){
       return next(new ApiError('Access forbidden', { status: 403 }))
     }
 
+    const file = req.file
+
+    if (file) {
+      async function uploadImage (imagePath) {
+    
+        const options = {
+            folder : "userImages",
+            use_filename: true,
+            unique_filename: false,
+            overwrite: false,
+            transformation : [
+            { width: 250, height: 250, crop:"auto" },
+            { quality: 'auto' },
+            { fetch_format: "auto" }
+          ]
+        };
+    
+        try {
+            const result = await cloudinary.uploader.upload(imagePath, options);
+            return result.url;
+        } catch (error) {
+            console.error(error);
+        }
+      };
+      
+      const urlImg = await uploadImage(req.file.path)
+      console.log(urlImg);
+      body.url_img = urlImg
+    }
     // Check if data and update it in database
-    if (input.email) {
-      const emailAlreadyExists = await UserDatamapper.findOne("email", input.email);
+    if (body.email) {
+      const emailAlreadyExists = await UserDatamapper.findOne("email", body.email);
       if(emailAlreadyExists.length){
         if (parseInt(id) !== emailAlreadyExists.id) {
           return next(new ApiError('Email already exists', { status: 409 }));
@@ -115,8 +145,8 @@ export default {
       }
     }
 
-    if(input.phone_number){
-      const phoneAlreadyExists = await UserDatamapper.findOne("phone_number", input.phone_number)
+    if(body.phone_number){
+      const phoneAlreadyExists = await UserDatamapper.findOne("phone_number", body.phone_number)
       if(phoneAlreadyExists.length){
         if (parseInt(id) !== phoneAlreadyExists.id) {
           return next(new ApiError('Phone number already exists', { status: 409 }));
@@ -124,14 +154,13 @@ export default {
       }
     }
 
-
-    if (input.password){
+    if (body.password){
       const hashPassword = await bcrypt.hash(input.password, 10);
       input.password = hashPassword;
     }
 
     delete req.body.repeatPassword;
-    await UserDatamapper.update(id, input);
+    await UserDatamapper.update(id, body);
     
     // Response
     return res.status(200).json({ message: 'User\'s data updated successfully' });
