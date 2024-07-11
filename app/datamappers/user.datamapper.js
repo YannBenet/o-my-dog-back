@@ -4,10 +4,10 @@ export default class UserDatamapper extends CoreDatamapper {
   static tableName = 'user';
 
   static async create(user){
-    const { firstname, lastname, email, hashPassword, city, phone_number } = user;
+    const { firstname, lastname, email, hashPassword, city, phone_number, department_label } = user;
     await this.client.query(
-      `INSERT INTO "user" (firstname, lastname, password, email, city, phone_number)
-      VALUES ($1, $2, $3, $4, $5, $6)`
+      `INSERT INTO "user" (firstname, lastname, password, email, city, phone_number, department_label)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)`
 
       , [
         firstname,
@@ -15,14 +15,15 @@ export default class UserDatamapper extends CoreDatamapper {
         hashPassword,
         email,
         city,
-        phone_number
+        phone_number,
+        department_label
         ]
     );
   }
 
   static async findByPk(id){
     const result = await this.client.query(`
-      SELECT firstname, lastname, email, city, phone_number
+      SELECT firstname, lastname, email, city, phone_number, department_label
       FROM "user" 
       WHERE id = $1;`,
       [id]
@@ -49,5 +50,13 @@ export default class UserDatamapper extends CoreDatamapper {
       WHERE id = $1;`,
       [id]
     );
+  }
+
+  static async findAllDepartments(){
+    const result = await this.client.query(`
+      SELECT DISTINCT "department_label"
+      FROM "user";
+    `);
+    return result.rows;
   }
 };

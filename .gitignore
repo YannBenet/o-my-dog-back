@@ -5,3 +5,5 @@ logfile
 test.http
 .dockerignore
 uploads
+TODO.md
+app/static

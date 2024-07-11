@@ -8,6 +8,7 @@ import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
 import multerConfig from '../libraries/middlewares/multerConfig.middleware.js'
+import compareCityDepartmentMiddleware from '../libraries/middlewares/compareCityDepartment.middleware.js';
 
 
 export const router = Router();
@@ -45,6 +46,7 @@ router.route('/signin')
  */
   .post(
     validationMiddleware(userPostSchema, 'body'),
+    compareCityDepartmentMiddleware(),
     cw(userController.store)
   );
 
@@ -139,10 +141,11 @@ router.route('/:id(\\d+)')
  *   "error": "Phone number or email already exists"
  * }
  */
- // ! ANCIENNE VERSION 
-  // .patch(
-  //   auth(),
-  //   validationMiddleware(userUpdateSchema, 'body'),
-  //   cw(userController.update)
-  // )
-.patch( auth(), validationMiddleware(userUpdateSchema, 'body'), multerConfig,  cw(userController.update))
+  .patch(
+    auth(),
+    validationMiddleware(userUpdateSchema, 'body'),
+    compareCityDepartmentMiddleware(),
+    multerConfig,
+    cw(userController.update)
+  )
+

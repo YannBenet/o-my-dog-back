@@ -10,11 +10,11 @@ export default () => async (req, res, next) => {
     if(ip !== tokenInfos.data.fingerprint.ip || userAgent !== tokenInfos.data.fingerprint.userAgent){
       throw new Error();
     }
-
+    
     req.token = tokenInfos.data.id;
 
     next();
-  } catch {
+} catch {
     res.status(401).json({ error: 'Invalid token'})
   }
 }
