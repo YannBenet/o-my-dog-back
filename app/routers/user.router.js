@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import express from 'express';
 import userController from '../controllers/user.controller.js';
 import validationMiddleware from '../libraries/middlewares/validation.middleware.js';
 import userPostSchema from '../schemas/user.post.schema.js';
@@ -6,9 +7,13 @@ import userUpdateSchema from '../schemas/user.update.schema.js';
 import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
+import multerConfig from '../libraries/middlewares/multerConfig.middleware.js'
 
 
 export const router = Router();
+
+// router.use(bodyParser.urlencoded({extended: true }))
+router.use(express.urlencoded({ extended: true }));
 
 router.route('/signin')
 /**
@@ -134,8 +139,10 @@ router.route('/:id(\\d+)')
  *   "error": "Phone number or email already exists"
  * }
  */
-  .patch(
-    auth(),
-    validationMiddleware(userUpdateSchema, 'body'),
-    cw(userController.update)
-  )
+ // ! ANCIENNE VERSION 
+  // .patch(
+  //   auth(),
+  //   validationMiddleware(userUpdateSchema, 'body'),
+  //   cw(userController.update)
+  // )
+.patch( auth(), validationMiddleware(userUpdateSchema, 'body'), multerConfig,  cw(userController.update))

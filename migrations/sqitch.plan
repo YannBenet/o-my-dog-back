@@ -5,3 +5,4 @@
 02-userUrlImg 2024-07-09T12:36:11Z Yann Bénet <yannbenet@gmail.com> # ajout d'une colonne url_img dans la table user
 03-addDepartmentColOnUser 2024-07-09T12:37:43Z Yann Bénet <yannbenet@gmail.com> # Add department column on user table
 04-addNotNull-afterSeeding 2024-07-09T13:10:34Z Yann Bénet <yannbenet@gmail.com> # Add NOT NULL type on department after seeding
+05-addUrlImg 2024-07-11T06:40:33Z PierreGuillard <pguillard95@gmail.com> # ajout d'une colone urlImg dans la table user pour accueillir les photos de profil user
