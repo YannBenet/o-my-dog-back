@@ -1,50 +1,41 @@
 {
-  length: 321,
+  length: 146,
   name: 'error',
   severity: 'ERREUR',
-  code: '23502',
-  detail: 'La ligne en échec contient (1, null, 1, 2024-07-10 09:27:50.638484+02, null).',
+  code: '42703',
+  detail: undefined,
   hint: undefined,
-  position: undefined,
+  position: '33',
   internalPosition: undefined,
   internalQuery: undefined,
   where: undefined,
-  schema: 'public',
-  table: 'announcement_animal_type',
-  column: 'animal_type_id',
+  schema: undefined,
+  table: undefined,
+  column: undefined,
   dataType: undefined,
   constraint: undefined,
-  file: 'execMain.c',
-  line: '1968',
-  routine: 'ExecConstraints',
-  status: 500,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
   level: 'error',
-  message: 'une valeur NULL viole la contrainte NOT NULL de la colonne « animal_type_id » dans la relation « announcement_animal_type »',
-  stack: 'error: une valeur NULL viole la contrainte NOT NULL de la colonne « animal_type_id » dans la relation « announcement_animal_type »\n' +
+  message: "la colonne « refresh_token » de la relation « user » n'existe pas",
+  stack: "error: la colonne « refresh_token » de la relation « user » n'existe pas\n" +
     '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
-    '    at async AnnouncementDatamapper.addAuthorizedAnimals (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/announcement.datamapper.js:147:5)\n' +
-    '    at async store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:94:7)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:33:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:22:7)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:70:43)\n' +
     '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
-  timestamp: '2024-07-10T07:27:50.641Z'
+  timestamp: '2024-07-11T12:42:03.112Z'
 }
 {
-
-  internalPosition: undefined,
-  internalQuery: undefined,
-  where: undefined,
-  schema: undefined,
-  table: undefined,
-  column: undefined,
-  dataType: undefined,
-  constraint: undefined,
-
+  length: 146,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
   hint: undefined,
-  position: undefined,
-  internalPosition: undefined,
-  internalQuery: undefined,
-  where: undefined,
-
+  position: '33',
   internalPosition: undefined,
   internalQuery: undefined,
   where: undefined,
@@ -53,222 +44,85 @@
   column: undefined,
   dataType: undefined,
   constraint: undefined,
-
-  internalPosition: undefined,
-  internalQuery: undefined,
-  where: undefined,
-  schema: undefined,
-  table: undefined,
-  column: undefined,
-  dataType: undefined,
-  constraint: undefined,
-
-  internalPosition: undefined,
-  internalQuery: undefined,
-  where: undefined,
-  schema: undefined,
-  table: undefined,
-  column: undefined,
-  dataType: undefined,
-  constraint: undefined,
-
-  internalPosition: undefined,
-  internalQuery: undefined,
-  where: undefined,
-  schema: undefined,
-  table: undefined,
-  column: undefined,
-  dataType: undefined,
-  constraint: undefined,
-
-}
-{
-  status: 500,
+  file: 'analyze.c',
+  line: '2466',
+  routine: 'transformUpdateTargetList',
   level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:11:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:16:11.472Z'
+  message: "la colonne « refresh_token » de la relation « user » n'existe pas",
+  stack: "error: la colonne « refresh_token » de la relation « user » n'existe pas\n" +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:33:20)\n' +
+    '    at async Object.createTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:22:7)\n' +
+    '    at async login (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:70:43)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-11T12:43:46.765Z'
 }
 {
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:11:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:16:59.255Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'name')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'name')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:11:21\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:21:03.302Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot access 'data' before initialization",
-  stack: "ReferenceError: Cannot access 'data' before initialization\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:9:9\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:24:57.348Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:26:36.883Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:29\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:27:56.667Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:37\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:29:38.366Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:37\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:30:16.501Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:32:48.767Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:33:20.078Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:16:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:34:28.178Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:16:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:36:08.790Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:16:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:38:34.801Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:17:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:46:06.930Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:17:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:46:55.033Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: 'Invalid city name or no exact match found.',
-  stack: 'Error: Invalid city name or no exact match found.\n' +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:47:34.562Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: 'Invalid city name or no exact match found.',
-  stack: 'Error: Invalid city name or no exact match found.\n' +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:50:48.039Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: 'Invalid city name or no exact match found.',
-  stack: 'Error: Invalid city name or no exact match found.\n' +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:52:47.454Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: 'Invalid city name or no exact match found.',
-  stack: 'Error: Invalid city name or no exact match found.\n' +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:17\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T10:58:55.349Z'
-}
-{
-  status: 500,
-  level: 'error',
-  message: "Cannot read properties of undefined (reading 'nom')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
-    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:13:33\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T11:04:08.739Z'
-}
-{
-  name: undefined,
+  name: 'ApiError',
   status: 400,
   level: 'error',
   message: 'Invalid city name or no exact match found.',
-  stack: 'Error: Invalid city name or no exact match found.\n' +
+  stack: 'ApiError: Invalid city name or no exact match found.\n' +
     '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:12:15\n' +
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
-  timestamp: '2024-07-11T11:44:26.879Z'
+  timestamp: '2024-07-11T12:47:58.517Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:93:19)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:54:16\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T12:49:49.642Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:93:19)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:54:16\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T12:52:19.556Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:93:19)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:55:16\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-11T12:55:28.072Z'
+}
+{
+  level: 'error',
+  message: 'Invalid refresh token',
+  stack: 'Error: Invalid refresh token\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:31:21\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:365:14)\n' +
+    '    at param (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:376:14)\n' +
+    '    at Function.process_params (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:421:3)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:280:10)',
+  timestamp: '2024-07-11T15:11:30.007Z'
 }

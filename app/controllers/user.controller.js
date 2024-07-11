@@ -41,11 +41,11 @@ export default {
   },
 
   async login(req, res, next){
+    console.log('login controller');
     // Get login informations from request
     const { email, password } = req.body;
 
     // Check login informations
-
     const user = await UserDatamapper.findOne('email', email);
 
     if(!user.length){
@@ -66,16 +66,23 @@ export default {
       ip: req.ip,
       userAgent: req.headers['user-agent']
     };
-
-    const token = await jwtService.createToken({
+    console.log('before create tokens');
+    const { accessToken, refreshToken } = await jwtService.createTokens({
       id: user[0].id,
       firstname: user[0].firstname,
-      lastname: user[0].lastname,
       fingerprint
+    });
+    console.log(accessToken);
+    //! TODO modifier secure: false par secure: true quand l'appli sera en https
+    res.cookie('refreshToken', refreshToken, { 
+      httpOnly: true,
+      secure: false,
+      sameSite: 'Strict',
+      maxAge:  7 * 86400000
     });
 
     // Response
-    res.status(200).json({ token });
+    res.status(200).json({ accessToken });
   },
 
   async show(req, res, next){

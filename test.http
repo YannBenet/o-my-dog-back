@@ -3,6 +3,7 @@
 @date_start=date_start=2024-07-20
 @date_end=date_end=2025-07-29
 @animal_label=animal_label=Chien
+@refreshToken = 
 
 
 GET {{endpoint}}/api/announcements/highlight
@@ -20,15 +21,14 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-
-  "firstname": "Sow",
-  "lastname": "Kaneda",
-  "email": "sow.kaned@ajokerteam.gc",
+  "firstname": "Harley",
+  "lastname": "Quinn",
+  "email": "batou@anonyme.bat",
   "password": "uuUU**00",
-  "city": "gotham",
+  "city": "toulon",
   "phone_number": "0612256389",
   "repeatPassword": "uuUU**00",
-  "department_label": "Bouche"
+  "department_label": "var"
 
 }
 ###
@@ -37,13 +37,14 @@ POST {{endpoint}}/api/users/login
 Content-Type: application/json
 
 {
-  "email": "harley.quinn@ajokerteam.gc",
+  "email": "batou@anonyme.bat",
   "password": "uuUU**00"
 }
 ###
 
-GET {{endpoint}}/api/users/26
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzM2ODUsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzM2MjR9.2jh-Qfn7grDh5F0fG0G3uAhaVOYqggIr9m3IwIoo4SI
+GET {{endpoint}}/api/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA3MDIxNTMsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjA3MDIxMjJ9.OofOzOZbQUfnPkfz849uTADkBxcghAuORssPRJH800E
+Cookie: refreshToken=; expires=Thu, 01 Jan 1970 00:00:00 GMT
 ###
 
 
@@ -102,6 +103,3 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA2NDM0O
 
 DELETE {{endpoint}}/api/users/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzY1MjYsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzY0NjZ9.0ZsDWMsLk4tQ7a9zDOst-bOS3fgD6VHEIGipT1ATevQ
-###
-
-GET {{endpoint}}/api/departments/
