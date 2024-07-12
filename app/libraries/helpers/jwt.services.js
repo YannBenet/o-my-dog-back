@@ -6,7 +6,7 @@ export default {
   // Create access and refresh tokens
   async createTokens(data){
     try {
-      const accessTokenExp = Math.round(Date.now() / 1000 + 15 * 2);
+      const accessTokenExp = Math.round(Date.now() / 1000 + 15 * 900);
       const refreshTokenExp = Math.round(Date.now() / 1000 + 604800);
       
       const accessToken = jwt.sign(
@@ -45,6 +45,7 @@ export default {
       // Return new tokens
       return tokens;
     } catch(err) {
+      
       throw err;
     }
   }
