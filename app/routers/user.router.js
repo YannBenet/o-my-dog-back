@@ -143,9 +143,9 @@ router.route('/:id(\\d+)')
  */
   .patch(
     auth(),
+    multerConfig,
     validationMiddleware(userUpdateSchema, 'body'),
     compareCityDepartmentMiddleware(),
-    multerConfig,
     cw(userController.update)
   );
 

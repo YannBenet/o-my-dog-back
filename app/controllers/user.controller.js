@@ -110,7 +110,7 @@ export default {
   async update(req, res, next) {
     const { id } = req.params;
     const input = req.body;
-    console.log(req.body);
+    console.log("req.body controller", req.body);
     const body = Object.assign({}, req.body);
 
     if(parseInt(id) !== req.token){
@@ -134,12 +134,9 @@ export default {
           ]
         };
     
-        try {
+
             const result = await cloudinary.uploader.upload(imagePath, options);
-            return result.url;
-        } catch (error) {
-            console.error(error);
-        }
+            return result.url
       };
       
       const urlImg = await uploadImage(req.file.path);
@@ -200,7 +197,7 @@ export default {
     res.status(200).json({ message: 'User profile removed successfully' });
   },
 
-  async getAllAnnouncements(req, res){
+  async getAllAnnouncements(req, res, next){
     // Check that requested informations are this user's informations
     const { id } = req.params;
 
