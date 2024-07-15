@@ -290,3 +290,32 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
   timestamp: '2024-07-15T21:51:45.948Z'
 }
+{
+  length: 383,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (160, Yann, Bénet, $2b$10$8zJK6IiVpRVDbp6LKCSF1.EG3vgwHEAoXFjGcpFt5IPTZDjGmxwIS, yannbenet@gmail.com, Verneuil, 0659177181, 2024-07-16 00:56:07.628474+02, null, null, Cher, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_code',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  level: 'error',
+  message: 'null value in column "department_code" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_code" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:40:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-15T22:56:07.634Z'
+}
