@@ -6,3 +6,4 @@
 03-addDepartmentColOnUser 2024-07-09T12:37:43Z Yann Bénet <yannbenet@gmail.com> # Add department column on user table
 04-addNotNull-afterSeeding 2024-07-09T13:10:34Z Yann Bénet <yannbenet@gmail.com> # Add NOT NULL type on department after seeding
 05-updateUrlConstraint 2024-07-11T08:35:19Z PierreGuillard <pguillard95@gmail.com> # modification de la contrainte pour les url de cloudinary
+06-CRUD-functions 2024-07-14T15:43:55Z Jérémy <jérémy@tralala.io> # add views and CRUD functions

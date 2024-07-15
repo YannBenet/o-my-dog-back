@@ -1,5 +1,6 @@
-import { AnnouncementDatamapper } from "../datamappers/index.datamapper.js";
-import ApiError from "../libraries/errors/api.error.js";
+import { AnnouncementDatamapper } from '../datamappers/index.datamapper.js';
+import { AnnouncementAnimalDatamapper } from '../datamappers/index.datamapper.js'
+import ApiError from '../libraries/errors/api.error.js';
 
 export default {
     
@@ -31,8 +32,8 @@ export default {
     }
 
     // Update announcement in database
-    const { date_start, date_end, mobility, home, description } = req.body;
-    await AnnouncementDatamapper.update(id, date_start, date_end, mobility, home, description);
+    const data = req.body;
+    await AnnouncementDatamapper.update(id, data);
 
     // Response
     res.status(200).json({message: 'Announcement updated successfully'});
@@ -46,7 +47,7 @@ export default {
     if(!req.token){
         return next(new ApiError('Access Forbidden', { status: 403 }));
     }
-
+    await AnnouncementAnimalDatamapper.delete(id);
     await AnnouncementDatamapper.delete(id);
 
     // Response
@@ -64,14 +65,12 @@ export default {
   async searchAnnouncement(req, res){
     // Get data from query
     const data = req.query
-    console.log(data);
 
     // Get data from database
     const allAnnouncements = await AnnouncementDatamapper.searchAnnouncement(data);
 
     // Response
     res.status(200).json(allAnnouncements)
-
   },
 
   async store(req, res, next){ 
@@ -91,12 +90,11 @@ export default {
     const announcementId = result.id;
     const animalTypes = req.body.animal;
 
-    for (const animalType of animalTypes) {
-      await AnnouncementDatamapper.addAuthorizedAnimals(announcementId, animalType)
+    for (const animalType of animalTypes){
+      await AnnouncementAnimalDatamapper.create(animalType, announcementId);
     };
 
     // Response
-    res.status(201).json({ message: 'Announcement created successfully'});
-      
+    res.status(201).json({ message: 'Announcement created successfully'});  
   }
 }
