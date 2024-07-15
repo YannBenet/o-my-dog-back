@@ -87,12 +87,15 @@ export default {
       return next(new ApiError('Ressource not found', { status: 404 }));
     }
 
-    const announcementId = result.id;
     const animalTypes = req.body.animal;
-
-    for (const animalType of animalTypes){
-      await AnnouncementAnimalDatamapper.create(animalType, announcementId);
-    };
+    console.log(animalTypes);
+    if(animalTypes){
+      console.log('animal not null');
+      const announcementId = result.id;
+      for (const animalType of animalTypes){
+        await AnnouncementAnimalDatamapper.create(animalType, announcementId);
+      };
+    }
 
     // Response
     res.status(201).json({ message: 'Announcement created successfully'});  

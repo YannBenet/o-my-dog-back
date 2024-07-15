@@ -848,3 +848,176 @@
     '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
   timestamp: '2024-07-15T15:22:09.435Z'
 }
+{
+  _original: {
+    date_start: '2025-07-20',
+    date_end: '2025-08-30',
+    mobility: true,
+    home: false,
+    description: 'PetSitting',
+    animal: []
+  },
+  details: [
+    {
+      message: '"animal" must contain at least 1 items',
+      path: [ 'animal' ],
+      type: 'array.min',
+      context: { limit: 1, value: [], label: 'animal', key: 'animal' }
+    }
+  ],
+  level: 'error',
+  message: '"animal" must contain at least 1 items',
+  stack: 'ValidationError: "animal" must contain at least 1 items',
+  timestamp: '2024-07-15T19:29:17.113Z'
+}
+{
+  _original: {
+    date_start: '2025-07-20',
+    date_end: '2025-08-30',
+    mobility: true,
+    home: false,
+    description: 'PetSitting',
+    animal: null
+  },
+  details: [
+    {
+      message: '"animal" must be an array',
+      path: [ 'animal' ],
+      type: 'array.base',
+      context: { label: 'animal', value: null, key: 'animal' }
+    }
+  ],
+  level: 'error',
+  message: '"animal" must be an array',
+  stack: 'ValidationError: "animal" must be an array',
+  timestamp: '2024-07-15T19:30:00.660Z'
+}
+{
+  _original: {
+    date_start: '2025-07-20',
+    date_end: '2025-08-30',
+    mobility: true,
+    home: false,
+    description: 'PetSitting',
+    animal: []
+  },
+  details: [
+    {
+      message: '"animal" must contain at least 1 items',
+      path: [ 'animal' ],
+      type: 'array.min',
+      context: { limit: 1, value: [], label: 'animal', key: 'animal' }
+    }
+  ],
+  level: 'error',
+  message: '"animal" must contain at least 1 items',
+  stack: 'ValidationError: "animal" must contain at least 1 items',
+  timestamp: '2024-07-15T19:30:31.574Z'
+}
+{
+  level: 'error',
+  message: 'animalTypes is not iterable',
+  stack: 'TypeError: animalTypes is not iterable\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:93:30)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-15T19:31:28.020Z'
+}
+{
+  _original: {
+    date_start: '2025-07-20',
+    date_end: '2025-08-30',
+    mobility: true,
+    home: false,
+    description: 'PetSitting',
+    animal: []
+  },
+  details: [
+    {
+      message: '"animal" must contain at least 1 items',
+      path: [ 'animal' ],
+      type: 'array.min',
+      context: { limit: 1, value: [], label: 'animal', key: 'animal' }
+    }
+  ],
+  level: 'error',
+  message: '"animal" must contain at least 1 items',
+  stack: 'ValidationError: "animal" must contain at least 1 items',
+  timestamp: '2024-07-15T19:34:39.279Z'
+}
+{
+  _original: {
+    date_start: '2025-07-20',
+    date_end: '2025-08-30',
+    mobility: true,
+    home: false,
+    description: 'PetSitting',
+    animal: null
+  },
+  details: [
+    {
+      message: '"animal" must be an array',
+      path: [ 'animal' ],
+      type: 'array.base',
+      context: { label: 'animal', value: null, key: 'animal' }
+    }
+  ],
+  level: 'error',
+  message: '"animal" must be an array',
+  stack: 'ValidationError: "animal" must be an array',
+  timestamp: '2024-07-15T19:35:14.508Z'
+}
+{
+  _original: {
+    date_start: '2025-07-20',
+    date_end: '2025-08-30',
+    mobility: true,
+    home: false,
+    description: 'PetSitting',
+    animal: null
+  },
+  details: [
+    {
+      message: '"animal" must be an array',
+      path: [ 'animal' ],
+      type: 'array.base',
+      context: { label: 'animal', value: null, key: 'animal' }
+    }
+  ],
+  level: 'error',
+  message: '"animal" must be an array',
+  stack: 'ValidationError: "animal" must be an array',
+  timestamp: '2024-07-15T19:36:40.065Z'
+}
+{
+  _original: {
+    date_start: '2025-07-20',
+    date_end: '2025-08-30',
+    mobility: true,
+    home: false,
+    description: 'PetSitting',
+    animal: []
+  },
+  details: [
+    {
+      message: '"animal" must contain at least 1 items',
+      path: [ 'animal' ],
+      type: 'array.min',
+      context: { limit: 1, value: [], label: 'animal', key: 'animal' }
+    }
+  ],
+  level: 'error',
+  message: '"animal" must contain at least 1 items',
+  stack: 'ValidationError: "animal" must contain at least 1 items',
+  timestamp: '2024-07-15T19:37:09.171Z'
+}
+{
+  status: 401,
+  level: 'error',
+  message: 'Invalid token',
+  stack: 'Error: Invalid token\n' +
+    '    at Object.refreshTokens (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:41:15)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:41:47',
+  timestamp: '2024-07-15T20:57:18.843Z'
+}

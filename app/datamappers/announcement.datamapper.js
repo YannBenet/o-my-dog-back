@@ -39,7 +39,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
 
   static async searchAnnouncement(data) {
     // const { department_label, date_start, date_end, animal_label } = filters;
-
+    console.log(data);
     const result = await this.client.query(
       'SELECT select_announcement_by_filters($1);',
       // `SELECT 
@@ -74,8 +74,8 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
       [data]
     );
         
-    const { rows } = result;
-    return rows[0].select_announcement_by_filters;
+    //const { rows } = result;
+    return result.rows;
   }
 
   static async findByPk(id) {

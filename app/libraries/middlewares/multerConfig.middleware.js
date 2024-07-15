@@ -17,4 +17,4 @@ const MIME_TYPES = {
     }
   });
   
- export default multer({storage: storage}).single('file');
+export default multer({storage: storage}).single('file');

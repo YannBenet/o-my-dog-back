@@ -1,8 +1,8 @@
 @endpoint=http://localhost:{{$dotenv PORT}}
-@department_label=department_label=Paris
-@date_start=date_start=2024-08-20
-@date_end=date_end=2025-06-29
-@animal_label=animal_label=Chien
+@department_label=department_label=Var
+@date_start=date_start=2025-07-30
+@date_end=date_end=2025-08-10
+@animal_label=animal_label=Chat
 @refreshToken = 
 
 
@@ -73,26 +73,27 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwNjA4N
 
 PATCH {{endpoint}}/api/users/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwNjM4MDEsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNTAzMDF9.NiplEAV6_F-1lvk3sP9iWgMMXyu8vlEfGnHHBw9YLjI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwOTA1NDMsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNzcwNDN9.mvm3wiCVFtj8E0qrvRMEE2Q-XKSALnXgW277UfF0ZDE
 
 
 {
-  "city": "paris"
+  "city": "Toulon"
 }
 
 ###
 POST {{endpoint}}/api/announcements/users/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwNjg5NjQsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNTU0NjN9.HEvM-LCPLR5yaaVv2yckOrjiHkUHjdN8deZ8FIfIKEk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwODUyMjQsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNzE3MjR9.pH0mXoYdmre_tpfBBL2-yrX6r3AlosfwMOFqhd8K_DE
 
 {
-    "date_start": "2025-07-20",
+    "date_start": "2024-07-20",
     "date_end": "2025-08-30",
     "mobility": true,
     "home": false,
     "description": "PetSitting",
-    "animal": ["Chien", "Chat"]
+    "animal": ["Chat", "Chien"]
 }
+
 ###
 
 GET {{endpoint}}/api/users/1/announcements

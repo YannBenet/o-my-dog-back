@@ -26,5 +26,4 @@ export default Joi.object({
   animal: 
     Joi.array()
     .items(Joi.string().min(2))
-    .min(1)
 })

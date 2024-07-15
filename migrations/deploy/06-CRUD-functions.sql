@@ -91,20 +91,17 @@ CREATE FUNCTION "select_announcement_by_filters" (input json) RETURNS JSON AS $$
     "announcement"
   JOIN 
     "user" ON "announcement"."user_id" = "user"."id"
-  JOIN
-    "announcement_animal_type" ON "announcement_animal_type"."announcement_id" = "announcement"."id"
-  JOIN
-    "animal_type" ON "animal_type"."id" = "announcement_animal_type"."animal_type_id"
   WHERE 
     "user"."department_label" = ($1->>'department_label')::text
     AND ($1->>'date_start')::date >= "announcement"."date_start"
     AND ($1->>'date_end')::date <= "announcement"."date_end"
-    AND "animal_type"."label" = ($1->>'animal_label')::text
-  GROUP BY
-    "announcement"."id",
-    "user"."firstname",
-    "user"."lastname",
-    "user"."city";
+    AND EXISTS (
+      SELECT *
+      FROM "announcement_animal_type"
+      JOIN "animal_type" ON "animal_type"."id" = "announcement_animal_type"."animal_type_id"
+      WHERE "announcement_animal_type"."announcement_id" = "announcement"."id"
+      AND "animal_type"."label" = ($1->>'animal_label')::text
+    );
 
 $$ LANGUAGE SQL STRICT;
 
