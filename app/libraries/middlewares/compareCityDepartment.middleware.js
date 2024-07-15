@@ -1,6 +1,7 @@
 
 
 export default () => async (req, res, next) => {
+    if (req.body.city) {
     const cityReq = req.body.city;
     const departmentReq = req.body.department_label;
     console.log("contenu de la requete formulaire:", cityReq)
@@ -44,6 +45,8 @@ export default () => async (req, res, next) => {
         return next(new Error('Invalid city name or no exact match found.', {status : 400}));
         
     }
+}
+next()
   };
 
   // A ENREGISTRER EN BDD
