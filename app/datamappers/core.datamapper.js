@@ -29,9 +29,6 @@ export default class CoreDatamapper {
 
   static async update(id, input) {
     const fieldPlaceholders = Object.keys(input).map((column, index) => `"${column}" = $${index + 1}`);
-        /*
-        fieldPlaceholders ==> ['"label" = $1', '"route" = $2']
-        */
     const values = Object.values(input);
     const result = await this.client.query(`
       UPDATE "${this.tableName}" 

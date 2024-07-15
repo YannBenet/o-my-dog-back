@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from "cors";
+import cookieParser from 'cookie-parser';
 
 import { router } from './routers/index.router.js';
 import docMiddleware from './libraries/middlewares/doc.middleware.js';
@@ -18,6 +19,7 @@ app.use(express.urlencoded({extended: true}));
 
 docMiddleware(app)
 
+app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(router);
 

@@ -1,7 +1,8 @@
 import bcrypt from 'bcrypt';
 import fs from 'fs'
 import jwtService from '../libraries/helpers/jwt.services.js';
-import { UserDatamapper } from "../datamappers/index.datamapper.js";
+import { UserDatamapper } from '../datamappers/index.datamapper.js';
+import { AnnouncementDatamapper } from '../datamappers/index.datamapper.js';
 import ApiError from '../libraries/errors/api.error.js';
 import { v2 as cloudinary } from 'cloudinary';
 
@@ -18,7 +19,7 @@ export default {
     }
 
     if(phone_number){
-      const phoneAlreadyExists = await UserDatamapper.findOne('phone_number', phone_number)
+      const phoneAlreadyExists = await UserDatamapper.findOne('phone_number', phone_number);
       if(phoneAlreadyExists.length){
         return next(new ApiError('Phone number already exists', { status: 409 }));
       }
@@ -43,15 +44,15 @@ export default {
   },
 
   async login(req, res, next){
+    console.log('login controller');
     // Get login informations from request
     const { email, password } = req.body;
 
     // Check login informations
-
     const user = await UserDatamapper.findOne('email', email);
 
     if(!user.length){
-      return next(new ApiError('Incorrect email or password', { status: 401 }))
+      return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
 
     const passwordValidation = await bcrypt.compare(
@@ -60,7 +61,7 @@ export default {
     );
 
     if(!passwordValidation){
-      return next(new ApiError('Incorrect email or password', { status: 401 }))
+      return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
 
     // Create JWT and load it with user's data
@@ -68,16 +69,23 @@ export default {
       ip: req.ip,
       userAgent: req.headers['user-agent']
     };
-
-    const token = await jwtService.createToken({
+    console.log('before create tokens');
+    const { accessToken, refreshToken } = await jwtService.createTokens({
       id: user[0].id,
       firstname: user[0].firstname,
-      lastname: user[0].lastname,
       fingerprint
+    });
+    console.log(accessToken);
+    //! TODO modifier secure: false par secure: true quand l'appli sera en https
+    res.cookie('refreshToken', refreshToken, { 
+      httpOnly: true,
+      secure: false,
+      sameSite: 'Strict',
+      maxAge:  7 * 86400000
     });
 
     // Response
-    res.status(200).json({ token });
+    res.status(200).json({ accessToken });
   },
 
   async show(req, res, next){
@@ -85,14 +93,14 @@ export default {
     const { id } = req.params;
 
     if(parseInt(id) !== req.token){
-      return next(new ApiError('Access forbidden', { status: 403 }))
+      return next(new ApiError('Access forbidden', { status: 403 }));
     }
 
     // Get user's informations from database
     const user = await UserDatamapper.findByPk(id);
 
     if(!user){
-      return next(new ApiError('User not found', { status: 404 }))
+      return next(new ApiError('User not found', { status: 404 }));
     }
 
     // Response
@@ -106,7 +114,7 @@ export default {
     const body = Object.assign({}, req.body);
 
     if(parseInt(id) !== req.token){
-      return next(new ApiError('Access forbidden', { status: 403 }))
+      return next(new ApiError('Access forbidden', { status: 403 }));
     }
 
     const file = req.file
@@ -134,7 +142,7 @@ export default {
         }
       };
       
-      const urlImg = await uploadImage(req.file.path)
+      const urlImg = await uploadImage(req.file.path);
       console.log(urlImg);
       body.url_img = urlImg
 
@@ -144,7 +152,6 @@ export default {
             console.error('Error deleting file:', err);
         } 
     });
-
     }
     // Check if data and update it in database
     if (body.email) {
@@ -157,7 +164,7 @@ export default {
     }
 
     if(body.phone_number){
-      const phoneAlreadyExists = await UserDatamapper.findOne("phone_number", body.phone_number)
+      const phoneAlreadyExists = await UserDatamapper.findOne("phone_number", body.phone_number);
       if(phoneAlreadyExists.length){
         if (parseInt(id) !== phoneAlreadyExists.id) {
           return next(new ApiError('Phone number already exists', { status: 409 }));
@@ -183,7 +190,7 @@ export default {
     const { id } = req.params;
 
     if(parseInt(id) !== req.token){
-      return next(new ApiError('Access forbidden', { status: 403 }))
+      return next(new ApiError('Access forbidden', { status: 403 }));
     }
 
     // Delete user in database
@@ -191,5 +198,25 @@ export default {
 
     // Response
     res.status(200).json({ message: 'User profile removed successfully' });
+  },
+
+  async getAllAnnouncements(req, res){
+    // Check that requested informations are this user's informations
+    const { id } = req.params;
+
+    if(parseInt(id) !== req.token){
+      return next(new ApiError('Access forbidden', { status: 403 }));
+    }
+
+    // Check if user exists and get data from database
+    const user = await UserDatamapper.findByPk(id);
+    if(!user){
+      return next(new ApiError('User not found', { status: 404 }));
+    }
+
+    const announcements = await AnnouncementDatamapper.findByAuthor(id);
+    
+    // Response
+    res.status(200).json(announcements);
   }
 };

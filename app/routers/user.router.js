@@ -147,5 +147,32 @@ router.route('/:id(\\d+)')
     compareCityDepartmentMiddleware(),
     multerConfig,
     cw(userController.update)
-  )
+  );
+
+router.route('/:id(\\d+)/announcements')
+  /**
+ * GET /api/users/{id}/announcements
+ * @summary get all announcements created by one user, need to be connected
+ * @tags user announcements
+ * @param {number} id.path.required
+ * @return {AnnouncementsResult[]} 200 - success message
+ * @return {ErrorResponseJson} 403 - Access forbidden
+ * @return {ErrorResponseJson} 404 - Ressource nor found
+ * @example response - 200 - Example success response
+ * [
+ *  {
+ *    "id": 20,
+ *    "date_start": "2024-08-19T22:00:00.000Z",
+ *    "date_end": "2024-08-27T22:00:00.000Z",
+ *    "mobility": false,
+ *    "home": false,
+ *    "description": "Eius modi tempora incidunt ut labore et dolore.",
+ *    "label": ["Chien", "Chat"]
+ *  }
+ * ]
+ */
+  .get(
+    auth(),
+    cw(userController.getAllAnnouncements)
+  );
 
