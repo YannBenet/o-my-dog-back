@@ -4,10 +4,10 @@ export default class UserDatamapper extends CoreDatamapper {
   static tableName = 'user';
 
   static async create(user){
-    const { firstname, lastname, email, hashPassword, city, phone_number, department_label } = user;
+    const { firstname, lastname, email, hashPassword, city, phone_number, department_label, department_code } = user;
     await this.client.query(
-      `INSERT INTO "user" (firstname, lastname, password, email, city, phone_number, department_label)
-      VALUES ($1, $2, $3, $4, $5, $6, $7)`
+      `INSERT INTO "user" (firstname, lastname, password, email, city, phone_number, department_label, department_code)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`
 
       , [
         firstname,
@@ -16,7 +16,8 @@ export default class UserDatamapper extends CoreDatamapper {
         email,
         city,
         phone_number,
-        department_label
+        department_label,
+        department_code
         ]
     );
   }
