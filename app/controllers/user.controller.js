@@ -8,7 +8,6 @@ import { v2 as cloudinary } from 'cloudinary';
 
 export default {
   async store(req, res, next){
-    console.log(req.body);
     // Get user's informations from request
     const { firstname, lastname, email, password, city, phone_number, department_label } = req.body;
 
@@ -47,17 +46,18 @@ export default {
   async login(req, res, next){
     // Get login informations from request
     const { email, password } = req.body;
-
+    console.log('avant user');
     // Check login informations
     const user = await UserDatamapper.findOne('email', email);
-
+    console.log('après user');
     if(!user){
+      console.log('pas de user');
       return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
 
     const passwordValidation = await bcrypt.compare(
       password,
-      user[0].password,
+      user.password,
     );
 
     if(!passwordValidation){
@@ -71,8 +71,8 @@ export default {
     };
 
     const { accessToken, refreshToken } = await jwtService.createTokens({
-      id: user[0].id,
-      firstname: user[0].firstname,
+      id: user.id,
+      firstname: user.firstname,
       fingerprint,
     });
 
@@ -224,7 +224,7 @@ export default {
     }
 
     const announcements = await AnnouncementDatamapper.findByAuthor(id);
-
+    console.log(announcements);
     // Response
     res.status(200).json(announcements);
   },

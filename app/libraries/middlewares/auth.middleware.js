@@ -15,7 +15,7 @@ export default () => async (req, res, next) => {
     }
     // Store user id in request and next
     req.token = tokenInfos.data.id;
-    console.log("req.token", req.token);
+
     next();
 
   } catch(err) {

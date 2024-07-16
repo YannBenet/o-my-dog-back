@@ -8,11 +8,13 @@ export default () => async (req, res, next) => {
   if (req.body.city) {
     const cityReq = req.body.city.split(' ')[0];
     const departmentReq = req.body.department_label;
-
+    console.log();
     try {
       const cityResult = await fetch(`https://geo.api.gouv.fr/communes?nom=${cityReq}&fields=nom,departement&boost=population&limit=5`);
       const dataCity = await cityResult.json();
+      console.log(JSON.stringify(dataCity));
       const departmentFound = dataCity.find((city) => city.departement.nom === departmentReq);
+      console.log(departmentFound);
       const departmentSelected = departmentFound.departement.nom;
 
       if(!dataCity.length || !departmentFound) {

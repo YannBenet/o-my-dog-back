@@ -18,7 +18,7 @@ CREATE FUNCTION "select_announcement_by_pk" (input_id int) RETURNS JSON AS $$
       'phone_number', "user"."phone_number",
       'email', "user"."email",
       'url_img', "user"."url_img",
-      'animal_labels', ARRAY_AGG("animal_type"."label")
+      'animal_label', ARRAY_AGG("animal_type"."label")
     )
   FROM
     "announcement"
@@ -52,7 +52,7 @@ CREATE FUNCTION "select_announcement_by_author" (input_id int) RETURNS JSON AS $
         'mobility', "announcement"."mobility",
         'home', "announcement"."home",
         'description', "announcement"."description",
-        'animal_labels',(
+        'animal_label',(
           SELECT ARRAY_AGG("animal_type"."label")
           FROM "animal_type"
           JOIN "announcement_animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
