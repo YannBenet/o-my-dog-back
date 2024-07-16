@@ -8,9 +8,9 @@ export default class UserDatamapper extends CoreDatamapper {
     const result  = await this.client.query(`
       SELECT "label" 
       FROM "${this.tableName}";
-      `)
+      `);
 
     // Return results
-    return result.rows
+    return result.rows;
   }
 };

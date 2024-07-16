@@ -16,8 +16,8 @@ export default class UserDatamapper extends CoreDatamapper {
         email,
         city,
         phone_number,
-        department_label
-        ]
+        department_label,
+      ],
     );
   }
 
@@ -26,10 +26,10 @@ export default class UserDatamapper extends CoreDatamapper {
       SELECT firstname, lastname, email, city, phone_number, refresh_token, department_label, url_img
       FROM "user" 
       WHERE id = $1;`,
-      [id]
+    [id],
     );
-        
-    return result.rows[0]; 
+
+    return result.rows[0];
   }
 
   static async findOne(column, data){
@@ -38,9 +38,9 @@ export default class UserDatamapper extends CoreDatamapper {
       FROM "user"
       WHERE ${column} = $1
       `, [
-        data
-      ]);
-      return result.rows;
+      data,
+    ]);
+    return result.rows;
   }
 
   static async delete(id){
@@ -48,7 +48,7 @@ export default class UserDatamapper extends CoreDatamapper {
       DELETE
       FROM "user"
       WHERE id = $1;`,
-      [id]
+    [id],
     );
   }
 

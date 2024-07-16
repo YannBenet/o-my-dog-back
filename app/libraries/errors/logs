@@ -155,3 +155,100 @@
     '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
   timestamp: '2024-07-12T08:04:13.436Z'
 }
+{
+  name: 'ApiError',
+  status: 401,
+  level: 'error',
+  message: 'Incorrect email or password',
+  stack: 'ApiError: Incorrect email or password\n' +
+    '    at login (file:///home/pierrofeu/Apo/BackOMyDog2/app/controllers/user.controller.js:64:19)\n' +
+    '    at async file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-15T19:55:47.934Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at logout (file:///home/pierrofeu/Apo/BackOMyDog2/app/controllers/user.controller.js:95:19)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/auth.middleware.js:19:5\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/index.js:284:15',
+  timestamp: '2024-07-16T09:39:18.002Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at logout (file:///home/pierrofeu/Apo/BackOMyDog2/app/controllers/user.controller.js:96:19)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/auth.middleware.js:19:5\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/index.js:284:15',
+  timestamp: '2024-07-16T09:40:47.168Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at logout (file:///home/pierrofeu/Apo/BackOMyDog2/app/controllers/user.controller.js:96:19)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/auth.middleware.js:19:5\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/index.js:284:15',
+  timestamp: '2024-07-16T09:41:13.200Z'
+}
+{
+  name: 'ApiError',
+  status: 403,
+  level: 'error',
+  message: 'Access forbidden',
+  stack: 'ApiError: Access forbidden\n' +
+    '    at logout (file:///home/pierrofeu/Apo/BackOMyDog2/app/controllers/user.controller.js:96:19)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/auth.middleware.js:19:5\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/index.js:284:15',
+  timestamp: '2024-07-16T09:43:40.689Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at /home/pierrofeu/Apo/BackOMyDog2/node_modules/jsonwebtoken/verify.js:171:19\n' +
+    '    at getSecret (/home/pierrofeu/Apo/BackOMyDog2/node_modules/jsonwebtoken/verify.js:97:14)\n' +
+    '    at module.exports [as verify] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/jsonwebtoken/verify.js:101:10)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/auth.middleware.js:9:28\n' +
+    '    at Layer.handle [as handle_request] (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/pierrofeu/Apo/BackOMyDog2/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///home/pierrofeu/Apo/BackOMyDog2/app/libraries/middlewares/validation.middleware.js:20:3\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T09:44:22.902Z'
+}

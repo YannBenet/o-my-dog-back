@@ -6,5 +6,5 @@ export const router = Router();
 
 router.route('/')
   .get(
-    cw(departmentController.index)
+    cw(departmentController.index),
   );

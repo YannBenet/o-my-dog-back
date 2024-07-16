@@ -14,7 +14,7 @@ router.route('/')
    * @tags announcements
    * @param {string} date_start.query.required - ex: 2023-11-11
    * @param {string} date_end.query.required - ex: 2025-11-29
-   * @param {string} city.query.required - ex: Lyon 
+   * @param {string} city.query.required - ex: Lyon
    * @param {string} animal_label.query.required - ex: Poisson rouge
    * @return {AnnouncementsResult[]} 200 - announce found
    * @example response - 200 - example success
@@ -29,12 +29,12 @@ router.route('/')
    *      "firstname": "Louise",
    *      "lastname": "Fournier",
    *      "label": ["Chien", "Chat"]
-   *   } 
+   *   }
    * ]
    */
   .get(
     //! Faire un schema de valdiation des données envoyées en query
-    cw(announcementController.searchAnnouncement)
+    cw(announcementController.searchAnnouncement),
   );
 
 router.route('/users/:id(\\d+)')
@@ -45,7 +45,7 @@ router.route('/users/:id(\\d+)')
    * @param {AnnouncementPost} request.body.required - filter for date_start, date_end, city and animal
    * @return {AnnouncementResponse} 201 - announce found
    * @example request - Example request payload
-   * {  
+   * {
    *   "date_start": "2024-08-19T22:00:00.000Z",
    *   "date_end": "2024-08-27T22:00:00.000Z",
    *   "mobility": true,
@@ -60,8 +60,8 @@ router.route('/users/:id(\\d+)')
    */
   .post(
     validationMiddleware(announcementPostSchema, 'body'),
-    auth(), 
-    cw(announcementController.store)
+    auth(),
+    cw(announcementController.store),
   );
 
 
@@ -89,7 +89,7 @@ router.route('/highlight')
    *  ]
    */
   .get(
-    cw(announcementController.getHighlight)
+    cw(announcementController.getHighlight),
   );
 
 router.route('/:id(\\d+)')
@@ -122,7 +122,7 @@ router.route('/:id(\\d+)')
   // TODO Ajouter exemple message erreur
   .get(
     auth(),
-    cw(announcementController.show)
+    cw(announcementController.show),
   )
   /**
    * DELETE /api/announcements/{id}
@@ -130,7 +130,7 @@ router.route('/:id(\\d+)')
    * @tags announcements
    * @param {number} id.path.required - id
    * @return {AnnouncementResponse} 200 - announce deleted
-   * @example response - 200 - 
+   * @example response - 200 -
    * {
    *  "message": "Announcement removed successfully"
    * }
@@ -138,7 +138,7 @@ router.route('/:id(\\d+)')
   // TODO Ajouter exemple message erreur
   .delete(
     auth(),
-    cw(announcementController.delete)
+    cw(announcementController.delete),
   )
   /**
    * PATCH /api/announcements/{id}
@@ -163,5 +163,5 @@ router.route('/:id(\\d+)')
    */
   .patch(
     auth(),
-    cw(announcementController.update)
+    cw(announcementController.update),
   );

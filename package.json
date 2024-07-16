@@ -10,9 +10,7 @@
 	"scripts": {
 		"dev": "NODE_ENV=development node --watch index.js",
 		"start": "NODE_ENV=production node index.js",
-		"createdb": "psql -U <dbuser> -d <dbname> -f ./migrations/deploy/init-migration.sql",
-		"seeding": "psql -U <dbuser> -d <dbname> -f ./data/seeding.sql",
-		"createdb:seeding": "npm run createdb && npm run seeding"
+		"test": "node --experimental-vm-modules ./node_modules/.bin/jest"
 	},
 	"repository": {
 		"type": "git",
@@ -41,9 +39,13 @@
 		"winston": "^3.13.0"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.5.0",
+		"@babel/preset-env": "^7.24.8",
+		"@eslint/js": "^9.7.0",
+		"babel-jest": "^29.7.0",
 		"eslint": "^9.5.0",
-		"globals": "^15.6.0"
+		"eslint-plugin-jest": "^28.6.0",
+		"globals": "^15.6.0",
+		"jest": "^29.7.0"
 	},
 	"keywords": [
 		"OmYDog"

@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'fs';
 
 export default (schema, reqProperty) => async (req, res, next) => {
   const userInput = req[reqProperty];
@@ -10,12 +10,12 @@ export default (schema, reqProperty) => async (req, res, next) => {
     if (req.file) {
       fs.unlink(req.file.path, (err) => {
         if (err) {
-            console.error('Error deleting file in validation.middleware:', err);
-        } 
+          console.error('Error deleting file in validation.middleware:', err);
+        }
       });
     }
     next(err);
   }
-  
+
   next();
 };
