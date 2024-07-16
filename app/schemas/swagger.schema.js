@@ -20,11 +20,11 @@
 
 /**
  * @typedef {object} UserInfos
- * @property {string} firstname 
- * @property {string} lastname 
- * @property {string} email 
- * @property {string} city 
- * @property {string} phone_number 
+ * @property {string} firstname
+ * @property {string} lastname
+ * @property {string} email
+ * @property {string} city
+ * @property {string} phone_number
  */
 
 /**
@@ -35,7 +35,7 @@
  */
 
 /**
- * Error 
+ * Error
  * @typedef {object} ErrorResponseJson
  * @property {string} error - error list
  */

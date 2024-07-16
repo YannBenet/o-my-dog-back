@@ -3,7 +3,7 @@ import { AnnouncementAnimalDatamapper } from '../datamappers/index.datamapper.js
 import ApiError from '../libraries/errors/api.error.js';
 
 export default {
-    
+
   async show(req, res, next){
     const { id } = req.params;
 
@@ -16,7 +16,7 @@ export default {
     const announcement = await AnnouncementDatamapper.findByPk(id);
 
     if(!announcement){
-        return next(new ApiError('Ressource not found', { status: 404 }));
+      return next(new ApiError('Ressource not found', { status: 404 }));
     }
 
     // Response
@@ -28,7 +28,7 @@ export default {
 
     // Check if user is logged
     if(!req.token){
-        return next(new ApiError('Access Forbidden', { status: 403 }));
+      return next(new ApiError('Access Forbidden', { status: 403 }));
     }
 
     // Update announcement in database
@@ -45,13 +45,13 @@ export default {
 
     // Check if user is logged
     if(!req.token){
-        return next(new ApiError('Access Forbidden', { status: 403 }));
+      return next(new ApiError('Access Forbidden', { status: 403 }));
     }
     await AnnouncementAnimalDatamapper.delete(id);
     await AnnouncementDatamapper.delete(id);
 
     // Response
-    res.status(200).json({ message: 'Announcement removed successfully' })
+    res.status(200).json({ message: 'Announcement removed successfully' });
   },
 
   async getHighlight(_, res) {
@@ -59,7 +59,7 @@ export default {
     const randomAnnouncements = await AnnouncementDatamapper.highlight();
 
     // Response
-    res.status(200).json(randomAnnouncements)
+    res.status(200).json(randomAnnouncements);
   },
 
   async searchAnnouncement(req, res){
@@ -70,10 +70,10 @@ export default {
     const allAnnouncements = await AnnouncementDatamapper.searchAnnouncement(data);
 
     // Response
-    res.status(200).json(allAnnouncements)
+    res.status(200).json(allAnnouncements);
   },
 
-  async store(req, res, next){ 
+  async store(req, res, next){
     // Check if user is logged
     const { id } = req.params;
     if(!req.token || req.token !== parseInt(id)){
@@ -88,9 +88,7 @@ export default {
     }
 
     const animalTypes = req.body.animal;
-    console.log(animalTypes);
     if(animalTypes){
-      console.log('animal not null');
       const announcementId = result.id;
       for (const animalType of animalTypes){
         await AnnouncementAnimalDatamapper.create(animalType, announcementId);

@@ -4,13 +4,12 @@ export default class CoreDatamapper {
   static tableName = null;
 
   static init(config) {
-    this.client = config.client; 
+    this.client = config.client;
   }
 
   static async findAll() {
     const result  = await this.client.query(`SELECT * FROM "${this.tableName}";`)
-    // Return results
-    return result.rows
+    return result.rows;
   }
 
   static async findByPk(id){

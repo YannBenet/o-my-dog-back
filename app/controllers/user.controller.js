@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import fs from 'fs'
+import fs from 'fs';
 import jwtService from '../libraries/helpers/jwt.services.js';
 import { UserDatamapper } from '../datamappers/index.datamapper.js';
 import { AnnouncementDatamapper } from '../datamappers/index.datamapper.js';
@@ -35,7 +35,7 @@ export default {
       password: hashPassword,
       city,
       phone_number,
-      department_label
+      department_label,
     };
 
     await UserDatamapper.create(user);
@@ -57,7 +57,7 @@ export default {
 
     const passwordValidation = await bcrypt.compare(
       password,
-      user[0].password
+      user[0].password,
     );
 
     if(!passwordValidation){
@@ -67,31 +67,44 @@ export default {
     // Create JWT and load it with user's data
     const fingerprint = {
       ip: req.ip,
-      userAgent: req.headers['user-agent']
+      userAgent: req.headers['user-agent'],
     };
 
     const { accessToken, refreshToken } = await jwtService.createTokens({
       id: user[0].id,
       firstname: user[0].firstname,
-      fingerprint
+      fingerprint,
     });
 
     //! TODO modifier secure: false par secure: true quand l'appli sera en https
-    res.cookie('refreshToken', refreshToken, { 
+    res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
       secure: false,
       sameSite: 'Strict',
-      maxAge:  7 * 86400000
+      maxAge:  7 * 86400000,
     });
 
     // Response
     res.status(200).json({ accessToken });
   },
 
+  async logout (req, res, next ) {
+    const { id } = req.params;
+    if(parseInt(id) !== req.token){
+      return next(new ApiError('Access forbidden', { status: 403 }));
+    }
+    await UserDatamapper.update(id, { refresh_token: null });
+    res.clearCookie('refreshToken', {
+      httpOnly: true,
+      secure: false,
+      sameSite: 'Strict',
+    });
+    res.status(200).json({message : "User disconnected"});
+  },
+
   async show(req, res, next){
     // Check that this requested data are this user's data
     const { id } = req.params;
-
     if(parseInt(id) !== req.token){
       return next(new ApiError('Access forbidden', { status: 403 }));
     }
@@ -106,7 +119,7 @@ export default {
     // Response
     res.status(200).json(user);
   },
- 
+
   async update(req, res, next) {
     // Check that this requested user matches with jwt informations and get data from request
     const { id } = req.params;
@@ -116,12 +129,13 @@ export default {
     if(parseInt(id) !== req.token){
       return next(new ApiError('Access forbidden', { status: 403 }));
     }
+
     // Get image from request and upload it on cloudinary
     const file = req.file
 
     if (file) {
       async function uploadImage (imagePath) {
-    
+
         const options = {
           folder : "userImages",
           use_filename: true,
@@ -130,23 +144,23 @@ export default {
           transformation : [
             { width: 250, height: 250, crop:"auto" },
             { quality: 'auto' },
-            { fetch_format: "auto" }
-          ]
+            { fetch_format: "auto" },
+          ],
         };
 
         const result = await cloudinary.uploader.upload(imagePath, options);
         return result.url;
       };
-      
+
       const urlImg = await uploadImage(req.file.path);
       body.url_img = urlImg
 
-      // Suppression de l'image dans le serveur après sauvegarde en ligne : 
+      // Suppression de l'image dans le serveur après sauvegarde en ligne :
       fs.unlink(req.file.path, (err) => {
         if (err) {
           console.error('Error deleting file:', err);
-        } 
-    });
+        }
+      });
     }
     // Check if data already exists for another user and update it in database
     if (body.email) {
@@ -174,12 +188,12 @@ export default {
 
     delete req.body.repeatPassword;
     await UserDatamapper.update(id, body);
-    
+
     // Response
     return res.status(200).json({ message: 'User\'s data updated successfully' });
   },
 
-    //? TODO Necessité de vérifier si l'utilisateur existe avant de la supprimer au cas où l'id transmis par le front serait faux ?
+  //? TODO Necessité de vérifier si l'utilisateur existe avant de la supprimer au cas où l'id transmis par le front serait faux ?
   async delete(req, res, next){
     // Check that this requested informations are this user's informations
     const { id } = req.params;
@@ -210,8 +224,8 @@ export default {
     }
 
     const announcements = await AnnouncementDatamapper.findByAuthor(id);
-    
+
     // Response
     res.status(200).json(announcements);
-  }
+  },
 };

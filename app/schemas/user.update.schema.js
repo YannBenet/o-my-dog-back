@@ -28,6 +28,6 @@ export default Joi.object({
     .message('Incorrect phone number')
     .optional(),
   url_img: Joi.string()
-  .pattern(new RegExp('^http://res.cloudinary.com/dfniqh3lp/image/upload/.*.jpg$'))
-  .optional()
+    .pattern(new RegExp('^http://res.cloudinary.com/dfniqh3lp/image/upload/.*.jpg$'))
+    .optional(),
 });

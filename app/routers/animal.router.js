@@ -7,14 +7,14 @@ export const router = Router();
 router.route('/')
   /**
    * GET /api/animals/
-   * @summary Get all animals 
+   * @summary Get all animals
    * @tags animals
    * @return {AnimalTypesResponse[]} 200 - animals found
    * @example response - 200 - example success
    * [
    *    {
    *      "id": 1,
-   *      "label": "Chien", 
+   *      "label": "Chien",
    *      "created_at": "2024-07-10T07:31:28.015Z",
    *      "updated_at": null
    *    },
@@ -27,5 +27,5 @@ router.route('/')
    * ]
    */
   .get(
-    cw(animalController.index)
+    cw(animalController.index),
   );

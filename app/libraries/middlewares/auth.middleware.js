@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import jwtServices from '../helpers/jwt.services.js';
-import CustomError from '../errors/custom.error.js'
+import CustomError from '../errors/custom.error.js';
 
 export default () => async (req, res, next) => {
   try {
@@ -9,13 +9,13 @@ export default () => async (req, res, next) => {
     const tokenInfos = jwt.verify(accessToken, process.env.JWT_PRIVATE_KEY);
     const ip = req.ip;
     const userAgent = req.headers['user-agent'];
-    
+
     if(ip !== tokenInfos.data.fingerprint.ip || userAgent !== tokenInfos.data.fingerprint.userAgent){
       throw new CustomError('Invalid token', { status: 401 });
     }
     // Store user id in request and next
     req.token = tokenInfos.data.id;
-
+    console.log("req.token", req.token);
     next();
 
   } catch(err) {
@@ -39,14 +39,14 @@ export default () => async (req, res, next) => {
         }
         // Generate new tokens
         const { accessToken, refreshToken } = await jwtServices.refreshTokens(token, refreshTokenInfos.data);
-        
+
         // Store new tokens in response and next
         //! TODO modifier secure: false par secure: true quand l'appli sera en https
         res.cookie('refreshToken', refreshToken, {
           httpOnly: true,
           secure: false,
           sameSite: 'Strict',
-          maxAge:  7 * 86400000
+          maxAge:  7 * 86400000,
         });
         res.setHeader('Authorization', `Bearer ${accessToken}`);
 
@@ -61,4 +61,4 @@ export default () => async (req, res, next) => {
 
     next(err);
   }
-}
+};

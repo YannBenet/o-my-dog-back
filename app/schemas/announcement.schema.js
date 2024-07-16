@@ -1,25 +1,25 @@
 import Joi from 'joi';
 
 export default Joi.object({
-  date_start: 
+  date_start:
     Joi.date()
-    .greater('now')
-    .required()
-    .messages({ 'any.required': 'Start date is required'}),
-  date_end: 
+      .greater('now')
+      .required()
+      .messages({ 'any.required': 'Start date is required'}),
+  date_end:
     Joi.date()
-    .greater(Joi.ref('date_start'))
-    .required()
-    .messages({ 'any.required': 'End date is required'}),
-  mobility: 
+      .greater(Joi.ref('date_start'))
+      .required()
+      .messages({ 'any.required': 'End date is required'}),
+  mobility:
     Joi.boolean()
-    .required()
-    .messages({ 'any.required': 'Mobility information is required'}),
-  home: 
+      .required()
+      .messages({ 'any.required': 'Mobility information is required'}),
+  home:
     Joi.boolean()
-    .required()
-    .messages({ 'any.required': 'Home information is required'}),
-  description: 
+      .required()
+      .messages({ 'any.required': 'Home information is required'}),
+  description:
   Joi.string()
   .pattern(new RegExp('^[a-zA-ZÀ-ÿ0-9 -.,;!?/+#]{3,}$'))
   .messages({ 'string.pattern.base': 'Description must contains only letters, hyphens and spaces' }),

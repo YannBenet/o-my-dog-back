@@ -1,12 +1,12 @@
 import CoreDatamapper from "./core.datamapper.js";
 
 export default class AnnouncementDatamapper extends CoreDatamapper {
-  static tableName = 'announcement'
+  static tableName = 'announcement';
 
 
-    static async highlight() {
-        const result  = await this.client.query(
-            `SELECT 
+  static async highlight() {
+    const result  = await this.client.query(
+      `SELECT 
                 "announcement"."id" AS "announcement_id", 
                 "announcement"."date_start", 
                 "announcement"."date_end", 
@@ -31,12 +31,11 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                 "announcement"."id",
                 "user"."id"
             ORDER BY RANDOM()
-            LIMIT 8;`
-        );
-
-      const { rows } = result; 
-      return rows
-    }
+            LIMIT 8;`,
+    );
+    const { rows } = result;
+    return rows;
+  }
 
   static async searchAnnouncement(data) {
     const result = await this.client.query(

@@ -1,4 +1,5 @@
 import CoreDatamapper from "./core.datamapper.js";
+import ApiError from '../libraries/errors/api.error.js';
 
 export default class UserDatamapper extends CoreDatamapper {
   static tableName = 'user';
@@ -10,13 +11,14 @@ export default class UserDatamapper extends CoreDatamapper {
         [data]
       );
       return result.rows[0].result;
-
     } else if(column === 'phone_number'){
       const result = await this.client.query(
         `SELECT select_user_by_phone($1) AS result;`,
         [data]
       );
       return result.rows[0].result;
+    } else {
+      throw new ApiError('Ressource not found', { status: 404 });
     }
   }
 

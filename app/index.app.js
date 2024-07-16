@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 // app.use(express.static('app/static'));
 
-docMiddleware(app)
+docMiddleware(app);
 
 app.use(cookieParser());
 app.use(cors(corsOptions));

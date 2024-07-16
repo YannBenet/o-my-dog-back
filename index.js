@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import 'dotenv/config';
 
 import { createServer } from 'http';
 // import { Server as WsServer } from 'socket.io';

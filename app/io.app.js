@@ -9,7 +9,7 @@ export default {
     // user connexion to websocket server
     this.server.on('connection', (socket) => {
       const user = {
-        id: socket.id
+        id: socket.id,
       };
       this.users.push(user);
       console.log(this.users);
@@ -37,8 +37,8 @@ export default {
           if(user.id === socket.id){
             this.users.delete(user);
           }
-        })
-      })
+        });
+      });
     });
-  }
-}
+  },
+};

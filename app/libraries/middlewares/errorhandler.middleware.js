@@ -1,13 +1,13 @@
 import logger from '../helpers/logger.services.js';
 
-export default  (err, req, res, next) => {
+export default  (err, req, res) => {
   logger.error(err);
 
   if(err.name === 'ValidationError'){
     err.status = 400;
-    err.message = `Bad request / ${err.details.map((detail) => detail.message)}`
+    err.message = `Bad request / ${err.details.map((detail) => detail.message)}`;
   }
-  
+
   if(!err.status){
     err.status = 500;
   }
@@ -16,5 +16,5 @@ export default  (err, req, res, next) => {
     err.message = 'Internal server error';
   }
 
-  return res.status(err.status).json({ error: err.message})
-}
+  return res.status(err.status).json({ error: err.message});
+};

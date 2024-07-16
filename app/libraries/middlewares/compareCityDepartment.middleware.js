@@ -41,5 +41,5 @@ export default () => async (req, res, next) => {
       next(err);
     }
   }
-  next()
+  next();
 };
