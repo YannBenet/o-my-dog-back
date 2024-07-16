@@ -413,3 +413,111 @@
     '    at trim_prefix (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:328:13)',
   timestamp: '2024-07-16T07:46:58.421Z'
 }
+{
+  _original: {
+    firstname: '',
+    lastname: '',
+    email: '',
+    city: 'Verneuil (16)',
+    phone_number: '',
+    password: '',
+    repeatPassword: '',
+    department_label: 'Charente',
+    department_code: '16'
+  },
+  details: [
+    {
+      message: '"firstname" is not allowed to be empty',
+      path: [ 'firstname' ],
+      type: 'string.empty',
+      context: { label: 'firstname', value: '', key: 'firstname' }
+    }
+  ],
+  level: 'error',
+  message: '"firstname" is not allowed to be empty',
+  stack: 'ValidationError: "firstname" is not allowed to be empty',
+  timestamp: '2024-07-16T08:56:24.858Z'
+}
+{
+  _original: {
+    firstname: 'Yann',
+    lastname: 'Benetato',
+    email: 'benetato@gmail.fr',
+    city: 'Roquefort (40)',
+    phone_number: '0658512422',
+    password: 'aaAA!!00',
+    repeatPassword: 'aaAA!!00',
+    department_label: 'Landes',
+    department_code: '40'
+  },
+  details: [
+    {
+      message: '"department_code" is not allowed',
+      path: [ 'department_code' ],
+      type: 'object.unknown',
+      context: {
+        child: 'department_code',
+        label: 'department_code',
+        value: '40',
+        key: 'department_code'
+      }
+    }
+  ],
+  level: 'error',
+  message: '"department_code" is not allowed',
+  stack: 'ValidationError: "department_code" is not allowed',
+  timestamp: '2024-07-16T08:58:04.573Z'
+}
+{
+  length: 132,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '97',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1066',
+  routine: 'checkInsertTargets',
+  level: 'error',
+  message: 'column "department_code" of relation "user" does not exist',
+  stack: 'error: column "department_code" of relation "user" does not exist\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:40:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T09:01:56.280Z'
+}
+{
+  level: 'error',
+  message: 'datacity is not defined',
+  stack: 'ReferenceError: datacity is not defined\n' +
+    '    at file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:15:29\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T09:19:21.264Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:15:49\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T09:20:06.924Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'nom')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'nom')\n" +
+    '    at file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:15:50\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T09:20:39.402Z'
+}
