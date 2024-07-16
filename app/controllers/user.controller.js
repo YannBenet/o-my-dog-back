@@ -14,13 +14,14 @@ export default {
 
     // Check data and add user in database
     const emailAlreadyExists = await UserDatamapper.findOne('email', email);
-    if(emailAlreadyExists.length){
+
+    if(emailAlreadyExists){
       return next(new ApiError('Email already exists', { status: 409 }));
     }
 
     if(phone_number){
       const phoneAlreadyExists = await UserDatamapper.findOne('phone_number', phone_number);
-      if(phoneAlreadyExists.length){
+      if(phoneAlreadyExists){
         return next(new ApiError('Phone number already exists', { status: 409 }));
       }
     }
@@ -31,7 +32,7 @@ export default {
       firstname,
       lastname,
       email,
-      hashPassword,
+      password: hashPassword,
       city,
       phone_number,
       department_label,
@@ -44,14 +45,13 @@ export default {
   },
 
   async login(req, res, next){
-    console.log('login controller');
     // Get login informations from request
     const { email, password } = req.body;
 
     // Check login informations
     const user = await UserDatamapper.findOne('email', email);
 
-    if(!user.length){
+    if(!user){
       return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
 
@@ -69,13 +69,13 @@ export default {
       ip: req.ip,
       userAgent: req.headers['user-agent'],
     };
-    console.log('before create tokens');
+
     const { accessToken, refreshToken } = await jwtService.createTokens({
       id: user[0].id,
       firstname: user[0].firstname,
       fingerprint,
     });
-    console.log(accessToken);
+
     //! TODO modifier secure: false par secure: true quand l'appli sera en https
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
@@ -103,7 +103,7 @@ export default {
   },
 
   async show(req, res, next){
-    // Check that requested data are this user's data
+    // Check that this requested data are this user's data
     const { id } = req.params;
     if(parseInt(id) !== req.token){
       return next(new ApiError('Access forbidden', { status: 403 }));
@@ -121,6 +121,7 @@ export default {
   },
 
   async update(req, res, next) {
+    // Check that this requested user matches with jwt informations and get data from request
     const { id } = req.params;
     const input = req.body;
     const body = Object.assign({}, req.body);
@@ -129,7 +130,8 @@ export default {
       return next(new ApiError('Access forbidden', { status: 403 }));
     }
 
-    const file = req.file;
+    // Get image from request and upload it on cloudinary
+    const file = req.file
 
     if (file) {
       async function uploadImage (imagePath) {
@@ -146,14 +148,12 @@ export default {
           ],
         };
 
-
         const result = await cloudinary.uploader.upload(imagePath, options);
         return result.url;
       };
 
       const urlImg = await uploadImage(req.file.path);
-      console.log(urlImg);
-      body.url_img = urlImg;
+      body.url_img = urlImg
 
       // Suppression de l'image dans le serveur après sauvegarde en ligne :
       fs.unlink(req.file.path, (err) => {
@@ -162,7 +162,7 @@ export default {
         }
       });
     }
-    // Check if data and update it in database
+    // Check if data already exists for another user and update it in database
     if (body.email) {
       const emailAlreadyExists = await UserDatamapper.findOne("email", body.email);
       if(emailAlreadyExists.length){
@@ -195,7 +195,7 @@ export default {
 
   //? TODO Necessité de vérifier si l'utilisateur existe avant de la supprimer au cas où l'id transmis par le front serait faux ?
   async delete(req, res, next){
-    // Check that requested informations are this user's informations
+    // Check that this requested informations are this user's informations
     const { id } = req.params;
 
     if(parseInt(id) !== req.token){
@@ -210,7 +210,7 @@ export default {
   },
 
   async getAllAnnouncements(req, res, next){
-    // Check that requested informations are this user's informations
+    // Check that this requested informations are this user's informations
     const { id } = req.params;
 
     if(parseInt(id) !== req.token){
