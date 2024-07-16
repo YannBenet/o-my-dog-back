@@ -7,7 +7,7 @@ import userUpdateSchema from '../schemas/user.update.schema.js';
 import loginPostSchema from '../schemas/login.post.schema.js';
 import auth from '../libraries/middlewares/auth.middleware.js';
 import cw from '../libraries/middlewares/controllerWrapper.middleware.js';
-import multerConfig from '../libraries/middlewares/multerConfig.middleware.js'
+import multerConfig from '../libraries/middlewares/multerConfig.middleware.js';
 import compareCityDepartmentMiddleware from '../libraries/middlewares/compareCityDepartment.middleware.js';
 
 
@@ -24,7 +24,7 @@ router.route('/signin')
  * @param {UserSignin} request.body.required - user's info
  * @return {UserResponse} 201 - User Created Successfully
  * @return {ErrorResponseJson} 409 - Phone number or email already exists
- * @return {ErrorResponseJson} 500 - server error 
+ * @return {ErrorResponseJson} 500 - server error
  * @example request - Example request payload
  * {
  *   "firstname": "John",
@@ -47,19 +47,19 @@ router.route('/signin')
   .post(
     validationMiddleware(userPostSchema, 'body'),
     compareCityDepartmentMiddleware(),
-    cw(userController.store)
+    cw(userController.store),
   );
 
 
-  router.route('/login')
+router.route('/login')
   /**
    * POST /api/users/login
    * @summary Signup the user
    * @tags users
    * @param {UserLogin} request.body.required - user's info to connect
    * @return {UserResponse} 200 - Exemple success response
-   * @return {ErrorResponseJson} 401 - Exemple error response 
-   * @return {ErrorResponseJson} 500 - server error 
+   * @return {ErrorResponseJson} 401 - Exemple error response
+   * @return {ErrorResponseJson} 500 - server error
    * @example request - example request payload
    * {
    *  "email": "john.doe@example.com",
@@ -76,8 +76,14 @@ router.route('/signin')
   */
   .post(
     validationMiddleware(loginPostSchema, 'body'),
-    cw(userController.login)
+    cw(userController.login),
   );
+
+// TODO Ajouter doc
+router.route('/logout/:id(\\d+)')
+  .post(
+    auth(),
+    cw(userController.logout));
 
 router.route('/:id(\\d+)')
 /**
@@ -85,12 +91,12 @@ router.route('/:id(\\d+)')
  * @summary get user's info
  * @tags users
  * @return {UserInfos} 200 - user's infos
- * @return {ErrorResponseJson} 500 - server error 
+ * @return {ErrorResponseJson} 500 - server error
  * @return {ErrorResponseJson} 404 - user not found
  */
   .get(
-    auth(), 
-    cw(userController.show)
+    auth(),
+    cw(userController.show),
   )
 /**
  * DELETE /api/users/{id}
@@ -103,14 +109,14 @@ router.route('/:id(\\d+)')
  * {
  *  "message": "User profile removed successfully"
  * }
- * @example response - 403 - Example error response 
+ * @example response - 403 - Example error response
  * {
  * "error": "Access forbidden"
  * }
  */
   .delete(
     auth(),
-    cw(userController.delete)
+    cw(userController.delete),
   )
   /**
  * PATCH /api/users/:id
@@ -119,9 +125,9 @@ router.route('/:id(\\d+)')
  * @param {UserSignin} request.body - user's info
  * @param {number} id.path.required
  * @return {UserResponse} 201 - User Created Successfully
- * @return {ErrorResponseJson} 403 - Access forbidden 
+ * @return {ErrorResponseJson} 403 - Access forbidden
  * @return {ErrorResponseJson} 409 - Phone number or email already exists
- * @return {ErrorResponseJson} 500 - server error 
+ * @return {ErrorResponseJson} 500 - server error
  * @example request - Example request payload
  * {
  *   "firstname": "John",
@@ -146,7 +152,7 @@ router.route('/:id(\\d+)')
     multerConfig,
     validationMiddleware(userUpdateSchema, 'body'),
     compareCityDepartmentMiddleware(),
-    cw(userController.update)
+    cw(userController.update),
   );
 
 router.route('/:id(\\d+)/announcements')
@@ -173,6 +179,6 @@ router.route('/:id(\\d+)/announcements')
  */
   .get(
     auth(),
-    cw(userController.getAllAnnouncements)
+    cw(userController.getAllAnnouncements),
   );
 
