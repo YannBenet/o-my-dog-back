@@ -572,3 +572,335 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
   timestamp: '2024-07-16T09:49:05.641Z'
 }
+{
+  _original: {
+    firstname: '',
+    lastname: '',
+    email: '',
+    city: 'Verneuil (58)',
+    phone_number: '',
+    password: '',
+    repeatPassword: '',
+    department_label: 'Nièvre',
+    department_code: '58'
+  },
+  details: [
+    {
+      message: '"firstname" is not allowed to be empty',
+      path: [ 'firstname' ],
+      type: 'string.empty',
+      context: { label: 'firstname', value: '', key: 'firstname' }
+    }
+  ],
+  level: 'error',
+  message: '"firstname" is not allowed to be empty',
+  stack: 'ValidationError: "firstname" is not allowed to be empty',
+  timestamp: '2024-07-16T10:01:17.643Z'
+}
+{
+  _original: {
+    firstname: '',
+    lastname: '',
+    email: '',
+    city: 'Roquefort (32)',
+    phone_number: '',
+    password: '',
+    repeatPassword: '',
+    department_label: 'Gers',
+    department_code: '32'
+  },
+  details: [
+    {
+      message: '"firstname" is not allowed to be empty',
+      path: [ 'firstname' ],
+      type: 'string.empty',
+      context: { label: 'firstname', value: '', key: 'firstname' }
+    }
+  ],
+  level: 'error',
+  message: '"firstname" is not allowed to be empty',
+  stack: 'ValidationError: "firstname" is not allowed to be empty',
+  timestamp: '2024-07-16T10:05:15.546Z'
+}
+{
+  _original: {
+    firstname: '',
+    lastname: '',
+    email: '',
+    city: 'Saint-Michel (64)',
+    phone_number: '',
+    password: '',
+    repeatPassword: '',
+    department_label: 'Pyrénées-Atlantiques',
+    department_code: '64'
+  },
+  details: [
+    {
+      message: '"firstname" is not allowed to be empty',
+      path: [ 'firstname' ],
+      type: 'string.empty',
+      context: { label: 'firstname', value: '', key: 'firstname' }
+    }
+  ],
+  level: 'error',
+  message: '"firstname" is not allowed to be empty',
+  stack: 'ValidationError: "firstname" is not allowed to be empty',
+  timestamp: '2024-07-16T10:15:31.631Z'
+}
+{
+  _original: {
+    firstname: '',
+    lastname: '',
+    email: '',
+    city: 'Saint-Michel (64)',
+    phone_number: '',
+    password: '',
+    repeatPassword: '',
+    department_label: 'Pyrénées-Atlantiques'
+  },
+  details: [
+    {
+      message: '"firstname" is not allowed to be empty',
+      path: [ 'firstname' ],
+      type: 'string.empty',
+      context: { label: 'firstname', value: '', key: 'firstname' }
+    }
+  ],
+  level: 'error',
+  message: '"firstname" is not allowed to be empty',
+  stack: 'ValidationError: "firstname" is not allowed to be empty',
+  timestamp: '2024-07-16T10:25:01.546Z'
+}
+{
+  _original: {
+    firstname: '',
+    lastname: '',
+    email: '',
+    city: 'Saint-Michel (64)',
+    phone_number: '',
+    password: '',
+    repeatPassword: '',
+    department_label: 'Pyrénées-Atlantiques'
+  },
+  details: [
+    {
+      message: '"firstname" is not allowed to be empty',
+      path: [ 'firstname' ],
+      type: 'string.empty',
+      context: { label: 'firstname', value: '', key: 'firstname' }
+    }
+  ],
+  level: 'error',
+  message: '"firstname" is not allowed to be empty',
+  stack: 'ValidationError: "firstname" is not allowed to be empty',
+  timestamp: '2024-07-16T10:26:47.415Z'
+}
+{
+  _original: {
+    firstname: '',
+    lastname: '',
+    email: '',
+    city: 'Saint-Michel (64)',
+    phone_number: '',
+    password: '',
+    repeatPassword: '',
+    department_label: 'Pyrénées-Atlantiques'
+  },
+  details: [
+    {
+      message: '"firstname" is not allowed to be empty',
+      path: [ 'firstname' ],
+      type: 'string.empty',
+      context: { label: 'firstname', value: '', key: 'firstname' }
+    }
+  ],
+  level: 'error',
+  message: '"firstname" is not allowed to be empty',
+  stack: 'ValidationError: "firstname" is not allowed to be empty',
+  timestamp: '2024-07-16T10:29:16.266Z'
+}
+{
+  _original: {
+    firstname: 'yann',
+    lastname: 'Benou',
+    email: 'yanoubennnou@test.fr',
+    city: 'Saint-Michel (82)',
+    phone_number: '0558555457',
+    password: 'aaAA!!00',
+    repeatPassword: 'aaAA!!00',
+    department_label: 'Tarn-et-Garonne'
+  },
+  details: [
+    {
+      message: 'Department_code is required',
+      path: [ 'department_code' ],
+      type: 'any.required',
+      context: { label: 'department_code', key: 'department_code' }
+    }
+  ],
+  level: 'error',
+  message: 'Department_code is required',
+  stack: 'ValidationError: Department_code is required',
+  timestamp: '2024-07-16T10:30:37.753Z'
+}
+{
+  _original: {
+    firstname: 'yann',
+    lastname: 'Benou',
+    email: 'yanoubennnou@test.fr',
+    city: 'Saint-Michel (82)',
+    phone_number: '0558555457',
+    password: 'aaAA!!00',
+    repeatPassword: 'aaAA!!00',
+    department_label: 'Tarn-et-Garonne'
+  },
+  details: [
+    {
+      message: 'Department_code is required',
+      path: [ 'department_code' ],
+      type: 'any.required',
+      context: { label: 'department_code', key: 'department_code' }
+    }
+  ],
+  level: 'error',
+  message: 'Department_code is required',
+  stack: 'ValidationError: Department_code is required',
+  timestamp: '2024-07-16T10:30:53.822Z'
+}
+{
+  _original: {
+    firstname: 'yann',
+    lastname: 'Benou',
+    email: 'yanoubennnou@test.fr',
+    city: 'Saint-Michel (82)',
+    phone_number: '0558555457',
+    password: 'aaAA!!00',
+    repeatPassword: 'aaAA!!00',
+    department_label: 'Tarn-et-Garonne'
+  },
+  details: [
+    {
+      message: 'Department_code is required',
+      path: [ 'department_code' ],
+      type: 'any.required',
+      context: { label: 'department_code', key: 'department_code' }
+    }
+  ],
+  level: 'error',
+  message: 'Department_code is required',
+  stack: 'ValidationError: Department_code is required',
+  timestamp: '2024-07-16T10:31:06.043Z'
+}
+{
+  _original: {
+    firstname: 'yann',
+    lastname: 'Benou',
+    email: 'yanoubennnou@test.fr',
+    city: 'Saint-Michel (82)',
+    phone_number: '0558555457',
+    password: 'aaAA!!00',
+    repeatPassword: 'aaAA!!00',
+    department_label: 'Tarn-et-Garonne'
+  },
+  details: [
+    {
+      message: 'Department_code is required',
+      path: [ 'department_code' ],
+      type: 'any.required',
+      context: { label: 'department_code', key: 'department_code' }
+    }
+  ],
+  level: 'error',
+  message: 'Department_code is required',
+  stack: 'ValidationError: Department_code is required',
+  timestamp: '2024-07-16T10:33:29.160Z'
+}
+{
+  _original: {
+    firstname: 'yann',
+    lastname: 'Benou',
+    email: 'yanoubennnou@test.fr',
+    city: 'Saint-Michel (82)',
+    phone_number: '0558555457',
+    password: 'aaAA!!00',
+    repeatPassword: 'aaAA!!00',
+    department_label: 'Tarn-et-Garonne'
+  },
+  details: [
+    {
+      message: 'Department_code is required',
+      path: [ 'department_code' ],
+      type: 'any.required',
+      context: { label: 'department_code', key: 'department_code' }
+    }
+  ],
+  level: 'error',
+  message: 'Department_code is required',
+  stack: 'ValidationError: Department_code is required',
+  timestamp: '2024-07-16T10:35:10.180Z'
+}
+{
+  _original: {
+    firstname: 'yann',
+    lastname: 'Benou',
+    email: 'yanoubennnou@test.fr',
+    city: 'Saint-Michel (82)',
+    phone_number: '0558555457',
+    password: 'aaAA!!00',
+    repeatPassword: 'aaAA!!00',
+    department_label: 'Tarn-et-Garonne'
+  },
+  details: [
+    {
+      message: 'Department_code is required',
+      path: [ 'department_code' ],
+      type: 'any.required',
+      context: { label: 'department_code', key: 'department_code' }
+    }
+  ],
+  level: 'error',
+  message: 'Department_code is required',
+  stack: 'ValidationError: Department_code is required',
+  timestamp: '2024-07-16T10:35:12.381Z'
+}
+{
+  name: 'ApiError',
+  status: 409,
+  level: 'error',
+  message: 'Email already exists',
+  stack: 'ApiError: Email already exists\n' +
+    '    at store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:18:19)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T10:42:30.425Z'
+}
+{
+  length: 132,
+  name: 'error',
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '33',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'analyze.c',
+  line: '2527',
+  routine: 'transformUpdateTargetList',
+  level: 'error',
+  message: 'column "refresh_token" of relation "user" does not exist',
+  stack: 'error: column "refresh_token" of relation "user" does not exist\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.update (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/core.datamapper.js:33:20)\n' +
+    '    at async Object.createTokens (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/helpers/jwt.services.js:21:7)\n' +
+    '    at async login (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:73:43)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T10:43:30.315Z'
+}
