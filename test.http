@@ -1,7 +1,7 @@
 @endpoint=http://localhost:{{$dotenv PORT}}
-@department_label=department_label=var
-@date_start=date_start=2024-07-20
-@date_end=date_end=2025-07-29
+@department_label=department_label=Var
+@date_start=date_start=2025-07-30
+@date_end=date_end=2025-08-10
 @animal_label=animal_label=Chien
 @refreshToken = 
 
@@ -21,15 +21,14 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-  "firstname": "Harley",
-  "lastname": "Quinn",
-  "email": "batou@anonyme.bat",
+  "firstname": "Yayoi",
+  "lastname": "Kaneda",
+  "email": "yayoi.kaneda2@tralala.pof",
   "password": "uuUU**00",
   "city": "toulon",
-  "phone_number": "0612256389",
+  "phone_number": "0612256335",
   "repeatPassword": "uuUU**00",
   "department_label": "var"
-
 }
 ###
 
@@ -44,70 +43,64 @@ Content-Type: application/json
 ###
 
 GET {{endpoint}}/api/users/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA3MDIxNTMsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjA3MDIxMjJ9.OofOzOZbQUfnPkfz849uTADkBxcghAuORssPRJH800E
-Cookie: refreshToken=; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExMzEyMjEsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjExMTc3MjB9.tzl7tcGG95lYAr5L7JsZcoBbhlKK14qlhLkjJwRamYQ
 
 ###
 
 
-GET {{endpoint}}/api/announcements/3
-content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA0MjYyMzcsImRhdGEiOnsiaWQiOjExLCJmaXJzdG5hbWUiOiJIYXJsZXkiLCJsYXN0bmFtZSI6IlF1aW5uIiwiZmluZ2VycHJpbnQiOnsiaXAiOiI6OmZmZmY6MTI3LjAuMC4xIiwidXNlckFnZW50IjoidnNjb2RlLXJlc3RjbGllbnQifX0sImlhdCI6MTcyMDQyMjYzNn0.12G563LA6o3JRopJbGcD4SmSeONnbWggQ9b5ufYmjU0
+GET {{endpoint}}/api/announcements/17
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExMzEyMjEsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjExMTc3MjB9.tzl7tcGG95lYAr5L7JsZcoBbhlKK14qlhLkjJwRamYQ
 
 ###
 
-PATCH {{endpoint}}/api/announcements/20
+PATCH {{endpoint}}/api/announcements/16
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExMzEyMjEsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjExMTc3MjB9.tzl7tcGG95lYAr5L7JsZcoBbhlKK14qlhLkjJwRamYQ
 
 {
-  "date_start": "2024-11-11",
-  "date_end": "2024-11-29",
+  "date_start": "2024-12-11",
+  "date_end": "2024-12-29",
   "description": "J'adore m'occuper des gros lezards",
   "home" : true,
-  "mobility" : true
+  "mobility" : false
 }
 
 ###
 
-DELETE {{endpoint}}/api/announcements/840
-
+DELETE {{endpoint}}/api/announcements/16
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwNjA4NDUsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNDczNDR9.RqroMEJ66JdGaxPkJJukJG2egX29xlAEkZXF0L5oe2Q
 ###
 
-PATCH {{endpoint}}/api/users/44
+PATCH {{endpoint}}/api/users/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwNzkwNDQsImRhdGEiOnsiaWQiOjI3LCJmaXJzdG5hbWUiOiJ0ZXN0IiwibGFzdG5hbWUiOiJ0ZXN0IiwiZmluZ2VycHJpbnQiOnsiaXAiOiI6OmZmZmY6MTI3LjAuMC4xIiwidXNlckFnZW50IjoidnNjb2RlLXJlc3RjbGllbnQifX0sImlhdCI6MTcyMDA3ODk4M30.h3qZzpNzSyH6IBlh5MsIw5DBt4EbCGFDCO60ZEGWbe8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExMzEyMjEsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjExMTc3MjB9.tzl7tcGG95lYAr5L7JsZcoBbhlKK14qlhLkjJwRamYQ
+
 
 {
-  "firstname": "Robert",
-  "lastname": "Patulacci",
-  "email": "yannbenet@test.com",
-  "password": "aaAA!!00",
-  "city": "poissy",
-  "phone_number": "0612256344",
-  "repeatPassword": "aaAA!!00",
-  "department_label": "yvelines"
+  "city": "Maubeuge"
 }
 
 ###
 
 POST {{endpoint}}/api/announcements/users/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA3ODQ3OTcsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjA3NzEyOTd9.DKiXpashkxOsuovQAdnst3ovatzny2Qdn7CauKoAGMY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwODUyMjQsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNzE3MjR9.pH0mXoYdmre_tpfBBL2-yrX6r3AlosfwMOFqhd8K_DE
 
 
 {
     "date_start": "2024-07-20",
-    "date_end": "2025-07-30",
+    "date_end": "2025-08-30",
     "mobility": true,
     "home": false,
     "description": "Ceci est une description",
     "animal": ["Chien", "Chat"]
 }
+
 ###
 
 GET {{endpoint}}/api/users/1/announcements
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA3ODQ3OTcsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjA3NzEyOTd9.DKiXpashkxOsuovQAdnst3ovatzny2Qdn7CauKoAGMY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwNjg5NjQsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNTU0NjN9.HEvM-LCPLR5yaaVv2yckOrjiHkUHjdN8deZ8FIfIKEk
 ###
 
-DELETE {{endpoint}}/api/users/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk5MzY1MjYsImRhdGEiOnsiaWQiOjIsImZpcnN0bmFtZSI6ImpoaW4iLCJsYXN0bmFtZSI6ImRvdSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MTk5MzY0NjZ9.0ZsDWMsLk4tQ7a9zDOst-bOS3fgD6VHEIGipT1ATevQ
+DELETE {{endpoint}}/api/users/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwNjUwOTYsImRhdGEiOnsiaWQiOjMsImZpcnN0bmFtZSI6IlNvdyIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNTE1OTV9.937OG4ndXbuJNWvciYGoT2asfcrIfM8PQ1tAEj045pA

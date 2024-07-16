@@ -15,34 +15,29 @@ export default () => async (req, res, next) => {
       const departmentFound = dataCity.find((city) => city.departement.nom === departmentReq);
       const departmentSelected = departmentFound.departement.nom;
 
-
-      console.log("Résultat de departmentSelected", departmentSelected);
       if(!dataCity.length || !departmentFound) {
-          console.log('No data');
-          throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
+        throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
      } 
       const cityFound = dataCity.find((city) => city.nom === cityReq);
       const citySelected = cityFound.nom;
-      console.log("Résultat du citySelected", citySelected);
 
       // Compare city with same writing format
       function normalizeString(str) {
-          return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
       }
 
       // if city selected is the right one, write it the same way in params
       if (normalizeString(citySelected) === normalizeString(cityReq) && normalizeString(departmentSelected) === normalizeString(departmentReq)) {
-          req.body.city = citySelected;
-          req.body.department_label = departmentSelected;
-          return next();
+        req.body.city = citySelected;
+        req.body.department_label = departmentSelected;
+        return next();
       } 
 
       else {
-          throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
+        throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
       }   
     } catch(err) {
 
-      console.log(`Dans le catch: ${err}`);
       next(err);
     }
   }

@@ -1,5 +1,6 @@
-import { AnnouncementDatamapper } from "../datamappers/index.datamapper.js";
-import ApiError from "../libraries/errors/api.error.js";
+import { AnnouncementDatamapper } from '../datamappers/index.datamapper.js';
+import { AnnouncementAnimalDatamapper } from '../datamappers/index.datamapper.js'
+import ApiError from '../libraries/errors/api.error.js';
 
 export default {
     
@@ -22,7 +23,7 @@ export default {
     res.status(200).json(announcement);
   },
 
-  async update(req, res){
+  async update(req, res, next){
     const { id } = req.params;
 
     // Check if user is logged
@@ -31,22 +32,22 @@ export default {
     }
 
     // Update announcement in database
-    const { date_start, date_end, mobility, home, description } = req.body;
-    await AnnouncementDatamapper.update(id, date_start, date_end, mobility, home, description);
+    const data = req.body;
+    await AnnouncementDatamapper.update(id, data);
 
     // Response
     res.status(200).json({message: 'Announcement updated successfully'});
   },
 
   //? TODO Necessité de vérifier si l'annonce existe avant de la supprimer au cas où l'id transmis par le front serait faux ?
-  async delete(req, res){
+  async delete(req, res, next){
     const { id } = req.params;
 
     // Check if user is logged
     if(!req.token){
         return next(new ApiError('Access Forbidden', { status: 403 }));
     }
-
+    await AnnouncementAnimalDatamapper.delete(id);
     await AnnouncementDatamapper.delete(id);
 
     // Response
@@ -64,14 +65,12 @@ export default {
   async searchAnnouncement(req, res){
     // Get data from query
     const data = req.query
-    console.log(data);
 
     // Get data from database
     const allAnnouncements = await AnnouncementDatamapper.searchAnnouncement(data);
 
     // Response
     res.status(200).json(allAnnouncements)
-
   },
 
   async store(req, res, next){ 
@@ -88,15 +87,17 @@ export default {
       return next(new ApiError('Ressource not found', { status: 404 }));
     }
 
-    const announcementId = result.id;
     const animalTypes = req.body.animal;
-
-    for (const animalType of animalTypes) {
-      await AnnouncementDatamapper.addAuthorizedAnimals(announcementId, animalType)
-    };
+    console.log(animalTypes);
+    if(animalTypes){
+      console.log('animal not null');
+      const announcementId = result.id;
+      for (const animalType of animalTypes){
+        await AnnouncementAnimalDatamapper.create(animalType, announcementId);
+      };
+    }
 
     // Response
-    res.status(201).json({ message: 'Announcement created successfully'});
-      
+    res.status(201).json({ message: 'Announcement created successfully'});  
   }
 }

@@ -2,7 +2,6 @@ import logger from '../helpers/logger.services.js';
 
 export default  (err, req, res, next) => {
   logger.error(err);
-  console.log('COUCOU');
 
   if(err.name === 'ValidationError'){
     err.status = 400;
