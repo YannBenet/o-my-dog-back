@@ -1,40 +1,42 @@
+// Compare city & department data coming from the front-end with the data from the API
+// Then stock them with same writing format in the database
+
 import ApiError from '../errors/api.error.js'; 
 
 export default () => async (req, res, next) => {
 
   if (req.body.city) {
-    const cityReq = req.body.city;
+    const cityReq = req.body.city.split(' ')[0];
     const departmentReq = req.body.department_label;
-    console.log("contenu de la requete formulaire:", cityReq);
+
     try {
-      const result = await fetch(`https://geo.api.gouv.fr/communes?nom=${cityReq}&fields=nom,departement&boost=population&limit=5`);
-      const data = await result.json();
-      if(!data.length){
+      const cityResult = await fetch(`https://geo.api.gouv.fr/communes?nom=${cityReq}&fields=nom,departement&boost=population&limit=5`);
+      const dataCity = await cityResult.json();
+      const departmentFound = dataCity.find((city) => city.departement.nom === departmentReq);
+      const departmentSelected = departmentFound.departement.nom;
+
+
+      console.log("Résultat de departmentSelected", departmentSelected);
+      if(!dataCity.length || !departmentFound) {
           console.log('No data');
           throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
-     }
+     } 
+      const cityFound = dataCity.find((city) => city.nom === cityReq);
+      const citySelected = cityFound.nom;
+      console.log("Résultat du citySelected", citySelected);
 
-      const cityApi = data[0].nom;
-      const departmentApi = data[0].departement.nom;
-      console.log("Requête de département" , departmentReq);
-      console.log("Requête de département API" , departmentApi);
-      // Normalisation des chaines de caractères pour comparer les villes
+      // Compare city with same writing format
       function normalizeString(str) {
           return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
       }
 
-      // si plusieurs communes trouvées et que la première commune correspond à la ville recherchée
-      if (data.length > 1 && normalizeString(cityApi) === normalizeString(cityReq)) {
-          req.body.city = cityApi;
-          req.body.department_label = departmentApi;
+      // if city selected is the right one, write it the same way in params
+      if (normalizeString(citySelected) === normalizeString(cityReq) && normalizeString(departmentSelected) === normalizeString(departmentReq)) {
+          req.body.city = citySelected;
+          req.body.department_label = departmentSelected;
           return next();
       } 
-      // si une seule commune trouvée et que la commune correspond à la ville recherchée
-      else if (data.length === 1 && normalizeString(cityApi) === normalizeString(cityReq)){
-          req.body.city = cityApi;
-          req.body.department_label = departmentApi;
-          return next();
-      }
+
       else {
           throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
       }   
