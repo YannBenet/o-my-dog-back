@@ -8,7 +8,8 @@ import docMiddleware from './libraries/middlewares/doc.middleware.js';
 const corsOptions = {
     origin: process.env.FRONT_URL,
     methods: 'GET,POST,PATCH,DELETE',
-    allowedHeaders: 'Content-Type,Authorization'
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials: true
 };
 
 const app = express();

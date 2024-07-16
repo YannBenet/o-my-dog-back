@@ -21,15 +21,14 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-  "firstname": "Sow",
+  "firstname": "Yayoi",
   "lastname": "Kaneda",
-  "email": "sow.kaneda@tralala.pof",
+  "email": "yayoi.kaneda2@tralala.pof",
   "password": "uuUU**00",
   "city": "toulon",
   "phone_number": "0612256335",
   "repeatPassword": "uuUU**00",
   "department_label": "var"
-
 }
 ###
 

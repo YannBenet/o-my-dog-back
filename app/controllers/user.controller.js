@@ -12,13 +12,14 @@ export default {
 
     // Check data and add user in database
     const emailAlreadyExists = await UserDatamapper.findOne('email', email);
-    if(emailAlreadyExists.length){
+
+    if(emailAlreadyExists){
       return next(new ApiError('Email already exists', { status: 409 }));
     }
 
     if(phone_number){
       const phoneAlreadyExists = await UserDatamapper.findOne('phone_number', phone_number);
-      if(phoneAlreadyExists.length){
+      if(phoneAlreadyExists){
         return next(new ApiError('Phone number already exists', { status: 409 }));
       }
     }
@@ -48,7 +49,7 @@ export default {
     // Check login informations
     const user = await UserDatamapper.findOne('email', email);
 
-    if(!user.length){
+    if(!user){
       return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
 

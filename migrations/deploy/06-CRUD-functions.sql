@@ -17,6 +17,7 @@ CREATE FUNCTION "select_announcement_by_pk" (input_id int) RETURNS JSON AS $$
       'city', "user"."city",
       'phone_number', "user"."phone_number",
       'email', "user"."email",
+      'url_img', "user"."url_img",
       'animal_labels', ARRAY_AGG("animal_type"."label")
     )
   FROM
@@ -35,7 +36,8 @@ CREATE FUNCTION "select_announcement_by_pk" (input_id int) RETURNS JSON AS $$
     "user"."lastname",
     "user"."city",
     "user"."phone_number",
-    "user"."email";
+    "user"."email",
+    "user"."url_img";
 
 $$ LANGUAGE SQL STRICT;
 
@@ -79,6 +81,7 @@ CREATE FUNCTION "select_announcement_by_filters" (input json) RETURNS JSON AS $$
         'firstname', "user"."firstname",
         'lastname', "user"."lastname",
         'city', "user"."city",
+        'url_img', "user"."url_img",
         'animal_label', (
           SELECT ARRAY_AGG("animal_type"."label")
           FROM "animal_type"
@@ -194,10 +197,34 @@ CREATE FUNCTION "select_user_by_pk" (input_id int) RETURNS JSON AS $$
       'city', "city",
       'phone_number', "phone_number",
       'refresh_token', "refresh_token",
-      'department_label', "department_label"
+      'department_label', "department_label",
+      'url_img', "url_img"
     )
   FROM "user"
   WHERE "id" = $1::int;
+
+$$ LANGUAGE SQL STRICT;
+
+CREATE FUNCTION "select_user_by_email" (input text) RETURNS JSON AS $$
+
+  SELECT
+    json_build_object(
+      'id', "id",
+      'email', "email",
+      'password', "password"
+    )
+  FROM "user"
+  WHERE "email" = $1::text;
+
+$$ LANGUAGE SQL STRICT;
+
+CREATE FUNCTION "select_user_by_phone" (input text) RETURNS BOOLEAN AS $$
+
+  SELECT EXISTS (
+    SELECT null
+    FROM "user"
+    WHERE "phone_number" = $1::text
+  );
 
 $$ LANGUAGE SQL STRICT;
 

@@ -5,6 +5,8 @@ BEGIN;
 DROP FUNCTION IF EXISTS "delete_user" (int);
 DROP FUNCTION IF EXISTS "update_user" (int, json);
 DROP FUNCTION IF EXISTS "insert_user" (json);
+DROP FUNCTION IF EXISTS "select_user_by_phone" (text);
+DROP FUNCTION IF EXISTS "select_user_by_email" (text);
 DROP FUNCTION IF EXISTS "select_user_by_pk" (int);
 DROP FUNCTION IF EXISTS "delete_announcement_animal_type" (int);
 DROP FUNCTION IF EXISTS "insert_announcement_animal_type" (int, text);

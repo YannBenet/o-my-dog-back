@@ -1076,3 +1076,172 @@
     '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
   timestamp: '2024-07-16T09:31:54.988Z'
 }
+{
+  level: 'error',
+  message: 'Client was passed a null or undefined query',
+  stack: 'TypeError: Client was passed a null or undefined query\n' +
+    '    at Client.query (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:510:13)\n' +
+    '    at UserDatamapper.findOne (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:9:40)\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:14:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:28:14\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T12:30:52.058Z'
+}
+{
+  level: 'error',
+  message: 'Client was passed a null or undefined query',
+  stack: 'TypeError: Client was passed a null or undefined query\n' +
+    '    at Client.query (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:510:13)\n' +
+    '    at UserDatamapper.findOne (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:9:40)\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:14:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:28:14\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T12:34:17.375Z'
+}
+{
+  level: 'error',
+  message: 'Client was passed a null or undefined query',
+  stack: 'TypeError: Client was passed a null or undefined query\n' +
+    '    at Client.query (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:510:13)\n' +
+    '    at UserDatamapper.findOne (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:9:40)\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:14:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:28:14\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T12:36:45.614Z'
+}
+{
+  level: 'error',
+  message: 'Client was passed a null or undefined query',
+  stack: 'TypeError: Client was passed a null or undefined query\n' +
+    '    at Client.query (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:510:13)\n' +
+    '    at UserDatamapper.findOne (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:10:40)\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:14:53)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:11\n' +
+    '    at Layer.handle [as handle_request] (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/compareCityDepartment.middleware.js:28:14\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-07-16T12:38:31.350Z'
+}
+{
+  length: 198,
+  name: 'error',
+  severity: 'ERREUR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: 'fonction SQL « select_user_by_email », instruction 1',
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '232',
+  routine: 'pg_strtoint32',
+  level: 'error',
+  message: 'syntaxe en entrée invalide pour le type integer : « yayoi.kaneda@tralala.pof »',
+  stack: 'error: syntaxe en entrée invalide pour le type integer : « yayoi.kaneda@tralala.pof »\n' +
+    '    at /var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.findOne (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:10:22)\n' +
+    '    at async store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:14:32)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:39:26.558Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'length')",
+  stack: "TypeError: Cannot read properties of null (reading 'length')\n" +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:15:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:42:34.399Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'length')",
+  stack: "TypeError: Cannot read properties of null (reading 'length')\n" +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:15:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:43:32.861Z'
+}
+{
+  level: 'error',
+  message: 'Client was passed a null or undefined query',
+  stack: 'TypeError: Client was passed a null or undefined query\n' +
+    '    at Client.query (/var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:510:13)\n' +
+    '    at UserDatamapper.findOne (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:22:40)\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:21:55)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:46:59.767Z'
+}
+{
+  name: 'ApiError',
+  status: 409,
+  level: 'error',
+  message: 'Email already exists',
+  stack: 'ApiError: Email already exists\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:17:19)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:50:39.417Z'
+}
+{
+  name: 'ApiError',
+  status: 409,
+  level: 'error',
+  message: 'Email already exists',
+  stack: 'ApiError: Email already exists\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:17:19)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:52:36.172Z'
+}
+{
+  name: 'ApiError',
+  status: 409,
+  level: 'error',
+  message: 'Phone number already exists',
+  stack: 'ApiError: Phone number already exists\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:24:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:52:53.490Z'
+}
+{
+  name: 'ApiError',
+  status: 409,
+  level: 'error',
+  message: 'Phone number already exists',
+  stack: 'ApiError: Phone number already exists\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:24:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:53:49.406Z'
+}
+{
+  name: 'ApiError',
+  status: 409,
+  level: 'error',
+  message: 'Phone number already exists',
+  stack: 'ApiError: Phone number already exists\n' +
+    '    at store (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/user.controller.js:24:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T12:54:43.127Z'
+}

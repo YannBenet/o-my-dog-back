@@ -5,6 +5,12 @@ BEGIN;
 SELECT *
 FROM pg_proc
 WHERE proname IN (
+  'select_user_by_phone',
+  'select_user_by_email',
+  'select_user_by_pk',
+  'select_announcement_by_filters',
+  'select_announcement_by_author',
+  'select_announcement_by_pk',
   'insert_announcement',
   'update_announcement',
   'delete_announcement',

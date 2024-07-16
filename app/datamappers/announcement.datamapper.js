@@ -39,18 +39,19 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
 
   static async searchAnnouncement(data) {
     const result = await this.client.query(
-      'SELECT select_announcement_by_filters($1);',
+      'SELECT select_announcement_by_filters($1) AS result;',
       [data]
     );
     // Return result
-    return result.rows[0].select_announcement_by_filters;
+    return result.rows[0].result;
   }
 
   static async findByAuthor(authorId) {
     const result = await this.client.query(
-      `SELECT select_announcement_by_author($1);`
-      , [authorId]);
+      `SELECT select_announcement_by_author($1) AS result;`,
+      [authorId]
+    );
     // Return results
-    return result.rows[0].select_announcement_by_author;
+    return result.rows[0].result;
   }
 }
