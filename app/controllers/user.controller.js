@@ -1,4 +1,5 @@
 import bcrypt from 'bcrypt';
+import fs from 'fs'
 import jwtService from '../libraries/helpers/jwt.services.js';
 import { UserDatamapper } from '../datamappers/index.datamapper.js';
 import { AnnouncementDatamapper } from '../datamappers/index.datamapper.js';
@@ -7,6 +8,7 @@ import { v2 as cloudinary } from 'cloudinary';
 
 export default {
   async store(req, res, next){
+    console.log(req.body);
     // Get user's informations from request
     const { firstname, lastname, email, password, city, phone_number, department_label } = req.body;
 
@@ -109,7 +111,6 @@ export default {
     // Check that this requested user matches with jwt informations and get data from request
     const { id } = req.params;
     const input = req.body;
-    //? ??
     const body = Object.assign({}, req.body);
 
     if(parseInt(id) !== req.token){
@@ -132,14 +133,20 @@ export default {
             { fetch_format: "auto" }
           ]
         };
-        //? le try/catch? 
+
         const result = await cloudinary.uploader.upload(imagePath, options);
         return result.url;
       };
       
       const urlImg = await uploadImage(req.file.path);
-      console.log(urlImg);
-      body.url_img = urlImg;
+      body.url_img = urlImg
+
+      // Suppression de l'image dans le serveur après sauvegarde en ligne : 
+      fs.unlink(req.file.path, (err) => {
+        if (err) {
+          console.error('Error deleting file:', err);
+        } 
+    });
     }
     // Check if data already exists for another user and update it in database
     if (body.email) {

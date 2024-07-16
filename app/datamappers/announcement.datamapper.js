@@ -17,6 +17,7 @@ export default class AnnouncementDatamapper extends CoreDatamapper {
                 "user"."firstname", 
                 "user"."lastname", 
                 "user"."city", 
+                "user"."url_img",
                 ARRAY_AGG("animal_type"."label") AS animal_label
             FROM 
                 "announcement"

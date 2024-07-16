@@ -36,6 +36,7 @@ POST {{endpoint}}/api/users/login
 Content-Type: application/json
 
 {
+
   "email": "batou@anonyme.bat",
   "password": "uuUU**00"
 }
@@ -43,6 +44,7 @@ Content-Type: application/json
 
 GET {{endpoint}}/api/users/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExMzEyMjEsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjExMTc3MjB9.tzl7tcGG95lYAr5L7JsZcoBbhlKK14qlhLkjJwRamYQ
+
 ###
 
 
@@ -79,17 +81,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExMzEyM
 }
 
 ###
+
 POST {{endpoint}}/api/announcements/users/1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwODUyMjQsImRhdGEiOnsiaWQiOjEsImZpcnN0bmFtZSI6IkhhcmxleSIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNzE3MjR9.pH0mXoYdmre_tpfBBL2-yrX6r3AlosfwMOFqhd8K_DE
+
 
 {
     "date_start": "2024-07-20",
     "date_end": "2025-08-30",
     "mobility": true,
     "home": false,
-    "description": "PetSitting",
-    "animal": ["Chat", "Chien"]
+    "description": "Ceci est une description",
+    "animal": ["Chien", "Chat"]
 }
 
 ###
