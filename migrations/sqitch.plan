@@ -6,5 +6,3 @@
 03-addDepartmentColOnUser 2024-07-09T12:37:43Z Yann Bénet <yannbenet@gmail.com> # Add department column on user table
 04-addNotNull-afterSeeding 2024-07-09T13:10:34Z Yann Bénet <yannbenet@gmail.com> # Add NOT NULL type on department after seeding
 05-updateUrlConstraint 2024-07-11T08:35:19Z PierreGuillard <pguillard95@gmail.com> # modification de la contrainte pour les url de cloudinary
-06-addDepartmentCodeOnUser 2024-07-15T21:56:54Z Yann Bénet <yannbenet@gmail.com> # 06-add department code col on user collumn
-07-addNotNullAfterSeedingDepartmentCode 2024-07-15T22:21:07Z Yann Bénet <yannbenet@gmail.com> # 07 Add NOT NULL on department code after seeding

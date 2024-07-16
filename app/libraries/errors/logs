@@ -348,3 +348,68 @@
     '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
   timestamp: '2024-07-15T23:01:07.658Z'
 }
+{
+  length: 382,
+  name: 'error',
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (162, Yann, Bénet, $2b$10$ckvi2j0nSd/zfOiL94jiFOPpAM8uecTEgulrkFZczG06H6W8hoDAy, yannbenet@gmail.com, Verneuil, 0659177181, 2024-07-16 01:03:27.41493+02, null, null, Cher, null).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'user',
+  column: 'department_code',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2003',
+  routine: 'ExecConstraints',
+  level: 'error',
+  message: 'null value in column "department_code" of relation "user" violates not-null constraint',
+  stack: 'error: null value in column "department_code" of relation "user" violates not-null constraint\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/pg/lib/client.js:526:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserDatamapper.create (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/datamappers/user.datamapper.js:8:5)\n' +
+    '    at async store (file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/controllers/user.controller.js:40:5)\n' +
+    '    at async file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-15T23:03:27.419Z'
+}
+{
+  name: 'ApiError',
+  status: 404,
+  level: 'error',
+  message: 'Ressource not found',
+  stack: 'ApiError: Ressource not found\n' +
+    '    at file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/routers/index.router.js:20:8\n' +
+    '    at Layer.handle [as handle_request] (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at trim_prefix (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:328:13)\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:286:9\n' +
+    '    at Function.process_params (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:47:12)\n' +
+    '    at Layer.handle [as handle_request] (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at trim_prefix (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:328:13)',
+  timestamp: '2024-07-16T07:46:58.295Z'
+}
+{
+  name: 'ApiError',
+  status: 404,
+  level: 'error',
+  message: 'Ressource not found',
+  stack: 'ApiError: Ressource not found\n' +
+    '    at file:///home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/app/routers/index.router.js:20:8\n' +
+    '    at Layer.handle [as handle_request] (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at trim_prefix (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:328:13)\n' +
+    '    at /home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:286:9\n' +
+    '    at Function.process_params (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:47:12)\n' +
+    '    at Layer.handle [as handle_request] (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at trim_prefix (/home/zodd/project/2024/o-my-dog/projet-6-o-mydog-back/node_modules/express/lib/router/index.js:328:13)',
+  timestamp: '2024-07-16T07:46:58.421Z'
+}

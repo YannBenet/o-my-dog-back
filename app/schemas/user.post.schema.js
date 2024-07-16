@@ -44,7 +44,7 @@ export default Joi.object({
     Joi.string().min(3)
     .required()
     .messages({ 'any.required': 'Department_label is required' }),
-    department_code: 
+  department_code: 
     Joi.string().min(2)
     .required()
     .messages({ 'any.required': 'Department_code is required' }),
