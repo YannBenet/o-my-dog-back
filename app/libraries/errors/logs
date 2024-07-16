@@ -1021,3 +1021,58 @@
     '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/auth.middleware.js:41:47',
   timestamp: '2024-07-15T20:57:18.843Z'
 }
+{
+  name: 'ApiError',
+  status: 404,
+  level: 'error',
+  message: 'Ressource not found',
+  stack: 'ApiError: Ressource not found\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:19:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T09:25:39.233Z'
+}
+{
+  name: 'ApiError',
+  status: 404,
+  level: 'error',
+  message: 'Ressource not found',
+  stack: 'ApiError: Ressource not found\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:19:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T09:25:57.775Z'
+}
+{
+  name: 'ApiError',
+  status: 404,
+  level: 'error',
+  message: 'Ressource not found',
+  stack: 'ApiError: Ressource not found\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:19:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T09:29:07.468Z'
+}
+{
+  name: 'ApiError',
+  status: 404,
+  level: 'error',
+  message: 'Ressource not found',
+  stack: 'ApiError: Ressource not found\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:19:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T09:30:04.846Z'
+}
+{
+  name: 'ApiError',
+  status: 404,
+  level: 'error',
+  message: 'Ressource not found',
+  stack: 'ApiError: Ressource not found\n' +
+    '    at show (file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/controllers/announcement.controller.js:19:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async file:///var/www/html/onigiri/oMyDog/projet-6-o-mydog-back/app/libraries/middlewares/controllerWrapper.middleware.js:3:5',
+  timestamp: '2024-07-16T09:31:54.988Z'
+}

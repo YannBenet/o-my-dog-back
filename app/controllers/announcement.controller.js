@@ -23,7 +23,7 @@ export default {
     res.status(200).json(announcement);
   },
 
-  async update(req, res){
+  async update(req, res, next){
     const { id } = req.params;
 
     // Check if user is logged
@@ -40,7 +40,7 @@ export default {
   },
 
   //? TODO Necessité de vérifier si l'annonce existe avant de la supprimer au cas où l'id transmis par le front serait faux ?
-  async delete(req, res){
+  async delete(req, res, next){
     const { id } = req.params;
 
     // Check if user is logged

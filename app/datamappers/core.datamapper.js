@@ -8,11 +8,18 @@ export default class CoreDatamapper {
   }
 
   static async findAll() {
-    // Request
     const result  = await this.client.query(`SELECT * FROM "${this.tableName}";`)
-
     // Return results
     return result.rows
+  }
+
+  static async findByPk(id){
+    const result = await this.client.query(
+      `SELECT select_${this.tableName}_by_pk($1) AS result`,
+      [id]
+    );
+    // Return result 
+    return result.rows[0].result; 
   }
 
   static async create(data, id){
@@ -49,7 +56,7 @@ export default class CoreDatamapper {
       [id, data]
     );
     // Return updated data
-    return result.rows[0];
+    return result.rows[0].result;
   }
 
   static async delete(id) {

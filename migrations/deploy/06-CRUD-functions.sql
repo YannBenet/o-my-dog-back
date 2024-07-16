@@ -23,9 +23,9 @@ CREATE FUNCTION "select_announcement_by_pk" (input_id int) RETURNS JSON AS $$
     "announcement"
   JOIN
     "user" ON "announcement"."user_id" = "user"."id"
-  JOIN
+  LEFT JOIN
     "announcement_animal_type" ON "announcement_animal_type"."announcement_id" = "announcement"."id"
-  JOIN
+  LEFT JOIN
     "animal_type" ON "animal_type"."id" = "announcement_animal_type"."animal_type_id"
   WHERE
     "announcement"."id" = $1::int
@@ -181,6 +181,23 @@ CREATE FUNCTION "delete_announcement_animal_type" (input_id int) RETURNS VOID AS
 
   DELETE  FROM "announcement_animal_type"
   WHERE "announcement_id" = $1::int;
+
+$$ LANGUAGE SQL STRICT;
+
+CREATE FUNCTION "select_user_by_pk" (input_id int) RETURNS JSON AS $$
+
+  SELECT
+    json_build_object(
+      'firstname', "firstname",
+      'lastname', "lastname",
+      'email', "email",
+      'city', "city",
+      'phone_number', "phone_number",
+      'refresh_token', "refresh_token",
+      'department_label', "department_label"
+    )
+  FROM "user"
+  WHERE "id" = $1::int;
 
 $$ LANGUAGE SQL STRICT;
 

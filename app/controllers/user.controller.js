@@ -187,7 +187,7 @@ export default {
     res.status(200).json({ message: 'User profile removed successfully' });
   },
 
-  async getAllAnnouncements(req, res){
+  async getAllAnnouncements(req, res, next){
     // Check that this requested informations are this user's informations
     const { id } = req.params;
 
