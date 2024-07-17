@@ -8,6 +8,7 @@ import { v2 as cloudinary } from 'cloudinary';
 
 export default {
   async store(req, res, next){
+    console.log(req.body);
     // Get user's informations from request
     const { firstname, lastname, email, password, city, phone_number, department_label } = req.body;
 
@@ -77,8 +78,8 @@ export default {
     //! TODO modifier secure: false par secure: true quand l'appli sera en https
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
-      secure: false,
-      sameSite: 'Strict',
+      secure: true,
+      sameSite: 'None',
       maxAge:  7 * 86400000,
     });
 

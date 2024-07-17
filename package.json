@@ -11,7 +11,7 @@
 		"dev": "NODE_ENV=development node --watch index.js",
 		"start": "NODE_ENV=production node index.js",
 		"test": "node --experimental-vm-modules ./node_modules/.bin/jest",
-		"init-seeding": "node ultimateSeeding/03-AnimalTable.js && node ultimateSeeding/01-UserSeeding.js &&  node ultimateSeeding/02-AnnounceSeeding.js",
+		"init-seeding": "NODE_ENV=production node ultimateSeeding/03-AnimalTable.js && node ultimateSeeding/01-UserSeeding.js &&  node ultimateSeeding/02-AnnounceSeeding.js",
 		"seeding": "node ultimateSeeding/01-UserSeeding.js &&  node ultimateSeeding/02-AnnounceSeeding.js",
 		"dropDB": "node ultimateSeeding/01-UserSeeding.js &&  node ultimateSeeding/02-AnnounceSeeding.js"
 	},
