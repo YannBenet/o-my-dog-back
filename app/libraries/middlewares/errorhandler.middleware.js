@@ -1,8 +1,8 @@
 import logger from '../helpers/logger.services.js';
-
-export default  (err, req, res) => {
+// Ne pas supprimer le next !
+export default  (err, req, res, next) => {
+  console.log("test");
   logger.error(err);
-
   if(err.name === 'ValidationError'){
     err.status = 400;
     err.message = `Bad request / ${err.details.map((detail) => detail.message)}`;

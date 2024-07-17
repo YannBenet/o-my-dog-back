@@ -48,7 +48,6 @@ export default {
     const { email, password } = req.body;
     // Check login informations
     const user = await UserDatamapper.findOne('email', email);
-    console.log(user);
     if(!user){
       return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
@@ -77,8 +76,8 @@ export default {
     //! TODO modifier secure: false par secure: true quand l'appli sera en https
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
-      secure: false,
-      sameSite: 'Strict',
+      secure: true,
+      sameSite: 'None',
       maxAge:  7 * 86400000,
     });
 
