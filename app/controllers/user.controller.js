@@ -221,7 +221,6 @@ export default {
     }
 
     const announcements = await AnnouncementDatamapper.findByAuthor(id);
-    console.log(announcements);
     // Response
     res.status(200).json(announcements);
   },

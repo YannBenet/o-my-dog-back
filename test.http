@@ -41,7 +41,7 @@ POST {{endpoint}}/api/users/login
 Content-Type: application/json
 
 {
-  "email": "yayoi.kaneda2@tralala.pof",
+  "email": "Sow.kaneda@tralala.pof",
   "password": "uuUU**00"
 }
 ###
@@ -108,8 +108,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExNTg3O
 
 ###
 
-GET {{endpoint}}/api/users/1/announcements
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExNTg3ODEsImRhdGEiOnsiaWQiOjEsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjExNDUyODF9.9dsjvEgxRaGvnJB8AWkO9ZM9qfxlSefUTdf70imkWck
+GET {{endpoint}}/api/users/2/announcements
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEyMTk1ODksImRhdGEiOnsiaWQiOjIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEyMDYwODl9.Rr3dhDQA9rI2UZ2wzzxG05C4JqIU6Y_lxnCdzs44wFw
 ###
 
 DELETE {{endpoint}}/api/users/3

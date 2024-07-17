@@ -16,7 +16,8 @@ export default Joi.object({
       .min(3)
       .max(30)
       .pattern(new RegExp('^[a-zA-ZÀ-ÿ-]{3,}$'))
-      .message('Firstname and lastname must contain only letters and hyphen'),
+      .message('Firstname and lastname must contain only letters and hyphen')
+      .optional(),
   email:
     Joi.string()
       .email({ minDomainSegments: 2, tlds: { allow: false } })
@@ -47,6 +48,7 @@ export default Joi.object({
   phone_number:
     Joi.string().max(13)
       .pattern(new RegExp('^[0-9+]+$'))
-      .message('Incorrect phone number'),
+      .message('Incorrect phone number')
+      .optional(),
 
 });

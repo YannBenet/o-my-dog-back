@@ -44,21 +44,23 @@ $$ LANGUAGE SQL STRICT;
 CREATE FUNCTION "select_announcement_by_author" (input_id int) RETURNS JSON AS $$
 
   SELECT 
-    json_agg(
-      json_build_object(
-        'id', "announcement"."id",
-        'date_start', "announcement"."date_start",
-        'date_end', "announcement"."date_end",
-        'mobility', "announcement"."mobility",
-        'home', "announcement"."home",
-        'description', "announcement"."description",
-        'animal_label',(
-          SELECT ARRAY_AGG("animal_type"."label")
-          FROM "animal_type"
-          JOIN "announcement_animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
-          WHERE "announcement_animal_type"."announcement_id" = "announcement"."id"
+    COALESCE(
+      json_agg(
+        json_build_object(
+          'id', "announcement"."id",
+          'date_start', "announcement"."date_start",
+          'date_end', "announcement"."date_end",
+          'mobility', "announcement"."mobility",
+          'home', "announcement"."home",
+          'description', "announcement"."description",
+          'animal_label',(
+            SELECT ARRAY_AGG("animal_type"."label")
+            FROM "animal_type"
+            JOIN "announcement_animal_type" ON "announcement_animal_type"."animal_type_id" = "animal_type"."id"
+            WHERE "announcement_animal_type"."announcement_id" = "announcement"."id"
+          )
         )
-      )
+      ), '[]'::json
     )
   FROM 
     "announcement"
