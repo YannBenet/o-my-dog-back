@@ -36,3 +36,9 @@ ALTER SEQUENCE announcement_animal_type_id_seq RESTART WITH 1;
 ALTER SEQUENCE animal_type_id_seq RESTART WITH 1;
 ALTER SEQUENCE announcement_id_seq RESTART WITH 1;
 ```
+
+```sql
+select * from "user";
+select * from "announcement";
+select * from "animal_type";
+```

@@ -21,9 +21,9 @@ export default Joi.object({
       .messages({ 'any.required': 'Home information is required'}),
   description:
   Joi.string()
-  .pattern(new RegExp('^[a-zA-ZÀ-ÿ0-9 -.,;!?/+#]{3,}$'))
-  .messages({ 'string.pattern.base': 'Description must contains only letters, hyphens and spaces' }),
-  animal: 
+    .pattern(new RegExp('^[A-Za-zÀ-ÖØ-öø-ÿ0-9- p{P}p{S}]{3,}$'))
+    .messages({ 'string.pattern.base': 'Description must contains only letters, hyphens and spaces' }),
+  animal:
     Joi.array()
-    .items(Joi.string().min(2))
-})
+      .items(Joi.string().min(2)),
+});
