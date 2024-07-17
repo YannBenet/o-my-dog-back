@@ -8,9 +8,9 @@ export default (schema, reqProperty) => async (req, res, next) => {
   }catch(err){
     //Si jamais il y a une erreur lors de la validation du schéma sur une route qui a sauvegardé une image dans le back => on la supprime
     if (req.file) {
-      fs.unlink(req.file.path, (err) => {
-        if (err) {
-          console.error('Error deleting file in validation.middleware:', err);
+      fs.unlink(req.file.path, (error) => {
+        if (error) {
+          console.error('Error deleting file in validation.middleware:', error);
         }
       });
     }

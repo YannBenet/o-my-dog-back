@@ -8,7 +8,6 @@ import { v2 as cloudinary } from 'cloudinary';
 
 export default {
   async store(req, res, next){
-    console.log(req.body);
     // Get user's informations from request
     const { firstname, lastname, email, password, city, phone_number, department_label } = req.body;
 
@@ -49,7 +48,6 @@ export default {
     const { email, password } = req.body;
     // Check login informations
     const user = await UserDatamapper.findOne('email', email);
-    console.log(user);
     if(!user){
       return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
