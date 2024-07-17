@@ -14,7 +14,7 @@ async function generateAnnouncementSeedData() {
     mobility: faker.datatype.boolean(),
     home: faker.datatype.boolean(),
     description: faker.lorem.sentences(),
-    animal: [faker.random.arrayElement(['Chien', 'Chat'])],
+    animal: [faker.random.arrayElement(['Chien', 'Chat', 'Oiseau', 'Poisson', 'Rongeur', 'Reptile'])],
   };
 }
 
@@ -45,11 +45,12 @@ async function seedAnnouncementsForUsers(startUserId, endUserId, numAnnouncement
     await seedAnnouncementsForUser(userId, numAnnouncementsPerUser);
   }
   console.log(`Seeding completed for users ${startUserId} to ${endUserId}.`);
+  process.exit();
 }
 
 // Appeler la fonction de seeding pour les utilisateurs compris entre 1 et 10
 const startUserId = 1;
-const endUserId = 10;
+const endUserId = 20;
 const numAnnouncementsPerUser = 5;
 
 seedAnnouncementsForUsers(startUserId, endUserId, numAnnouncementsPerUser).catch(console.error);

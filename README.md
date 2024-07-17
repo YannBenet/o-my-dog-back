@@ -11,13 +11,28 @@ postgres=# CREATE USER omydog WITH PASSWORD 'omydog';
 postgres=# CREATE DATABASE omydog OWNER omydog;
 ```
 
-Si problème lors du seeding :
+Pour seeder la BDD la première fois :
 
 ```bash
-ALTER SEQUENCE user_id_seq RESTART WITH 1;
+npm run init-seeding
+```
+
+Pour ajouter des annonces et des utilisateurs :
+
+```bash
+npm run seeding
+```
+
+Si besoin de dropper la BDD
+
+```sql
+DELETE FROM "announcement_animal_type";
+DELETE FROM "animal_type";
+DELETE FROM "announcement";
+DELETE FROM "user";
+
 ALTER SEQUENCE user_id_seq RESTART WITH 1;
 ALTER SEQUENCE announcement_animal_type_id_seq RESTART WITH 1;
 ALTER SEQUENCE animal_type_id_seq RESTART WITH 1;
 ALTER SEQUENCE announcement_id_seq RESTART WITH 1;
-\i ./data/seeding.sql
 ```
