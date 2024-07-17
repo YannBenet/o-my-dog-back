@@ -10,11 +10,11 @@ export default () => async (req, res, next) => {
     const ip = req.ip;
     const userAgent = req.headers['user-agent'];
 
-    if(ip !== tokenInfos.data.fingerprint.ip || userAgent !== tokenInfos.data.fingerprint.userAgent){
-      console.log("auth.middleware1", ip ,tokenInfos.data.fingerprint.ip);
-      console.log("auth.middleware2", userAgent , tokenInfos.data.fingerprint.userAgent);
-      throw new CustomError('Invalid token', { status: 401 });
-    }
+    // if(ip !== tokenInfos.data.fingerprint.ip || userAgent !== tokenInfos.data.fingerprint.userAgent){
+    //   console.log("auth.middleware1", ip ,tokenInfos.data.fingerprint.ip);
+    //   console.log("auth.middleware2", userAgent , tokenInfos.data.fingerprint.userAgent);
+    //   throw new CustomError('Invalid token', { status: 401 });
+    // }
     // Store user id in request and next
     req.token = tokenInfos.data.id;
 
