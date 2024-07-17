@@ -1,25 +1,22 @@
 // Compare city & department data coming from the front-end with the data from the API
 // Then stock them with same writing format in the database
 
-import ApiError from '../errors/api.error.js'; 
+import ApiError from '../errors/api.error.js';
 
 export default () => async (req, res, next) => {
 
   if (req.body.city) {
     const cityReq = req.body.city.split(' ')[0];
     const departmentReq = req.body.department_label;
-    console.log();
     try {
       const cityResult = await fetch(`https://geo.api.gouv.fr/communes?nom=${cityReq}&fields=nom,departement&boost=population&limit=5`);
       const dataCity = await cityResult.json();
-      console.log(JSON.stringify(dataCity));
       const departmentFound = dataCity.find((city) => city.departement.nom === departmentReq);
-      console.log(departmentFound);
       const departmentSelected = departmentFound.departement.nom;
 
       if(!dataCity.length || !departmentFound) {
         throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
-     } 
+      }
       const cityFound = dataCity.find((city) => city.nom === cityReq);
       const citySelected = cityFound.nom;
 
@@ -33,11 +30,11 @@ export default () => async (req, res, next) => {
         req.body.city = citySelected;
         req.body.department_label = departmentSelected;
         return next();
-      } 
+      }
 
       else {
         throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
-      }   
+      }
     } catch(err) {
 
       next(err);

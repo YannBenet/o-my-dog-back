@@ -1,5 +1,5 @@
 import { AnnouncementDatamapper } from '../datamappers/index.datamapper.js';
-import { AnnouncementAnimalDatamapper } from '../datamappers/index.datamapper.js'
+import { AnnouncementAnimalDatamapper } from '../datamappers/index.datamapper.js';
 import ApiError from '../libraries/errors/api.error.js';
 
 export default {
@@ -64,7 +64,7 @@ export default {
 
   async searchAnnouncement(req, res){
     // Get data from query
-    const data = req.query
+    const data = req.query;
 
     // Get data from database
     const allAnnouncements = await AnnouncementDatamapper.searchAnnouncement(data);
@@ -79,7 +79,6 @@ export default {
     if(!req.token || req.token !== parseInt(id)){
       return next(new ApiError('Access Forbidden', { status: 403 }));
     }
-
     // Add new announcement in database
     const result = await AnnouncementDatamapper.create(req.body, id);
 
@@ -96,6 +95,6 @@ export default {
     }
 
     // Response
-    res.status(201).json({ message: 'Announcement created successfully'});  
-  }
-}
+    res.status(201).json({ message: 'Announcement created successfully'});
+  },
+};

@@ -3,7 +3,7 @@ import { getClient } from "../config/pg.client.js";
 import UserDatamapper from './user.datamapper.js';
 import AnnouncementDatamapper from "./announcement.datamapper.js";
 import AnimalDatamapper from './animal.datamapper.js';
-import AnnouncementAnimalDatamapper from './announcementAnimal.datamapper.js'
+import AnnouncementAnimalDatamapper from './announcementAnimal.datamapper.js';
 
 const client = getClient();
 await client.connect();
@@ -17,5 +17,5 @@ export {
   UserDatamapper,
   AnnouncementDatamapper,
   AnimalDatamapper,
-  AnnouncementAnimalDatamapper
+  AnnouncementAnimalDatamapper,
 };

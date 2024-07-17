@@ -46,12 +46,9 @@ export default {
   async login(req, res, next){
     // Get login informations from request
     const { email, password } = req.body;
-    console.log('avant user');
     // Check login informations
     const user = await UserDatamapper.findOne('email', email);
-    console.log('après user');
     if(!user){
-      console.log('pas de user');
       return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
 
@@ -131,7 +128,7 @@ export default {
     }
 
     // Get image from request and upload it on cloudinary
-    const file = req.file
+    const file = req.file;
 
     if (file) {
       async function uploadImage (imagePath) {
@@ -153,7 +150,7 @@ export default {
       };
 
       const urlImg = await uploadImage(req.file.path);
-      body.url_img = urlImg
+      body.url_img = urlImg;
 
       // Suppression de l'image dans le serveur après sauvegarde en ligne :
       fs.unlink(req.file.path, (err) => {

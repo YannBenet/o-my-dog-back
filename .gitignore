@@ -4,6 +4,6 @@ sqitch.conf
 logfile
 test.http
 .dockerignore
-uploads
+/uploads/*
 TODO.md
 app/static
