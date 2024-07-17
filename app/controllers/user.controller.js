@@ -48,6 +48,7 @@ export default {
     const { email, password } = req.body;
     // Check login informations
     const user = await UserDatamapper.findOne('email', email);
+    console.log(user);
     if(!user){
       return next(new ApiError('Incorrect email or password', { status: 401 }));
     }
@@ -112,6 +113,8 @@ export default {
     if(!user){
       return next(new ApiError('User not found', { status: 404 }));
     }
+
+    delete user.refresh_token;
 
     // Response
     res.status(200).json(user);
