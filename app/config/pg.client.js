@@ -12,7 +12,7 @@ const getClient = () => {
     client = new pg.Pool({
       host: process.env.PGHOST,
       database: process.env.PGDATABASE,
-      user: process.env.PGUSER,
+      user: process.env.POSTGRESUSER,
       port: process.env.PGPORT,
       password: process.env.PGPASSWORD,
       ssl: {

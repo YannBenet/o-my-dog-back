@@ -35,6 +35,7 @@ export default {
       }
       
       if(user.refresh_token !== refreshToken){
+        console.log("jwt.services", user.refresh_token, refreshToken);
         // If refresh tokens don't match, remove it from database to prevent unauthorized user to use it
         await UserDatamapper.update(data.id, { refresh_token: null });
         throw new CustomError('Invalid token', { status: 401 });

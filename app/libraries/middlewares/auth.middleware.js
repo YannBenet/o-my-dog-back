@@ -10,9 +10,11 @@ export default () => async (req, res, next) => {
     const ip = req.ip;
     const userAgent = req.headers['user-agent'];
 
-    if(ip !== tokenInfos.data.fingerprint.ip || userAgent !== tokenInfos.data.fingerprint.userAgent){
-      throw new CustomError('Invalid token', { status: 401 });
-    }
+    // if(ip !== tokenInfos.data.fingerprint.ip || userAgent !== tokenInfos.data.fingerprint.userAgent){
+    //   console.log("auth.middleware1", ip ,tokenInfos.data.fingerprint.ip);
+    //   console.log("auth.middleware2", userAgent , tokenInfos.data.fingerprint.userAgent);
+    //   throw new CustomError('Invalid token', { status: 401 });
+    // }
     // Store user id in request and next
     req.token = tokenInfos.data.id;
 
@@ -23,7 +25,8 @@ export default () => async (req, res, next) => {
     if(err.name === 'TokenExpiredError' || err.message === 'jwt must be provided'){
       // Get refresh token from cookies
       const token = req.cookies.refreshToken;
-
+      console.log("auth.mw token", token);
+      console.log("auth.mw err", err);
       if(!token){
         throw new Error('Invalid token', { status: 401 });
       }
