@@ -25,7 +25,8 @@ export default class UserDatamapper extends CoreDatamapper {
   static async findAllDepartments(){
     const result = await this.client.query(`
       SELECT DISTINCT "department_label"
-      FROM "user";
+      FROM "user"
+      ORDER BY "department_label" ASC;
     `);
     return result.rows;
   }

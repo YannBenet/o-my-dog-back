@@ -44,8 +44,8 @@ export default () => async (req, res, next) => {
         //! TODO modifier secure: false par secure: true quand l'appli sera en https
         res.cookie('refreshToken', refreshToken, {
           httpOnly: true,
-          secure: false,
-          sameSite: 'Strict',
+          secure: true,
+          sameSite: 'None',
           maxAge:  7 * 86400000,
         });
         res.setHeader('Authorization', `Bearer ${accessToken}`);

@@ -81,6 +81,7 @@ router.route('/login')
 
 // TODO Ajouter doc
 router.route('/logout/:id(\\d+)')
+
   .post(
     auth(),
     cw(userController.logout));

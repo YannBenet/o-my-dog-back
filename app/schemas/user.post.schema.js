@@ -47,7 +47,7 @@ export default Joi.object({
       .messages({ 'any.required': 'Department_label is required' }),
   phone_number:
     Joi.string().max(13)
-      .pattern(new RegExp('^[0-9+]+$'))
+      .pattern(new RegExp('^(0|\\+33|0033)[1-9][0-9]{8}$'))
       .message('Incorrect phone number')
       .optional(),
 

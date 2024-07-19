@@ -6,7 +6,7 @@ export default {
   // Create access and refresh tokens
   async createTokens(data){
     try {
-      const accessTokenExp = Math.round(Date.now() / 1000 + 15 * 900);
+      const accessTokenExp = Math.round(Date.now() / 1000 + 2);
       const refreshTokenExp = Math.round(Date.now() / 1000 + 604800);
 
       const accessToken = jwt.sign(
@@ -33,7 +33,7 @@ export default {
       if(!user){
         throw new CustomError('Ressource not found', { status: 404 });
       }
-
+      
       if(user.refresh_token !== refreshToken){
         // If refresh tokens don't match, remove it from database to prevent unauthorized user to use it
         await UserDatamapper.update(data.id, { refresh_token: null });

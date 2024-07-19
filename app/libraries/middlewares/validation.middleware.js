@@ -14,6 +14,7 @@ export default (schema, reqProperty) => async (req, res, next) => {
         }
       });
     }
+
     next(err);
   }
 

@@ -1,6 +1,6 @@
 import logger from '../helpers/logger.services.js';
 
-export default  (err, req, res) => {
+export default  (err, req, res, next) => {
   logger.error(err);
 
   if(err.name === 'ValidationError'){

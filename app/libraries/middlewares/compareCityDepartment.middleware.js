@@ -36,9 +36,10 @@ export default () => async (req, res, next) => {
         throw new ApiError('Invalid city name or no exact match found.', { status: 400 });
       }
     } catch(err) {
-
+      
       next(err);
     }
   }
+
   next();
 };

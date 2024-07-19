@@ -25,12 +25,12 @@ POST {{endpoint}}/api/users/signin
 Content-Type: application/json
 
 {
-  "firstname": "Sow",
-  "lastname": "Kaneda",
-  "email": "Sow.kaneda@tralala.pof",
+  "firstname": "Albert",
+  "lastname": "Osef",
+  "email": "alb.osef@tralala.pof",
   "password": "uuUU**00",
   "city": "Toulon",
-  "phone_number": "0612256363",
+  "phone_number": "061225636289",
   "repeatPassword": "uuUU**00",
   "department_label": "Var"
 }
@@ -53,7 +53,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjExMzgzN
 ###
 
 GET {{endpoint}}/api/users/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEyMjIzMDAsImRhdGEiOnsiaWQiOjIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEyMDg3OTl9.J9T9R62dIpYemea939ZoYqL2cJ66u6dvbzP31PMGRcE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjE0MDQ4NDQsImRhdGEiOnsiaWQiOjIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjE0MDQ4NDF9.KMqDsZpN8GUQ1zOFunaThnIQ46tP_Dqevf-S9AaiHK8
 
 ###
 
@@ -113,3 +113,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEyMTk1O
 
 DELETE {{endpoint}}/api/users/3
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEwNjUwOTYsImRhdGEiOnsiaWQiOjMsImZpcnN0bmFtZSI6IlNvdyIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEwNTE1OTV9.937OG4ndXbuJNWvciYGoT2asfcrIfM8PQ1tAEj045pA
+###
+
+POST {{endpoint}}/api/users/logout/30
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjEyMjY1MTEsImRhdGEiOnsiaWQiOjIsImZpbmdlcnByaW50Ijp7ImlwIjoiOjpmZmZmOjEyNy4wLjAuMSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50In19LCJpYXQiOjE3MjEyMTMwMTB9.Dd1l9CRqVSPwovvNCX5B4zXe8ccIwMDIN5l5S5jro-8

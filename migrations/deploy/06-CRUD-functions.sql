@@ -267,6 +267,7 @@ CREATE FUNCTION "update_user" (input_id int, input json) RETURNS VOID AS $$
     "phone_number" = COALESCE(($2->>'phone_number')::text, "phone_number"),
     "department_label" = COALESCE(($2->>'department_label')::text, "department_label"),
     "url_img" = COALESCE(($2->>'url_img')::text, "url_img"),
+    "refresh_token" = COALESCE(($2->>'refresh_token')::text, "refresh_token"),
     "updated_at" = now()
   WHERE "id" = $1::int;
 
